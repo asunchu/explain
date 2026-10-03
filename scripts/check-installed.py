@@ -5,9 +5,10 @@ import hashlib, json, os
 root = Path(__file__).resolve().parents[1]
 home = Path.home()
 paths = {
-    'codex': Path(os.environ.get('CODEX_HOME', home/'.codex'))/'skills/explain',
+    # skills@1.7.0 uses the shared Agent Skills directory for these targets.
+    'codex': home/'.agents/skills/explain',
     'claude-code': Path(os.environ.get('CLAUDE_CONFIG_DIR', home/'.claude'))/'skills/explain',
-    'opencode': Path(os.environ.get('XDG_CONFIG_HOME', home/'.config'))/'opencode/skills/explain',
+    'opencode': home/'.agents/skills/explain',
 }
 expected = root/'skills/explain'
 report = {'scope': 'Installation and file integrity only; no model invocation', 'harnesses': {}}
