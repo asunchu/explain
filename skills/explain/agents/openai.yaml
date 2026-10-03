@@ -1,0 +1,4 @@
+interface:
+  display_name: "Explain"
+  short_description: "Clear diagrams, interactive explainers, and videos"
+  default_prompt: "Use $explain to turn this topic into a clear visual explanation with the right medium."

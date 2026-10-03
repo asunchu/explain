@@ -1,0 +1,27 @@
+{
+  "name": "explain-film",
+  "version": "1.0.0",
+  "description": "Explain: a narrated tour of the portable explanation skill",
+  "main": "index.js",
+  "scripts": {
+    "narrate": ".venv/bin/python scripts/narrate.py",
+    "stills": "node scripts/render.mjs stills",
+    "sample": "node scripts/render.mjs sample",
+    "render": "node scripts/render.mjs full && .venv/bin/python scripts/finalize.py",
+    "studio": "remotion studio src/index.jsx",
+    "verify": ".venv/bin/python scripts/verify.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@remotion/bundler": "4.0.532",
+    "@remotion/cli": "4.0.532",
+    "@remotion/renderer": "4.0.532",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.532"
+  },
+  "private": true
+}

@@ -1,0 +1,14 @@
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+models/
+examples/explain-video/output/*
+!examples/explain-video/output/explain.mp4
+!examples/explain-video/output/clarity.png
+!examples/explain-video/output/captions.srt
+!examples/explain-video/output/transcript.md
+!examples/explain-video/output/validation.json

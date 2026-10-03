@@ -1,0 +1,303 @@
+{
+  "fps": 30,
+  "duration": 3944,
+  "scenes": [
+    {
+      "id": "clarity",
+      "chapter": "THE IDEA",
+      "title": "From complexity to clarity.",
+      "visual": "Scattered information tiles converge into one clean Explain mark.",
+      "lines": [
+        "An answer can be correct, and still be hard to understand.",
+        "Explain turns complex ideas into something you can see, follow, and remember."
+      ],
+      "start": 0,
+      "captions": [
+        {
+          "text": "An answer can be correct, and still be hard to understand.",
+          "start": 18,
+          "end": 116
+        },
+        {
+          "text": "Explain turns complex ideas into something you can see, follow, and remember.",
+          "start": 122,
+          "end": 269
+        }
+      ],
+      "duration": 293
+    },
+    {
+      "id": "brief",
+      "chapter": "01 / UNDERSTAND",
+      "title": "Start with the learning goal.",
+      "visual": "A natural-language request resolves into topic, audience, and outcome.",
+      "lines": [
+        "Start with a topic, a document, or a piece of code.",
+        "The skill identifies your audience and what they should understand afterward.",
+        "You can specify the format, length, and budget."
+      ],
+      "start": 293,
+      "captions": [
+        {
+          "text": "Start with a topic, a document, or a piece of code.",
+          "start": 18,
+          "end": 112
+        },
+        {
+          "text": "The skill identifies your audience and what they should understand afterward.",
+          "start": 118,
+          "end": 244
+        },
+        {
+          "text": "You can specify the format, length, and budget.",
+          "start": 250,
+          "end": 342
+        }
+      ],
+      "duration": 366
+    },
+    {
+      "id": "format",
+      "chapter": "02 / CHOOSE",
+      "title": "The idea chooses the medium.",
+      "visual": "Four animated format cards reveal prose, diagram, interactive page, and video.",
+      "lines": [
+        "A definition may need a sentence. A relationship may need a diagram.",
+        "Changing a variable calls for an interactive page.",
+        "A process unfolding over time may work best as a narrated video."
+      ],
+      "start": 659,
+      "captions": [
+        {
+          "text": "A definition may need a sentence. A relationship may need a diagram.",
+          "start": 18,
+          "end": 146
+        },
+        {
+          "text": "Changing a variable calls for an interactive page.",
+          "start": 152,
+          "end": 249
+        },
+        {
+          "text": "A process unfolding over time may work best as a narrated video.",
+          "start": 255,
+          "end": 386
+        }
+      ],
+      "duration": 410
+    },
+    {
+      "id": "example",
+      "chapter": "A CONCRETE EXAMPLE",
+      "title": "Show what a cache changes.",
+      "visual": "First request travels to the origin. A repeat request takes the shorter cache route.",
+      "lines": [
+        "Take a cache. The first request fetches data from its original source.",
+        "A later request can reuse the stored copy.",
+        "Animating those two paths makes the difference visible."
+      ],
+      "start": 1069,
+      "captions": [
+        {
+          "text": "Take a cache. The first request fetches data from its original source.",
+          "start": 18,
+          "end": 149
+        },
+        {
+          "text": "A later request can reuse the stored copy.",
+          "start": 155,
+          "end": 238
+        },
+        {
+          "text": "Animating those two paths makes the difference visible.",
+          "start": 244,
+          "end": 341
+        }
+      ],
+      "duration": 365
+    },
+    {
+      "id": "story",
+      "chapter": "03 / BUILD THE STORY",
+      "title": "Every scene earns its place.",
+      "visual": "Evidence becomes a plain-language script, then an ordered storyboard.",
+      "lines": [
+        "Explain checks the source material, defines unfamiliar terms, and writes in plain language.",
+        "Then it maps each teaching point to a scene.",
+        "The visuals show the mechanism while narration connects the ideas."
+      ],
+      "start": 1434,
+      "captions": [
+        {
+          "text": "Explain checks the source material, defines unfamiliar terms, and writes in plain language.",
+          "start": 18,
+          "end": 188
+        },
+        {
+          "text": "Then it maps each teaching point to a scene.",
+          "start": 194,
+          "end": 265
+        },
+        {
+          "text": "The visuals show the mechanism while narration connects the ideas.",
+          "start": 271,
+          "end": 388
+        }
+      ],
+      "duration": 412
+    },
+    {
+      "id": "motion",
+      "chapter": "04 / MAKE IT MOVE",
+      "title": "Purposeful motion. Clear ideas.",
+      "visual": "Remotion video card, GSAP interaction card, and Motion Canvas vector card animate distinct examples.",
+      "lines": [
+        "Remotion is the default for polished video.",
+        "G sap supports interactive web animation. Motion Canvas suits narrated vector diagrams.",
+        "Typography, color, and motion stay consistent so your attention follows the idea."
+      ],
+      "start": 1846,
+      "captions": [
+        {
+          "text": "Remotion is the default for polished video.",
+          "start": 18,
+          "end": 104
+        },
+        {
+          "text": "GSAP supports interactive web animation. Motion Canvas suits narrated vector diagrams.",
+          "start": 110,
+          "end": 295
+        },
+        {
+          "text": "Typography, color, and motion stay consistent so your attention follows the idea.",
+          "start": 301,
+          "end": 465
+        }
+      ],
+      "duration": 489
+    },
+    {
+      "id": "voice",
+      "chapter": "05 / GIVE IT A VOICE",
+      "title": "Narration sets the pace.",
+      "visual": "Local Kokoro voice waveform generates separate reusable audio clips.",
+      "lines": [
+        "For this film, Kokoro generates the narration locally, with no paid speech API.",
+        "Each passage becomes a reusable audio clip.",
+        "Changing the visuals does not require generating the voice again."
+      ],
+      "start": 2335,
+      "captions": [
+        {
+          "text": "For this film, Kokoro generates the narration locally, with no paid speech API.",
+          "start": 18,
+          "end": 180
+        },
+        {
+          "text": "Each passage becomes a reusable audio clip.",
+          "start": 186,
+          "end": 273
+        },
+        {
+          "text": "Changing the visuals does not require generating the voice again.",
+          "start": 279,
+          "end": 399
+        }
+      ],
+      "duration": 423
+    },
+    {
+      "id": "sync",
+      "chapter": "06 / SYNCHRONIZE",
+      "title": "One timeline. Everything aligned.",
+      "visual": "Audio, animation, and caption tracks align to a shared moving playhead.",
+      "lines": [
+        "The skill measures the actual audio, then fits the animation to it.",
+        "Captions follow the spoken passages.",
+        "Frame based motion keeps previews and final renders consistent."
+      ],
+      "start": 2758,
+      "captions": [
+        {
+          "text": "The skill measures the actual audio, then fits the animation to it.",
+          "start": 18,
+          "end": 139
+        },
+        {
+          "text": "Captions follow the spoken passages.",
+          "start": 145,
+          "end": 216
+        },
+        {
+          "text": "Frame-based motion keeps previews and final renders consistent.",
+          "start": 222,
+          "end": 343
+        }
+      ],
+      "duration": 367
+    },
+    {
+      "id": "verify",
+      "chapter": "07 / CHECK THE RESULT",
+      "title": "A render is only the beginning.",
+      "visual": "Rendered frame enlarges while checks inspect labels, timing, audio, and export.",
+      "lines": [
+        "Before delivery, it checks rendered frames, readable labels, timing, captions, and the exported file.",
+        "Audio should be checked for pronunciation and clipping.",
+        "Any checks it could not perform are reported clearly."
+      ],
+      "start": 3125,
+      "captions": [
+        {
+          "text": "Before delivery, it checks rendered frames, readable labels, timing, captions, and the exported file.",
+          "start": 18,
+          "end": 204
+        },
+        {
+          "text": "Audio should be checked for pronunciation and clipping.",
+          "start": 210,
+          "end": 300
+        },
+        {
+          "text": "Any checks it could not perform are reported clearly.",
+          "start": 306,
+          "end": 396
+        }
+      ],
+      "duration": 420
+    },
+    {
+      "id": "deliver",
+      "chapter": "READY TO USE",
+      "title": "Make the next idea click.",
+      "visual": "Explain command appears above three harness chips and a finished-artifact stack.",
+      "lines": [
+        "Use Explain in Codex, OpenCode, or Claude Code.",
+        "Ask for the explanation you need, and receive the finished artifact plus editable source.",
+        "This video was created using that same workflow."
+      ],
+      "start": 3545,
+      "captions": [
+        {
+          "text": "Use Explain in Codex, OpenCode, or Claude Code.",
+          "start": 18,
+          "end": 121
+        },
+        {
+          "text": "Ask for the explanation you need, and receive the finished artifact plus editable source.",
+          "start": 127,
+          "end": 286
+        },
+        {
+          "text": "This video was created using that same workflow.",
+          "start": 292,
+          "end": 375
+        }
+      ],
+      "duration": 399
+    }
+  ],
+  "voice": "af_heart",
+  "provider": "local Kokoro ONNX",
+  "apiCostUsd": 0
+}

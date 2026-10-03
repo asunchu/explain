@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Explore how a software factory builds, verifies, repairs, and releases one feature."><title>Software factories — Explain</title><style>
+:root{color-scheme:light dark;--background:light-dark(#ffffff,#15191f);--foreground:light-dark(#17212c,#ecf0f5);--muted:light-dark(#f1f4f7,#242c35);--muted-foreground:light-dark(#526172,#afbdcc);--border:light-dark(#cbd4de,#485767);--viz-series-1:light-dark(#166d9b,#72ceff)}
+*{box-sizing:border-box}body{margin:0;padding:24px 16px;background:var(--background);color:var(--foreground);font:16px/1.5 system-ui,sans-serif}main{max-width:800px;margin:auto}a{color:var(--viz-series-1)}h1{font-size:30px;line-height:1.2}h3{font-size:18px;font-weight:600;margin-bottom:4px}.text-small{font-size:13px}.text-muted{color:var(--muted-foreground)}svg text{font-size:12px}.btn{font:inherit;font-size:14px;padding:10px 14px;border:1px solid var(--border);border-radius:8px;background:var(--muted);color:var(--foreground);min-height:44px;cursor:pointer}.btn-primary{background:var(--foreground);color:var(--background)}.btn:disabled{opacity:.45;cursor:default}.btn:focus-visible,a:focus-visible{outline:3px solid var(--viz-series-1);outline-offset:3px}footer{margin-top:36px;font-size:14px;color:var(--muted-foreground)}@media(max-width:380px){body{padding:16px 8px}}
+</style></head><body><main><a href="../../">← Explain</a><h1>How software factories work</h1><p>Follow a CSV-export feature. At the controller, try passing checks, finding a data leak, or encountering an unclear requirement.</p><style>
+#factory-tour { color:var(--foreground); }
+#factory-tour .factory-heading { padding-right:0; }
+#factory-tour .factory-flow { display:block; width:100%; height:350px; margin:14px 0; }
+#factory-tour .factory-flow text { fill:var(--foreground); }
+#factory-tour .factory-flow .sub { fill:var(--muted-foreground); }
+#factory-tour .factory-detail { min-height:44px; margin:10px 0; }
+#factory-tour .factory-controls { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+#factory-tour .factory-status { margin-top:12px; color:var(--muted-foreground); }
+#factory-tour [hidden] { display:none !important; }
+</style>
+<div id="factory-tour">
+  <div class="factory-heading"><h3>One feature through a software factory</h3><div class="text-small text-muted">Illustrative request: export my records as CSV</div></div>
+  <svg class="factory-flow" role="img" aria-label="Request, specification, plan, build, verification, controller, release, observation, and human decision. The highlighted stage changes as you advance."></svg>
+  <div class="factory-detail" aria-live="polite" id="factory-detail"></div>
+  <div class="factory-controls">
+    <button type="button" class="btn" id="factory-back">Back</button>
+    <button type="button" class="btn btn-primary" id="factory-next">Define success →</button>
+    <div class="factory-controls" id="factory-outcomes" hidden>
+      <button type="button" class="btn" data-result="pass">Checks pass</button>
+      <button type="button" class="btn" data-result="fail">Data leak found</button>
+      <button type="button" class="btn" data-result="unclear">Requirement unclear</button>
+    </div>
+    <button type="button" class="btn btn-primary" id="factory-human" hidden>Clarify requirement →</button>
+    <button type="button" class="btn btn-primary" id="factory-release" hidden>Approve simulated release →</button>
+    <button type="button" class="btn" id="factory-again" hidden>Follow another request →</button>
+  </div>
+  <div class="factory-status text-small" id="factory-status"></div>
+</div>
+<script>
+(() => {
+  const root=document.getElementById('factory-tour');
+  const svg=root.querySelector('svg');
+  const $=id=>root.querySelector('#factory-'+id);
+  const labels=['Request','Specify','Plan','Build','Verify','Controller','Release','Observe','Human'];
+  const outputs=['User goal','Scenarios','Tasks','Patch','Evidence','Route work','Deploy','Outcomes','Decision'];
+  const grid=[[0,0],[1,0],[2,0],[2,1],[1,1],[0,1],[0,2],[1,2],[2,2]];
+  const details=[
+    'Request: users want to download their own records as a CSV file.',
+    'Specify: exported rows belong to this user; commas, quotes, and empty results work.',
+    'Plan: separate permission checks, CSV formatting, and the download button.',
+    'Build: an agent changes code and tests in an isolated workspace.',
+    'Verify: exercise the real export and attempt to download another user’s records.',
+    'Controller: use verification evidence to choose the next action.',
+    'Release: passing checks is separate from permission to deploy.',
+    'Observe: check live failures and whether users can complete their exports.',
+    'Human: resolve missing requirements or a repair loop that cannot make progress.'
+  ];
+  let state={stage:0,repairs:0,reason:'',last:null};
+  let history=[];
+  let token=null;
+  const ns='http://www.w3.org/2000/svg';
+  function el(tag,attrs,parent=svg,text){const n=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);if(text!==undefined)n.textContent=text;parent.appendChild(n);return n;}
+  function store(){}
+  function restore(snapshot){const p=snapshot?.privateContent;if(p&&Number.isInteger(p.state?.stage)&&p.state.stage>=0&&p.state.stage<9){state=p.state;history=Array.isArray(p.history)?p.history.slice(-30):[];}}
+  function draw(animate=false){
+    const w=Math.max(280,svg.getBoundingClientRect().width),gap=28,margin=8,bw=(w-2*margin-2*gap)/3,bh=67;
+    svg.setAttribute('viewBox',`0 0 ${w} 350`);svg.replaceChildren();
+    const coords=grid.map(([x,y])=>({x:margin+x*(bw+gap),y:22+y*112}));
+    const defs=el('defs',{});const marker=el('marker',{id:'factory-arrow',viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:6,markerHeight:6,orient:'auto-start-reverse'},defs);el('path',{d:'M 0 0 L 10 5 L 0 10 z',fill:'var(--muted-foreground)'},marker);
+    const links=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]];
+    for(const [a,b] of links){let p=coords[a],q=coords[b];const horiz=p.y===q.y;const d=horiz?(p.x<q.x?`M${p.x+bw+3} ${p.y+bh/2}H${q.x-5}`:`M${p.x-3} ${p.y+bh/2}H${q.x+bw+5}`):`M${p.x+bw/2} ${p.y+bh+3}V${q.y-5}`;el('path',{d,fill:'none',stroke:'var(--border)','stroke-width':1.5,'marker-end':'url(#factory-arrow)'});}
+    if(state.last===5&&(state.stage===3||state.stage===8)){
+      const a=coords[5],b=coords[state.stage];
+      const d=state.stage===3?`M${a.x+bw/2} ${a.y}V${a.y-21}H${b.x+bw/2}V${b.y-5}`:`M${a.x+bw} ${a.y+bh-6}H${b.x+bw/2}V${b.y-5}`;
+      el('path',{d,fill:'none',stroke:'var(--viz-series-1)','stroke-width':2,'marker-end':'url(#factory-arrow)'});
+    }
+    coords.forEach((p,i)=>{const active=i===state.stage;el('rect',{x:p.x,y:p.y,width:bw,height:bh,rx:10,fill:active?'color-mix(in srgb, var(--viz-series-1) 16%, var(--background))':'var(--muted)',stroke:'var(--border)','stroke-width':1});el('text',{x:p.x+bw/2,y:p.y+26,'text-anchor':'middle','font-weight':500},svg,labels[i]);el('text',{x:p.x+bw/2,y:p.y+48,'text-anchor':'middle',class:'sub'},svg,outputs[i]);});
+    const p=coords[state.stage];const next={x:p.x+bw/2,y:p.y-8};const dot=el('circle',{cx:next.x,cy:next.y,r:5,fill:'var(--viz-series-1)'});
+    if(animate&&token&&!matchMedia('(prefers-reduced-motion: reduce)').matches){dot.animate([{transform:`translate(${token.x-next.x}px,${token.y-next.y}px)`},{transform:'translate(0,0)'}],{duration:350,easing:'ease-out'});}
+    token=next;
+  }
+  function render(animate=false){
+    let detail=details[state.stage];
+    if(state.stage===3&&state.repairs)detail='Repair: fix the missing ownership check, keep the acceptance criteria, then verify again.';
+    if(state.stage===8&&state.reason==='limit')detail='Human: two repairs failed in this example; stop the loop and investigate.';
+    $('detail').textContent=detail;
+    $('back').disabled=!history.length;
+    $('next').hidden=[5,6,7,8].includes(state.stage);
+    $('outcomes').hidden=state.stage!==5;
+    $('human').hidden=state.stage!==8;
+    $('release').hidden=state.stage!==6;
+    $('again').hidden=state.stage!==7;
+    $('next').textContent=['Define success →','Plan the change →','Build the feature →','Run verification →','Evaluate evidence →'][state.stage]||'Continue →';
+    $('human').textContent=state.reason==='limit'?'Revise approach →':'Clarify requirement →';
+    $('status').textContent=`${labels[state.stage]} · ${state.repairs} repair attempt${state.repairs===1?'':'s'} · Simulation only`;
+    svg.setAttribute('aria-label',`${labels[state.stage]}. ${detail}`);
+    draw(animate);
+  }
+  function go(stage,extra={}){history.push({...state});history=history.slice(-30);state={...state,...extra,last:state.stage,stage};render(true);store();}
+  $('next').addEventListener('click',()=>go(state.stage+1));
+  $('back').addEventListener('click',()=>{if(history.length){state=history.pop();render(true);store();}});
+  root.querySelectorAll('[data-result]').forEach(b=>b.addEventListener('click',()=>{
+    if(b.dataset.result==='pass')go(6);
+    else if(b.dataset.result==='unclear')go(8,{reason:'unclear'});
+    else if(state.repairs>=2)go(8,{reason:'limit'});
+    else go(3,{repairs:state.repairs+1,reason:'bug'});
+  }));
+  $('human').addEventListener('click',()=>go(state.reason==='limit'?2:1,{reason:'',repairs:0}));
+  $('release').addEventListener('click',()=>go(7));
+  $('again').addEventListener('click',()=>go(0,{repairs:0,reason:''}));
+  render();
+  new ResizeObserver(()=>draw()).observe(svg);
+})();
+</script>
+<footer><p>This is a simplified teaching model, not a running development system. Use Tab and Enter to operate the controls. Motion follows your reduced-motion preference.</p><p>Background: <a href="https://www.anthropic.com/engineering/harness-design-long-running-apps">Anthropic harness design</a> · <a href="https://factory.strongdm.ai/">StrongDM software factory</a></p><a href="https://github.com/asunchu/explain">Source on GitHub</a></footer></main></body></html>

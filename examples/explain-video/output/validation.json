@@ -1,0 +1,20 @@
+{
+  "video": "output/explain.mp4",
+  "durationSeconds": 131.5,
+  "resolution": "1920x1080",
+  "fps": 30,
+  "videoCodec": "H.264",
+  "audioCodec": "AAC",
+  "chapters": 10,
+  "audioPeakDbFS": -1.4,
+  "fullDecode": "passed without errors",
+  "sceneAudioTiming": "matched to frame timeline",
+  "captions": "nonoverlapping measured passage boundaries; burned into video; SRT also supplied",
+  "visualInspection": "All 10 representative scene frames reviewed; cache sample rendered and inspected",
+  "limitations": [
+    "No independent listening audition of pronunciation or subjective voice quality was performed."
+  ],
+  "speechApiCostUsd": 0,
+  "narration": "AI-generated locally with Kokoro-82M / af_heart",
+  "source": "storyboard.json; src/index.jsx; scripts/narrate.py; scripts/render.mjs; scripts/finalize.py"
+}
