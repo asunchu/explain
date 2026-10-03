@@ -1,0 +1,43 @@
+name: Cloud installation and render smoke test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  clean-linux:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install public skill for all three harnesses
+        run: npx --yes skills@1.7.0 add asunchu/explain --skill explain -g -a codex -a claude-code -a opencode -y
+      - name: Verify installed files and list discovery
+        run: |
+          python scripts/check-installed.py
+          npx --yes skills@1.7.0 list -g
+          python scripts/validate.py
+      - name: Install video dependencies
+        working-directory: examples/explain-video
+        run: npm ci --no-audit --no-fund
+      - name: Render sample from bundled narration
+        working-directory: examples/explain-video
+        run: npm run sample
+      - name: Verify sample media
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          python scripts/check-sample.py
+      - name: Save rendered sample and report
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-cloud-evidence
+          path: |
+            examples/explain-video/output/sample.mp4
+            cloud-installation.json
+            cloud-render.json
