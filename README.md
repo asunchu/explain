@@ -22,13 +22,17 @@ The skill itself has no runtime dependency. Video tools and speech models are in
 
 ## Try it
 
+In Claude Code:
+
 ```text
-Use explain to explain database indexes with a small example.
-Use explain to explain how software factories work with interactive HTML.
-Use explain to make a narrated video of how this architecture works, using local TTS.
+/explain database indexes with a small example
+/explain how software factories work using interactive HTML
+/explain this architecture as a narrated video using local TTS
 ```
 
-Codex supports `$explain`; Claude Code supports `/explain`. In OpenCode, ask the agent to use the `explain` skill. Natural-language discovery depends on your harness and model.
+In Codex, use `$explain` instead of `/explain`. In OpenCode, ask the agent to use the `explain` skill.
+
+You can also ask naturally: “Explain database indexes with a small example.” Automatic skill selection depends on your harness and model; explicit invocation is more reliable.
 
 | What needs explaining | Typical format |
 | --- | --- |
