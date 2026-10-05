@@ -4,7 +4,7 @@
 
 A portable agent skill for Codex, Claude Code, and OpenCode. Explain starts with what someone needs to understand, then chooses a useful format. A short question can stay a short answer. A system with meaningful choices can become an interactive page. A story over time can become a narrated film.
 
-[Try the interactive demo](https://asunchu.github.io/explain/examples/software-factory/) · [Watch the film](https://asunchu.github.io/explain/#film) · [Read the skill](skills/explain/SKILL.md)
+[Explore an example: Software factories](https://asunchu.github.io/explain/examples/software-factory/) · [Watch the film](https://asunchu.github.io/explain/#film) · [Read the skill](skills/explain/SKILL.md)
 
 [![Explain film preview](examples/explain-video/output/clarity.png)](https://asunchu.github.io/explain/#film)
 
@@ -32,7 +32,7 @@ In Claude Code:
 
 In Codex, use `$explain` instead of `/explain`. In OpenCode, ask the agent to use the `explain` skill.
 
-You can also ask naturally: “Explain database indexes with a small example.” Automatic skill selection depends on your harness and model; explicit invocation is more reliable.
+You can also ask naturally: “Why do database indexes speed up reads but slow down writes?” or “Help me understand how software factories work.” You do not need to name the skill or choose a format first. Automatic skill selection depends on your harness and model; explicit invocation is a fallback when discovery misses.
 
 | What needs explaining | Typical format |
 | --- | --- |
@@ -52,11 +52,15 @@ Default animation choices include Remotion, HTML/SVG with GSAP when useful, Moti
 
 ## Automatic use
 
-The description lets supporting harnesses select Explain automatically. For stronger routing, optionally add this sentence to your own global or project instructions (`AGENTS.md`, `CLAUDE.md`, or the equivalent):
+The skill's frontmatter description advertises ordinary explanation requests, not just visual/video requests. Codex's `agents/openai.yaml` explicitly allows implicit invocation (also its default). These make Explain eligible for automatic selection; they do not force an invocation. The main skill instructions are read after selection, so putting “always use me” inside them cannot solve discovery.
+
+For stronger routing, optionally add this instruction to your own global or project instructions (`AGENTS.md`, `CLAUDE.md`, or the equivalent):
 
 > When a request would benefit from an explanation, use the Explain skill if available. Honor any requested format; otherwise choose the smallest effective medium. Simple answers may remain prose.
 
 Installation does not rewrite system prompts or global instruction files, and automatic selection is not guaranteed.
+
+After changing the installed description, start a fresh session or reload skills as supported by your harness. Test ordinary prompts without `/explain`, `$explain`, or “use Explain,” and inspect the skill-load trace. The [discovery evaluations](evals/README.md) test this separately from explicitly invoked behavior. See the official [Codex](https://developers.openai.com/codex/skills/), [Claude Code](https://code.claude.com/docs/en/skills), and [OpenCode](https://opencode.ai/docs/skills) documentation for discovery behavior.
 
 ## Compatibility and verification
 
@@ -73,6 +77,12 @@ The runner then installed the pinned video dependencies and rendered the cache-e
 This is an installation and existing-example rendering test, not an AI-agent behavioral evaluation or a fresh TTS synthesis test. It ran in an ephemeral GitHub cloud runner, not an OpenAI cloud sandbox. Maintainers can repeat it through the **Cloud installation and render smoke test** workflow in Actions.
 
 ## Contribute
+
+### Behavioral evaluations
+
+The [evaluation suite](evals/README.md) contains 17 cases for format selection, explicit overrides, explanation accuracy, working HTML/video, local TTS, spending boundaries, and automatic discovery. Prepare isolated trials for Codex, Claude Code, or OpenCode, retain their outputs, and score observable behavior against the supplied rubrics. Reports distinguish passed, failed, blocked, and unrun cases.
+
+CI validates the cases and reporting code; it does **not** run AI harnesses or prove behavioral compatibility. See the evaluation guide for running and reviewing actual trials.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Useful contributions include clear examples, format-selection evaluations, portability fixes, and updated provider references. Run `python3 scripts/validate.py` before opening a pull request.
 

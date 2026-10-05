@@ -1,6 +1,6 @@
 ---
 name: explain
-description: Turn complex topics, code, research, or model outputs into clear explanations, diagrams, interactive HTML, or polished narrated explainer videos. Use when the user asks to explain visually, animate a concept, build an explorable explanation, or make an explainer video.
+description: Explain how and why concepts, code, or systems work when the user wants to understand a mechanism, relationship, or tradeoff. Choose concise prose, diagrams, interactive HTML, or narrated video. Use for natural explanation requests without requiring a skill name or format. Skip trivial facts and routine code edits.
 ---
 
 # Explain
@@ -66,8 +66,10 @@ Deliver the requested artifact, editable sources, a concise transcript/source li
 
 ## Invocation examples
 
-- “Use explain to explain transformer attention with an interactive HTML page.”
-- “Use explain to make a polished 90-second video of this architecture. Use local Kokoro and Remotion.”
-- “Use explain to turn this research into a narrated explainer. Hosted TTS budget: $1.”
+- “Why do database indexes speed up reads but slow down writes?”
+- “Help me understand how software factories work.”
+- “Explain transformer attention with an interactive HTML page.”
+- “Make a polished 90-second video of this architecture. Use local Kokoro and Remotion.”
+- “Turn this research into a narrated explainer. Hosted TTS budget: $1.”
 
 Codex can invoke `$explain`; Claude Code can invoke `/explain`. In OpenCode, ask to use the `explain` skill. Natural-language selection is also supported when the harness makes the skill available.

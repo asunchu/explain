@@ -11,3 +11,5 @@ jobs:
         with:
           python-version: '3.11'
       - run: python scripts/validate.py
+      - run: python scripts/evaluate.py validate
+      - run: python -m unittest discover -s evals -p 'test_*.py' -v

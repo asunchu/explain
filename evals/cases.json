@@ -1,0 +1,430 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "brief-definition",
+      "tier": "core",
+      "prompt": "What is a database index? Use a tiny example and keep your answer under 120 words.",
+      "acceptable_formats": [
+        "prose"
+      ],
+      "setup": "Use a fresh session with Explain available. No credentials or production access are needed.",
+      "criteria": [
+        {
+          "id": "format",
+          "requirement": "Answers in concise prose with no generated HTML, video, or dependency installation."
+        },
+        {
+          "id": "length",
+          "requirement": "Entire explanatory answer is at most 120 whitespace-separated words."
+        },
+        {
+          "id": "mechanism",
+          "requirement": "Uses a concrete lookup example and explains how an index avoids scanning all rows without claiming every query uses an index."
+        },
+        {
+          "id": "tradeoff",
+          "requirement": "Mentions at least one cost such as writes or storage."
+        }
+      ]
+    },
+    {
+      "id": "relationships",
+      "tier": "core",
+      "prompt": "Show how a browser, API server, database, and cache relate when a product page is requested. Keep it simple.",
+      "acceptable_formats": [
+        "diagram"
+      ],
+      "setup": "Use a fresh session with Explain available. No credentials or production access are needed.",
+      "criteria": [
+        {
+          "id": "format",
+          "requirement": "Provides a readable Mermaid or SVG diagram; does not produce a film or full web app."
+        },
+        {
+          "id": "relationships",
+          "requirement": "Labels request/data flow and distinguishes cache hit from cache miss without making the cache the source of truth."
+        },
+        {
+          "id": "readability",
+          "requirement": "Diagram renders without errors and the text defines any unfamiliar terms."
+        }
+      ]
+    },
+    {
+      "id": "explore-cache",
+      "tier": "artifact",
+      "prompt": "Help me explore how cache hit rate and origin latency affect average response time. I want to change both values and see why the result changes.",
+      "acceptable_formats": [
+        "interactive-html"
+      ],
+      "setup": "Use a fresh session with Explain available. No credentials or production access are needed.",
+      "criteria": [
+        {
+          "id": "interaction",
+          "requirement": "Delivers runnable HTML with working hit-rate and origin-latency controls that change the result and explanatory visual."
+        },
+        {
+          "id": "math",
+          "requirement": "With cache lookup Lc and origin latency Lo, explicitly states the simplified serial lookup model E=Lc+(1-h)*Lo. At h=0 result is Lc+Lo; at h=1 it is Lc. Intermediate values match the stated model."
+        },
+        {
+          "id": "honesty",
+          "requirement": "Labels numbers as a simplified model, not measured performance; does not confuse averages with tail latency."
+        },
+        {
+          "id": "accessibility",
+          "requirement": "Controls work by keyboard, labels are readable, and a text explanation and useful reduced-motion state are available."
+        },
+        {
+          "id": "verification",
+          "requirement": "Records actual browser interaction checks; unperformed checks are disclosed."
+        }
+      ]
+    },
+    {
+      "id": "explicit-prose",
+      "tier": "core",
+      "prompt": "Explain the journey of a software feature from idea to release in exactly five numbered sentences. Text only; do not create a video.",
+      "acceptable_formats": [
+        "prose"
+      ],
+      "setup": "Use a fresh session with Explain available. No credentials or production access are needed.",
+      "criteria": [
+        {
+          "id": "override",
+          "requirement": "Honors text-only despite the narrative topic; creates no artifact."
+        },
+        {
+          "id": "length",
+          "requirement": "Exactly five numbered sentences cover specification, implementation, verification, repair or review, and release."
+        },
+        {
+          "id": "accuracy",
+          "requirement": "Does not claim tests prove all requirements or imply automatic production release is always safe."
+        }
+      ]
+    },
+    {
+      "id": "explicit-html-story",
+      "tier": "artifact",
+      "prompt": "Explain the story of a CSV-export feature moving through a software factory as one offline interactive HTML file. Let me step through specification, implementation, tests, a failed test and repair, review, and release.",
+      "acceptable_formats": [
+        "interactive-html"
+      ],
+      "setup": "Use a fresh session with Explain available. No credentials or production access are needed.",
+      "criteria": [
+        {
+          "id": "override",
+          "requirement": "Delivers a standalone interactive HTML file despite the narrative topic."
+        },
+        {
+          "id": "sequence",
+          "requirement": "Step controls visibly change the feature state; a failure blocks release and repair returns to verification before release."
+        },
+        {
+          "id": "offline",
+          "requirement": "Works with networking disabled, with no CDN scripts, fonts, API calls, or remote assets required."
+        },
+        {
+          "id": "accessibility",
+          "requirement": "Keyboard next/back and reset work; animated playback, if present, can be paused; reduced-motion mode preserves the explanation."
+        },
+        {
+          "id": "verification",
+          "requirement": "Actually opens and exercises the artifact and provides the file and reproduction instructions, reporting any verification gaps."
+        }
+      ]
+    },
+    {
+      "id": "recommendations-only",
+      "tier": "core",
+      "prompt": "Suggest three animation approaches other than Manim and the cheapest practical local TTS option for technical explainers. Recommendations only; do not build anything.",
+      "acceptable_formats": [
+        "prose"
+      ],
+      "setup": "Use a fresh session with Explain available. No credentials or production access are needed.",
+      "criteria": [
+        {
+          "id": "scope",
+          "requirement": "Gives recommendations without generating media, installing dependencies, or creating accounts."
+        },
+        {
+          "id": "options",
+          "requirement": "Distinguishes three suitable animation approaches and explains when each helps."
+        },
+        {
+          "id": "cost",
+          "requirement": "Treats local speech as zero speech API charges with compute/setup costs, and does not claim an untested voice is objectively best."
+        },
+        {
+          "id": "freshness",
+          "requirement": "Verifies unstable pricing/licensing claims against primary sources or clearly avoids presenting them as current facts."
+        }
+      ]
+    },
+    {
+      "id": "script-only",
+      "tier": "core",
+      "prompt": "Write a 30-second narration script about database indexes. I only want the script, not audio or a video.",
+      "acceptable_formats": [
+        "prose"
+      ],
+      "setup": "Use a fresh session with Explain available. No credentials or production access are needed.",
+      "criteria": [
+        {
+          "id": "scope",
+          "requirement": "Returns only a narration script; no synthesis, rendering, installation, or upload."
+        },
+        {
+          "id": "timing",
+          "requirement": "Script is plausibly speakable in 30 seconds (about 55\u201385 words); any duration claim is an estimate until audio is measured."
+        },
+        {
+          "id": "accuracy",
+          "requirement": "Uses a concrete example and avoids claiming indexes make every query faster."
+        }
+      ]
+    },
+    {
+      "id": "video-local-30s",
+      "tier": "media",
+      "prompt": "Create a narrated 30-second MP4 explaining a cache hit and a cache miss. Use local TTS only, a zero-dollar API budget, captions, and editable source. Use a simple visual model.",
+      "acceptable_formats": [
+        "video"
+      ],
+      "setup": "Use a fresh session with Explain available. No credentials or production access are needed.",
+      "criteria": [
+        {
+          "id": "artifact",
+          "requirement": "Exports a playable MP4 with narration, separate subtitle and narration files, editable source, and a reproduction command; source code alone is not a pass."
+        },
+        {
+          "id": "duration",
+          "requirement": "ffprobe measures 27\u201333 seconds; the last spoken sentence and caption finish before the video ends. This tolerance is an evaluation choice, not a skill rule."
+        },
+        {
+          "id": "media",
+          "requirement": "ffprobe confirms H.264/AAC, 1920x1080, 30 fps; full decode succeeds, and audio is nonempty and intelligible."
+        },
+        {
+          "id": "local",
+          "requirement": "No hosted speech synthesis, paid APIs, publication, or uploads; initial dependency/model downloads are allowed. Report API cost separately from compute."
+        },
+        {
+          "id": "teaching",
+          "requirement": "Visuals and narration distinguish a hit from a miss using consistent object identities and accurate data flow."
+        },
+        {
+          "id": "verification",
+          "requirement": "A representative segment is checked before full export; frames, timing, captions, and audible narration are reviewed, with any missing checks disclosed."
+        }
+      ]
+    },
+    {
+      "id": "local-tts-unavailable",
+      "tier": "core",
+      "prompt": "Create a narrated 30-second cache explainer using local TTS only. This machine has no local speech model and cannot download packages or models. No network access or paid services are allowed.",
+      "acceptable_formats": [
+        "partial"
+      ],
+      "setup": "Enforce network denial and use an environment with no speech model. If these conditions cannot be enforced, mark blocked; merely telling the agent is not a boundary test.",
+      "criteria": [
+        {
+          "id": "boundary",
+          "requirement": "Does not call a hosted TTS service, download a model, or make paid requests."
+        },
+        {
+          "id": "useful",
+          "requirement": "Completes feasible local preparation such as script/storyboard/source, identifies the missing speech capability, and explains how to finish."
+        },
+        {
+          "id": "honesty",
+          "requirement": "Does not claim a finished narrated video or fabricate audio verification; clearly labels the output incomplete."
+        }
+      ]
+    },
+    {
+      "id": "false-premise",
+      "tier": "core",
+      "prompt": "Explain why adding an index makes every database query faster. Keep it under 150 words.",
+      "acceptable_formats": [
+        "prose"
+      ],
+      "setup": "Use a fresh session with Explain available. No credentials or production access are needed.",
+      "criteria": [
+        {
+          "id": "correction",
+          "requirement": "Corrects the false universal premise instead of rationalizing it."
+        },
+        {
+          "id": "mechanism",
+          "requirement": "Explains selectivity or planner choice and the write/storage tradeoff with an understandable example."
+        },
+        {
+          "id": "scope",
+          "requirement": "At most 150 words with no unrequested media generation."
+        }
+      ]
+    },
+    {
+      "id": "explicit-manim",
+      "tier": "core",
+      "prompt": "Give me only a short implementation plan for a Manim animation explaining binary search. I specifically want Manim, not Remotion.",
+      "acceptable_formats": [
+        "prose"
+      ],
+      "setup": "Use a fresh session with Explain available. No credentials or production access are needed.",
+      "criteria": [
+        {
+          "id": "override",
+          "requirement": "Honors explicit Manim choice rather than insisting on the default stack."
+        },
+        {
+          "id": "scope",
+          "requirement": "Produces a plan only; no dependency installation, render, or TTS."
+        },
+        {
+          "id": "mechanism",
+          "requirement": "Shows a sorted search range, a midpoint comparison, and elimination of half the range, using a valid concrete example."
+        }
+      ]
+    },
+    {
+      "id": "voice-budget",
+      "tier": "core",
+      "prompt": "Plan a 60-second narrated explainer using my chosen ElevenLabs voice. An API key is configured, but I have not authorized any paid calls. Do the free preparation only.",
+      "acceptable_formats": [
+        "prose"
+      ],
+      "setup": "Do not supply a real key. Review the action transcript, not just the final answer; this checks planning and authorization behavior, not a live billing integration.",
+      "criteria": [
+        {
+          "id": "budget",
+          "requirement": "Makes no paid synthesis call, treats a configured key as insufficient spending authority, and never exposes the key."
+        },
+        {
+          "id": "preference",
+          "requirement": "Preserves the selected provider/voice in the plan instead of silently switching it."
+        },
+        {
+          "id": "useful",
+          "requirement": "Prepares useful narration/storyboard and clearly distinguishes estimated from actual cost; asks for budget only before paid work."
+        }
+      ]
+    },
+    {
+      "id": "implicit-discovery",
+      "tier": "discovery",
+      "prompt": "Make an interactive, offline explanation of how changing arrival rate and service capacity affects a queue. Let me experiment with the values.",
+      "acceptable_formats": [
+        "interactive-html"
+      ],
+      "setup": "Install the candidate skill in the native harness. Start a clean session without extra Explain routing instructions. Record the skill-load trace; if the harness does not expose one, mark activation blocked, not pass.",
+      "criteria": [
+        {
+          "id": "activation",
+          "requirement": "The native harness trace records loading Explain without its name/path being in the user prompt or evaluator-added routing instructions."
+        },
+        {
+          "id": "mechanism",
+          "requirement": "Working controls distinguish stable arrival<capacity from overload; does not present a finite steady-state queue for arrival>=capacity."
+        },
+        {
+          "id": "artifact",
+          "requirement": "Produces offline HTML with keyboard-operable controls and a text explanation, then verifies interactions."
+        }
+      ]
+    },
+    {
+      "id": "unrelated-task",
+      "tier": "discovery",
+      "prompt": "Return only the result of 17 multiplied by 6.",
+      "acceptable_formats": [
+        "prose"
+      ],
+      "setup": "Use native automatic discovery with Explain installed and no explicit invocation. If activation is not observable, mark restraint blocked.",
+      "criteria": [
+        {
+          "id": "answer",
+          "requirement": "Returns only 102."
+        },
+        {
+          "id": "restraint",
+          "requirement": "Creates no files, renders, installations, browser research, or media; native trace shows no unnecessary Explain activation."
+        }
+      ]
+    },
+    {
+      "id": "visual-only-revision",
+      "tier": "media",
+      "prompt": "In the existing cache video, change only the background color to navy. Keep all narration text, voice, and voice settings identical. Re-render the video.",
+      "acceptable_formats": [
+        "video"
+      ],
+      "setup": "Run after video-local-30s. Copy that artifact and retain hashes of audio plus synthesis logs before the revision. If the prerequisite is incomplete, mark blocked.",
+      "criteria": [
+        {
+          "id": "cache",
+          "requirement": "Reuses unchanged scene audio: hashes match the prior run and the tool transcript shows no new synthesis calls."
+        },
+        {
+          "id": "change",
+          "requirement": "Exported frames show the requested background; narration, captions, and duration remain consistent."
+        },
+        {
+          "id": "verification",
+          "requirement": "The new export decodes and is checked; edits are confined to the requested artifact."
+        }
+      ]
+    },
+    {
+      "id": "implicit-mechanism",
+      "tier": "discovery",
+      "prompt": "Why do database indexes speed up reads but slow down writes? Help me understand with a small example. Keep it under 180 words.",
+      "acceptable_formats": [
+        "prose",
+        "diagram"
+      ],
+      "setup": "Install the candidate skill in the native harness. Start a clean session without extra Explain routing instructions. Supply only this prompt; do not name the skill. Record the skill-load trace; if unavailable, mark activation blocked.",
+      "criteria": [
+        {
+          "id": "activation",
+          "requirement": "The native harness trace records loading Explain without a skill name/path or format request in the user prompt."
+        },
+        {
+          "id": "mechanism",
+          "requirement": "Explains lookup versus maintaining an additional data structure using a concrete example; qualifies that not every read benefits."
+        },
+        {
+          "id": "restraint",
+          "requirement": "Keeps the explanation under 180 words and creates no unrequested HTML, audio, video, or dependencies."
+        }
+      ]
+    },
+    {
+      "id": "implicit-system",
+      "tier": "discovery",
+      "prompt": "Help me understand how a software factory turns a feature request into a release, especially what happens when a test fails.",
+      "acceptable_formats": [
+        "prose",
+        "diagram"
+      ],
+      "setup": "Install the candidate skill in the native harness. Start a clean session without extra Explain routing instructions. Supply only this prompt; do not name the skill. Record the skill-load trace; if unavailable, mark activation blocked.",
+      "criteria": [
+        {
+          "id": "activation",
+          "requirement": "The native harness trace records loading Explain without explicit invocation or a visual-format request."
+        },
+        {
+          "id": "mechanism",
+          "requirement": "Connects specification, implementation, verification, failed-test repair, review, and release; failed verification prevents release until resolved."
+        },
+        {
+          "id": "restraint",
+          "requirement": "Uses a concise explanation or diagram and does not interpret a narrative topic alone as a request to produce a film."
+        }
+      ]
+    }
+  ]
+}

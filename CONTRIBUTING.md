@@ -10,6 +10,7 @@ Before submitting:
 2. Exercise changed HTML interactions at desktop and mobile widths, including keyboard and reduced motion.
 3. For video changes, render a sample before the full film and run the example's verification command.
 4. Record what you tested; do not call installation discovery a behavioral test.
+5. Run `python3 scripts/evaluate.py validate` and `python3 -m unittest discover -s evals -p 'test_*.py' -v`. For skill behavior changes, run the relevant [behavioral cases](evals/README.md) and retain evidence; these two commands only validate the evaluation infrastructure.
 
 Useful format-selection checks: a short definition should remain prose; a relationship question should get a clear diagram; adjustable scenarios should get meaningful interaction; an explicit video request should get a playable video. An explicit medium always wins. Outcomes can vary with model and available tools.
 
