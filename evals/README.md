@@ -8,7 +8,7 @@ These evaluations ask whether an agent using Explain makes good decisions and de
 
 | Tier | Cases | Purpose |
 | --- | --- | --- |
-| core | 9 | Brief answers, diagrams, explicit prose/Manim, recommendations/script only, false premises, unavailable local TTS, unauthorized paid narration |
+| core | 15 | Brief answers, diagrams, explicit prose/Manim, recommendations/script only, false premises, unavailable local TTS, unauthorized paid narration; six STE cases for default prose, strict steps, protected text, uncertainty, UI copy, and user style |
 | artifact | 2 | Cache controls with numerical endpoints; offline software-factory story with failure and repair |
 | media | 2 | Fresh 30-second narrated export; visual-only revision reuses audio |
 | discovery | 4 | Implicit Explain activation; an unrelated arithmetic request stays minimal |
@@ -68,6 +68,7 @@ An explicit request wins over the typical format for a topic. A narrative can be
 
 ## Review actual artifacts
 
+- **STE:** review word choice, sentence counts, procedure voice, and preserved meaning against `skills/explain/RULES.md` and `WORDS.md`. House-style checks do not certify full ASD-STE100 compliance. Keep quotations, code, and identifiers intact.
 - **Prose:** check the causal explanation and factual qualifications, not particular words or headings. Count words only when the prompt asks for a limit.
 - **Diagrams:** render them. Check arrow direction, labels, and whether the same entities retain their meaning.
 - **HTML:** open it in a real browser. Exercise keyboard controls, endpoint and intermediate parameter values, reset, and reduced motion. Disable network for offline cases. Compare displayed results with the formula in the rubric; inspect desktop and narrow layouts. Static HTML string matches do not prove interactions work.

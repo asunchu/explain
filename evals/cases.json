@@ -425,6 +425,141 @@
           "requirement": "Uses a concise explanation or diagram and does not interpret a narrative topic alone as a request to produce a film."
         }
       ]
+    },
+    {
+      "id": "ste-default-reply",
+      "tier": "core",
+      "prompt": "Explain why a cache can return an old value. Keep the answer useful for someone who reads English as a second language.",
+      "acceptable_formats": [
+        "prose",
+        "diagram"
+      ],
+      "setup": "Use a fresh session with Explain explicitly available. Do not give the agent the reviewer rubric. Review only editable prose against the writing rules.",
+      "criteria": [
+        {
+          "id": "style",
+          "requirement": "Uses one topic per sentence, active voice where practical, and no editable sentence above 25 words. Each paragraph has at most six sentences."
+        },
+        {
+          "id": "meaning",
+          "requirement": "Explains stale copies and invalidation or expiry accurately. Does not imply that all caches update automatically."
+        },
+        {
+          "id": "scope",
+          "requirement": "Uses prose or a small diagram; no unrequested HTML/video or routine compliance report."
+        }
+      ]
+    },
+    {
+      "id": "ste-strict-procedure",
+      "tier": "core",
+      "prompt": "Write a strict STE runbook from these facts: save the configuration; check that the backup exists; stop the service; restore the backup; start the service; check its health. Restoring the backup overwrites the current configuration. Do not execute any steps.",
+      "acceptable_formats": [
+        "prose"
+      ],
+      "setup": "Use a fresh session with Explain explicitly available. Do not give the agent the reviewer rubric. Review only editable prose against the writing rules.",
+      "criteria": [
+        {
+          "id": "steps",
+          "requirement": "Each numbered step contains one imperative instruction and at most 20 words. No step uses passive voice."
+        },
+        {
+          "id": "warning",
+          "requirement": "A separate caution states the overwrite consequence before the restore step. The backup check precedes stopping the service."
+        },
+        {
+          "id": "scope",
+          "requirement": "Only writes the runbook; executes no commands. Makes no full ASD-STE100 compliance claim without a dictionary check."
+        }
+      ]
+    },
+    {
+      "id": "ste-protected-text",
+      "tier": "core",
+      "prompt": "Simplify only the surrounding explanation. Keep this error, command, and identifier exactly: \"Failed to initialize LeverageManager\"; `git config --get remote.origin.url`; `utilizeCache`. Explanation: The aforementioned component is capable of performing a check of the configuration prior to commencing execution.",
+      "acceptable_formats": [
+        "prose"
+      ],
+      "setup": "Use a fresh session with Explain explicitly available. Do not give the agent the reviewer rubric. Review only editable prose against the writing rules.",
+      "criteria": [
+        {
+          "id": "preservation",
+          "requirement": "Preserves the exact error string, command, and identifier, including capitalization and punctuation inside each item."
+        },
+        {
+          "id": "word-choice",
+          "requirement": "Rewrites the editable explanation using clear verbs and removes avoid-list phrases without changing its meaning."
+        },
+        {
+          "id": "length",
+          "requirement": "Editable sentences contain at most 25 words; protected text is not rewritten to satisfy word checks."
+        }
+      ]
+    },
+    {
+      "id": "ste-uncertainty",
+      "tier": "core",
+      "prompt": "Use 80% STE to rewrite this status: We have not deployed the patch. The tests have passed locally. The patch may reduce failures. We plan to deploy tomorrow if the review passes.",
+      "acceptable_formats": [
+        "prose"
+      ],
+      "setup": "Use a fresh session with Explain explicitly available. Do not give the agent the reviewer rubric. Review only editable prose against the writing rules.",
+      "criteria": [
+        {
+          "id": "truth",
+          "requirement": "Preserves local-only test evidence, the fact that deployment has not happened, the uncertain benefit, and the conditional plan for tomorrow."
+        },
+        {
+          "id": "style",
+          "requirement": "Uses short clear sentences of at most 25 words. Does not force past or future facts into a misleading present-tense claim."
+        },
+        {
+          "id": "compliance",
+          "requirement": "Does not call 80% a measured compliance score or append a compliance certificate."
+        }
+      ]
+    },
+    {
+      "id": "ste-ui-copy",
+      "tier": "core",
+      "prompt": "Use strict STE for an error message and a recovery instruction. The upload failed because the network connection stopped. The local file is safe. The reader must reconnect and retry. Write the text only.",
+      "acceptable_formats": [
+        "prose"
+      ],
+      "setup": "Use a fresh session with Explain explicitly available. Do not give the agent the reviewer rubric. Review only editable prose against the writing rules.",
+      "criteria": [
+        {
+          "id": "error",
+          "requirement": "States the known cause and preserves the fact that the local file is safe."
+        },
+        {
+          "id": "steps",
+          "requirement": "Reconnect and retry are separate imperative instructions. Each instruction has at most 20 words; descriptions have at most 25."
+        },
+        {
+          "id": "scope",
+          "requirement": "Creates no artifact or new warning; does not claim formal dictionary compliance."
+        }
+      ]
+    },
+    {
+      "id": "ste-user-style",
+      "tier": "core",
+      "prompt": "Write a warm, informal two-sentence thank-you note in Spanish to a teammate who helped fix a test. No technical explanation is needed.",
+      "acceptable_formats": [
+        "prose"
+      ],
+      "setup": "Use a fresh session with Explain explicitly available. Do not give the agent the reviewer rubric. Review only editable prose against the writing rules.",
+      "criteria": [
+        {
+          "id": "override",
+          "requirement": "Uses Spanish and the requested informal tone in exactly two sentences. Does not force English or override the user style with rigid STE wording."
+        },
+        {
+          "id": "scope",
+          "requirement": "Returns only the note, with no skill explanation, compliance report, files, or media."
+        }
+      ]
     }
   ]
 }

@@ -1,13 +1,40 @@
 ---
 name: explain
-description: Explain how and why concepts, code, or systems work when the user wants to understand a mechanism, relationship, or tradeoff. Choose concise prose, diagrams, interactive HTML, or narrated video. Use for natural explanation requests without requiring a skill name or format. Skip trivial facts and routine code edits.
+description: Write clear technical English for replies, documentation, procedures, and explanations. Use 80% STE by default and strict writing rules for instructions. Choose text, diagrams, interactive HTML, or narrated video when they help. Preserve code, exact quotations, and the user's requested style.
 ---
 
 # Explain
 
-Make the subject easier to understand. Choose a useful medium, establish a coherent visual model, and deliver a working artifact when requested. This skill runs in Codex, OpenCode, and Claude Code using ordinary file, shell, browser, and HTTP capabilities; no particular MCP server or harness-specific tool is required.
+Make each explanation easy to read once and understand. Start with clear words. Choose a richer format only when it helps.
 
-Inspired by [Karpathy's explanation-format post](https://x.com/karpathy/status/2105819303471976479): clear writing, diagrams, interactive pages, and bespoke narrated explainers. These are options, not a mandatory escalation ladder.
+This skill uses a house style inspired by ASD-STE100. It works in Codex, Claude Code, and OpenCode.
+
+## Write clearly by default
+
+Apply these rules to prose that people read to understand or do something. This includes replies, messages, documentation, comments, labels, and scripts.
+
+Use **80% STE** for replies, explanations, teaching, and commit or PR text. This name means a relaxed style, not a compliance score.
+Use **strict STE** for procedures, runbooks, safety text, UI copy, and error messages. The user can select either mode.
+
+Keep the core rules in both modes:
+
+- Give each sentence one topic. Use at most 20 words for an instruction and 25 words for a description.
+- Use active voice. Write each procedure step as one command. Keep articles such as “the” and “a.”
+- Use present tense for descriptions. Use past tense for completed facts. Do not change tense if that changes the truth.
+- Use short, clear verbs and stable names. Define unfamiliar terms before use. Split long groups of nouns.
+- Keep each paragraph on one topic, with at most six sentences. Put a needed warning before its step.
+
+Read [RULES.md](RULES.md) and [WORDS.md](WORDS.md) when applying or checking the detailed writing rules.
+In 80% mode, allow a familiar word or connective when it improves clarity. In strict mode, check every rule and word choice.
+Our word guide is not the official dictionary. Claim full ASD-STE100 compliance only after checking the official rules and dictionary.
+If that check is unavailable, apply the strict house rules and disclose the missing dictionary check when compliance matters.
+
+Preserve code identifiers, commands, paths, quoted errors, legal text, third-party quotations, and the user's text unless asked to edit them.
+Technical names can remain nouns. Do not rename an API or command to satisfy a word preference.
+The user's requested language, voice, and layout take precedence. Do not turn uncertainty into certainty to simplify a sentence.
+
+Before delivery, check word choice, sentence length, voice, and procedure steps. Keep this review internal unless the user requests an audit.
+Do not attach a compliance report to each ordinary reply.
 
 ## Choose the output
 
@@ -25,12 +52,13 @@ Do not turn a request for recommendations or a script into an unrequested produc
 ## Build the explanation
 
 1. Establish what the viewer should understand afterward. Inspect supplied code/data and verify unstable or disputed claims against primary sources. Keep source URLs with the project. Distinguish simplified examples from measured results.
-2. Write in plain, controlled English inspired by ASD-STE100: short sentences, concrete verbs, stable names, one main idea per sentence, and terms defined before use. Preserve nuance; do not claim formal ASD-STE100 compliance.
+2. Apply the writing rules above to the prose, labels, captions, and narration.
 3. Build a causal sequence: familiar starting point → concrete example → visible mechanism → consequence → useful takeaway. A visual should explain a relationship or change, not simply decorate narration.
 4. For substantial artifacts, draft a compact storyboard with scene ID, teaching point, narration, visible objects, action, and source. Proceed within existing authorization; do not impose a new approval gate unless the user asked to review first.
 
 ## Select animation and narration
 
+Read [VIDEO.md](VIDEO.md) for video scripts and production checks.
 Read [references/animation.md](references/animation.md) when producing animated HTML or video. Defaults:
 
 - **Interactive HTML:** HTML/CSS/SVG plus GSAP when a timeline or morphing is useful.

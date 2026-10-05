@@ -43,7 +43,7 @@ class ReporterTests(unittest.TestCase):
         return row
 
     def test_suite_loads(self):
-        self.assertEqual(len(evaluate.load_suite()['cases']), 17)
+        self.assertEqual(len(evaluate.load_suite()['cases']), 23)
 
     def test_unrun_is_incomplete(self):
         self.assertEqual(self.report(), 2)

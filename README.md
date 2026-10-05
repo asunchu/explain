@@ -1,8 +1,8 @@
 # Explain
 
-**Choose the clearest way to teach an idea: words, diagrams, interactive pages, or video.**
+**Clear technical English by default. Visuals when they help.**
 
-A portable agent skill for Codex, Claude Code, and OpenCode. Explain starts with what someone needs to understand, then chooses a useful format. A short question can stay a short answer. A system with meaningful choices can become an interactive page. A story over time can become a narrated film.
+A portable agent skill for Codex, Claude Code, and OpenCode. Explain starts with clear technical English, then chooses a useful format. A short question can stay a short answer. A system with meaningful choices can become an interactive page. A story over time can become a narrated film.
 
 [Explore an example: Software factories](https://asunchu.github.io/explain/examples/software-factory/) · [Watch the film](https://asunchu.github.io/explain/#film) · [Read the skill](skills/explain/SKILL.md)
 
@@ -50,15 +50,33 @@ An explicit format request takes precedence.
 
 Default animation choices include Remotion, HTML/SVG with GSAP when useful, Motion Canvas, and Three.js for spatial concepts. The narration guide compares local Kokoro, low-cost hosted Kokoro, and premium voices. Prices are dated examples, not guarantees; check the provider before spending.
 
+## Writing comes first
+
+Explain uses **80% STE** for replies, explanations, teaching, and commit or PR text.
+It uses **strict STE** for procedures, runbooks, safety text, UI copy, and error messages.
+The user can choose either mode. “80%” names the relaxed style; it is not a measured score.
+
+Both modes keep sentences short, use direct verbs, and preserve technical meaning.
+Procedures allow 20 words per sentence. Descriptions allow 25 words.
+The relaxed mode permits a familiar word when its replacement makes the text harder to read.
+
+Read the [writing rules](skills/explain/RULES.md), [word guide](skills/explain/WORDS.md), and [video guide](skills/explain/VIDEO.md).
+These are house rules inspired by ASD-STE100, not the complete official standard or dictionary.
+Full compliance requires a separate check against the official sources.
+Code, exact quotations, legal text, and technical names stay unchanged unless an edit is requested.
+The user's language and style take precedence.
+
 ## Automatic use
 
-The skill's frontmatter description advertises ordinary explanation requests, not just visual/video requests. Codex's `agents/openai.yaml` explicitly allows implicit invocation (also its default). These make Explain eligible for automatic selection; they do not force an invocation. The main skill instructions are read after selection, so putting “always use me” inside them cannot solve discovery.
+The skill description covers writing and explanations, including ordinary replies. Codex's `agents/openai.yaml` explicitly allows implicit invocation (also its default). These make Explain eligible for automatic selection; they do not force an invocation. The main skill instructions are read after selection, so putting “always use me” inside them cannot solve discovery.
 
 For stronger routing, optionally add this instruction to your own global or project instructions (`AGENTS.md`, `CLAUDE.md`, or the equivalent):
 
-> When a request would benefit from an explanation, use the Explain skill if available. Honor any requested format; otherwise choose the smallest effective medium. Simple answers may remain prose.
+> Use Explain's 80% STE style for human-readable replies by default. Give each sentence one topic. Use active voice and clear verbs. Limit descriptive sentences to 25 words. Use strict rules for procedures and UI copy. Limit procedure sentences to 20 words, with one command per step. Preserve facts, uncertainty, code, exact quotations, and technical names. Follow the user's requested language and style. Load Explain's detailed rules when needed. Choose the simplest useful format; ordinary replies remain text.
 
-Installation does not rewrite system prompts or global instruction files, and automatic selection is not guaranteed.
+Put this default in `~/.codex/AGENTS.md`, `~/.claude/CLAUDE.md`, or `~/.config/opencode/AGENTS.md` for your chosen harness.
+The global instruction supplies the basic writing style even when the agent does not load a skill.
+Installation does not edit these files. It does not rewrite system prompts or guarantee automatic selection.
 
 After changing the installed description, start a fresh session or reload skills as supported by your harness. Test ordinary prompts without `/explain`, `$explain`, or “use Explain,” and inspect the skill-load trace. The [discovery evaluations](evals/README.md) test this separately from explicitly invoked behavior. See the official [Codex](https://developers.openai.com/codex/skills/), [Claude Code](https://code.claude.com/docs/en/skills), and [OpenCode](https://opencode.ai/docs/skills) documentation for discovery behavior.
 
@@ -80,7 +98,7 @@ This is an installation and existing-example rendering test, not an AI-agent beh
 
 ### Behavioral evaluations
 
-The [evaluation suite](evals/README.md) contains 17 cases for format selection, explicit overrides, explanation accuracy, working HTML/video, local TTS, spending boundaries, and automatic discovery. Prepare isolated trials for Codex, Claude Code, or OpenCode, retain their outputs, and score observable behavior against the supplied rubrics. Reports distinguish passed, failed, blocked, and unrun cases.
+The [evaluation suite](evals/README.md) contains 23 cases for STE writing, format selection, explicit overrides, explanation accuracy, working HTML/video, local TTS, spending boundaries, and automatic discovery. Prepare isolated trials for Codex, Claude Code, or OpenCode, retain their outputs, and score observable behavior against the supplied rubrics. Reports distinguish passed, failed, blocked, and unrun cases.
 
 CI validates the cases and reporting code; it does **not** run AI harnesses or prove behavioral compatibility. See the evaluation guide for running and reviewing actual trials.
 

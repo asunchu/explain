@@ -1,6 +1,6 @@
 interface:
   display_name: "Explain"
-  short_description: "Understand concepts with the simplest useful format"
-  default_prompt: "Use $explain to make this topic clear using the simplest effective format."
+  short_description: "Clear technical English, with visuals when useful"
+  default_prompt: "Use $explain to write in clear technical English and choose the simplest useful format."
 policy:
   allow_implicit_invocation: true
