@@ -70,13 +70,21 @@ The user's language and style take precedence.
 
 The skill description covers writing and explanations, including ordinary replies. Codex's `agents/openai.yaml` explicitly allows implicit invocation (also its default). These make Explain eligible for automatic selection; they do not force an invocation. The main skill instructions are read after selection, so putting “always use me” inside them cannot solve discovery.
 
-For stronger routing, optionally add this instruction to your own global or project instructions (`AGENTS.md`, `CLAUDE.md`, or the equivalent):
+For always-on writing, append the [shared core](skills/explain/CORE.md) to your harness's global or project instructions.
+Preserve unrelated instructions and update the copied core when Explain changes.
+The [harness adapter guide](adapters/README.md) lists the instruction locations and tool mapping.
+Installation does not modify those files or guarantee automatic selection.
 
-> Use Explain's 80% STE style for human-readable replies by default. Give each sentence one topic. Use active voice and clear verbs. Limit descriptive sentences to 25 words. Use strict rules for procedures and UI copy. Limit procedure sentences to 20 words, with one command per step. Preserve facts, uncertainty, code, exact quotations, and technical names. Follow the user's requested language and style. Load Explain's detailed rules when needed. Choose the simplest useful format; ordinary replies remain text.
+The shared core preserves meaning before shortening text. It also chooses evidence sources:
 
-Put this default in `~/.codex/AGENTS.md`, `~/.claude/CLAUDE.md`, or `~/.config/opencode/AGENTS.md` for your chosen harness.
-The global instruction supplies the basic writing style even when the agent does not load a skill.
-Installation does not edit these files. It does not rewrite system prompts or guarantee automatic selection.
+- Read local code and project documents for local behavior.
+- Use Context7 when it provides relevant library documentation for the requested version.
+- Otherwise, use official documentation or search that leads to primary sources.
+- Skip unnecessary research for rewrites and basic arithmetic.
+
+Context7 is optional. No connector, API key, or research skill is required by the package.
+When verification is unavailable, Explain should preserve uncertainty and state the limit.
+These are instructions, not a guarantee of model behavior.
 
 After changing the installed description, start a fresh session or reload skills as supported by your harness. Test ordinary prompts without `/explain`, `$explain`, or “use Explain,” and inspect the skill-load trace. The [discovery evaluations](evals/README.md) test this separately from explicitly invoked behavior. See the official [Codex](https://developers.openai.com/codex/skills/), [Claude Code](https://code.claude.com/docs/en/skills), and [OpenCode](https://opencode.ai/docs/skills) documentation for discovery behavior.
 
@@ -84,7 +92,7 @@ After changing the installed description, start a fresh session or reload skills
 
 The skill follows the [Agent Skills format](https://agentskills.io/specification) and uses ordinary file, shell, browser, and HTTP capabilities; no specific MCP server is required.
 
-The examples were created in Codex. The HTML's routes and mobile layout were tested in a browser. The video was decoded and checked for codecs, timing, captions, and audio clipping; representative frames were visually reviewed. No independent listening audition was performed. Full behavioral evaluation in Claude Code and OpenCode remains community testing work. The video build commands target macOS/Linux.
+The examples were created in Codex. The HTML's routes and mobile layout were tested in a browser. The video was decoded and checked for codecs, timing, captions, and audio clipping; representative frames were visually reviewed. No independent listening audition was performed. Behavioral results depend on the model, loaded instructions, and available tools; installation alone does not establish compatibility. The video build commands target macOS/Linux.
 
 ### Clean cloud test
 
@@ -101,6 +109,8 @@ This is an installation and existing-example rendering test, not an AI-agent beh
 The [evaluation suite](evals/README.md) contains 23 cases for STE writing, format selection, explicit overrides, explanation accuracy, working HTML/video, local TTS, spending boundaries, and automatic discovery. Prepare isolated trials for Codex, Claude Code, or OpenCode, retain their outputs, and score observable behavior against the supplied rubrics. Reports distinguish passed, failed, blocked, and unrun cases.
 
 CI validates the cases and reporting code; it does **not** run AI harnesses or prove behavioral compatibility. See the evaluation guide for running and reviewing actual trials.
+The [paired default experiment](evals/paired-defaults.md) separates instruction following from automatic skill discovery and factual grounding.
+See the [paired results](evals/reports/2026-10-15-grounded-defaults.md) for the tested models, observed improvements, and remaining failures.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Useful contributions include clear examples, format-selection evaluations, portability fixes, and updated provider references. Run `python3 scripts/validate.py` before opening a pull request.
 

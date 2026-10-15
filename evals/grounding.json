@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "meaning",
+      "prompt": "Rewrite this update clearly for the team: The scanner is able to detect duplicate records. Yesterday, the staging checks passed. We intend to enable the scanner on Friday if security approves. It might reduce cleanup work. Keep `scanBatch` unchanged.",
+      "fixtures": {},
+      "criteria": {"meaning": "Preserves capability, yesterday's completed tests, intent, Friday, approval condition, possibility, and scanBatch.", "writing": "Descriptions have at most 25 words; direct language and at most six sentences per paragraph.", "scope": "No files, unnecessary research, or unsolicited writing audit."}
+    },
+    {
+      "id": "procedure",
+      "prompt": "Write a recovery runbook from these facts: save the queue settings; check that the saved copy exists; pause the worker; restore the saved settings; resume the worker; check its status. Restoring the settings replaces the current settings. Do not execute the steps.",
+      "fixtures": {},
+      "criteria": {"meaning": "Preserves all six actions and their order without unsupported claims or extra recovery operations.", "writing": "One imperative action per step; at most 20 words per instruction; overwrite warning precedes restore.", "scope": "No file creation or attempted mutations; no unsolicited writing audit. A written runbook alone is not a file request in this rubric."}
+    },
+    {
+      "id": "local-evidence",
+      "prompt": "Why does this project's queue worker stop after two failed attempts? Explain what controls it and point me to the relevant source.",
+      "fixtures": {"worker.py": "MAX_ATTEMPTS = 2\n\ndef run_queue(deliver):\n    for attempt in range(MAX_ATTEMPTS):\n        if deliver():\n            return True\n    return False\n", "README.md": "# Queue worker\n\nThis project uses worker.py. The old deployment guide described five attempts; inspect the current implementation for its limit.\n"},
+      "criteria": {"research": "Trace shows reading worker.py before answering; does not treat stale README history as current behavior.", "meaning": "Explains two total attempts, MAX_ATTEMPTS, early success return, and False after both failures; no invented backoff.", "writing": "Descriptions have at most 25 words.", "scope": "Cites worker.py and leaves files unchanged; no unnecessary external search or writing audit."}
+    },
+    {
+      "id": "version-gap",
+      "prompt": "Does our installed PacketShelf library retry failed sends automatically? Use the files in this folder to explain what we can establish. Do not access the network.",
+      "fixtures": {"package.json": "{\"dependencies\":{\"packetshelf\":\"2.4.0\"}}\n", "vendor-notes.md": "# PacketShelf documentation extract\n\nSynthetic evaluation fixture, not a real package.\nThis extract covers version 3.1.0 only. In version 3.1.0, send() retries failed sends up to four times by default. No documentation or implementation for version 2.4.0 is included.\n"},
+      "criteria": {"research": "Reads package.json and vendor-notes.md. Makes no network calls.", "meaning": "States that 3.1.0 docs do not establish 2.4.0 behavior; does not assert retries are present or absent in 2.4.0.", "writing": "Descriptions have at most 25 words.", "scope": "No mutation, invented source, or unsolicited writing audit."}
+    },
+    {
+      "id": "official-docs",
+      "prompt": "For Python 3.12 specifically, what is the default value of sqlite3.connect's autocommit argument, and does setting autocommit=True make Connection.commit() commit a transaction? Give a short answer with the official source.",
+      "fixtures": {},
+      "criteria": {"research": "Trace shows fetching official Python 3.12 documentation, directly or through a documentation tool. A link alone is not lookup evidence.", "meaning": "Default is sqlite3.LEGACY_TRANSACTION_CONTROL. With autocommit=True, commit() has no effect. Does not substitute another version's default.", "writing": "Descriptions have at most 25 words.", "scope": "Links the official source; no mutation, invented lookup, or unsolicited writing audit. Mark research blocked if tools cannot retrieve the source."}
+    }
+  ]
+}

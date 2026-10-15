@@ -1,0 +1,2941 @@
+{
+  "date": "2026-10-15",
+  "reviewer": "Primary assistant; manual review with advisory word counts",
+  "raw_traces": "Retained locally; not published. Hashes identify the reviewed original answers. Evidence paths are relative to each private trial folder.",
+  "results": [
+    {
+      "harness": "codex",
+      "condition": "baseline",
+      "repeat": 1,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "82fe8255fec67a7da10aa58c2af3f03f7c253b6f0002d240e6558acd35871a3c",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "baseline",
+      "repeat": 1,
+      "case": "meaning",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "456c529728d250ea428daddd388d464ce21758336c84b20cf08d8cbe8c62fe84",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "baseline",
+      "repeat": 1,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "e67408a3aae2f482e4c38cb366f5a8e773a8d71e54faf9e0937b9cfab725afb1",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "baseline",
+      "repeat": 1,
+      "case": "procedure",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "eaa9ed6296b3f1c05de7f010778a95bf3f5e928a401581ea64071ea9a69a3c6d",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "baseline",
+      "repeat": 1,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "f6759753faa58b283a92518028998280339ff83880b029d608f43b97276aa52c",
+      "skill_load_observed": true
+    },
+    {
+      "harness": "codex",
+      "condition": "baseline",
+      "repeat": 2,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "3a70e285ea0698ac4373ef1934a34d935dcef6a03d79ab9bd3302697a9ab0918",
+      "skill_load_observed": true
+    },
+    {
+      "harness": "codex",
+      "condition": "baseline",
+      "repeat": 2,
+      "case": "meaning",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "a5c5efe8c008b4b14944b42b82bd7a63cfd30c56422b8ce09cb7ff97d47af182",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "baseline",
+      "repeat": 2,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "f86d06f2fb76479467ab2867e60af3c2435360a3751b91de7f0f91d6b881a9e7",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "baseline",
+      "repeat": 2,
+      "case": "procedure",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "b2473d6596583a5a062e72ed065347efc80f73e079338d8a8478abf6a749e6c4",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "baseline",
+      "repeat": 2,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "1f4278a98b000e9e0b7b68faa8960914e4ff5ffca9dfb177ce415def2f26a082",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "baseline",
+      "repeat": 3,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "c30bf03ad580aab948a94148fb34687a5cbd73aaee04d4d87633f65774b9af88",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "baseline",
+      "repeat": 3,
+      "case": "meaning",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "1c2ef1d27fb6675eddd745b07ab01929d9c62f0fc8d1396b3486b723cd8ce036",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "baseline",
+      "repeat": 3,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "97f73cf65db17e4c13f9a0268b088487c64af7118efb8ea1f40709d4feb3f9a7",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "baseline",
+      "repeat": 3,
+      "case": "procedure",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "757d48dff59ecfe0e600570cf45e4a174232acb1ed5eff0ceb12b8dde5aa1502",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "baseline",
+      "repeat": 3,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "5c7d823c51d685d985e58ae8b606b0997014f16cc23704c1212aa9b0fc2a80e7",
+      "skill_load_observed": true
+    },
+    {
+      "harness": "codex",
+      "condition": "candidate",
+      "repeat": 1,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "a2763a8ab79df300dfa2b3b71677ba1af98256c06e0a2d5e6f36d6ee9a0d5b10",
+      "skill_load_observed": true
+    },
+    {
+      "harness": "codex",
+      "condition": "candidate",
+      "repeat": 1,
+      "case": "meaning",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "1c2ef1d27fb6675eddd745b07ab01929d9c62f0fc8d1396b3486b723cd8ce036",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "candidate",
+      "repeat": 1,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "253e6e5db9237bd67a8d48d7c387445ffea278eac8874ed6ec7f78e4c5ca7650",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "candidate",
+      "repeat": 1,
+      "case": "procedure",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "1767c93a7fe089477ad699afb52d572d15c487d010f5e86ac828d56590280cf9",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "candidate",
+      "repeat": 1,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "5b7560485314ff1e7cd117269e2f18335959ab17cfb4dcd6ada563bc3c1cdd5b",
+      "skill_load_observed": true
+    },
+    {
+      "harness": "codex",
+      "condition": "candidate",
+      "repeat": 2,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "c4ed16dcfddb4e7c393f5eb366a18849b86148e2bb77619543eaa3c79749f6ac",
+      "skill_load_observed": true
+    },
+    {
+      "harness": "codex",
+      "condition": "candidate",
+      "repeat": 2,
+      "case": "meaning",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "f86876d6b27add68ed305b6b3f71f731e7aebe85e80919afd23f93dbec5c2a08",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "candidate",
+      "repeat": 2,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "97f73cf65db17e4c13f9a0268b088487c64af7118efb8ea1f40709d4feb3f9a7",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "candidate",
+      "repeat": 2,
+      "case": "procedure",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "2db8616c3ba9e340a7880ed6a2f88b3f617a58b203adc5657ff4a618c8ba68c7",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "candidate",
+      "repeat": 2,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "b62834a1e25a7156fcdce5e5933167ad1624367a938221fd9da0e6eb026f77fe",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "candidate",
+      "repeat": 3,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "9aa320ff82fe0df92a0cd8b4cb88f93fd52debc6281ec2e37bb7dd90f08fa628",
+      "skill_load_observed": true
+    },
+    {
+      "harness": "codex",
+      "condition": "candidate",
+      "repeat": 3,
+      "case": "meaning",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "f86876d6b27add68ed305b6b3f71f731e7aebe85e80919afd23f93dbec5c2a08",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "candidate",
+      "repeat": 3,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "bfbd5cafb2464aa181ba212e6b9fd1b4b68a453877caa566749fe7883eb9fcc8",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "candidate",
+      "repeat": 3,
+      "case": "procedure",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "a953dc39acfd29c10d0797e6ea9ccadaaf5747de3b633c0c8edf1aa7fdb42310",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "codex",
+      "condition": "candidate",
+      "repeat": 3,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "2c6def3e67a4c3a483e74ab5b9605c88099e20ff2c86f0b126508217447be362",
+      "skill_load_observed": true
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "baseline",
+      "repeat": 1,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "66aa27f0c7ee2a8c34dde862c9237f9caeaeb4d89172ef82b0dbeec96214794a",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "baseline",
+      "repeat": 1,
+      "case": "meaning",
+      "status": "fail",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "fail",
+          "evidence": "Adds an unsolicited writing audit (Insight block or an explanation of the rewrite).",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "2dab8ba235412be99f9489b22864183157bef0ac50037236d0a149bb21a8a05b",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "baseline",
+      "repeat": 1,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "e2af9847398413d287a2d26d08f6aba40e3456102cd430cd35ba6291629680ee",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "baseline",
+      "repeat": 1,
+      "case": "procedure",
+      "status": "fail",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "fail",
+          "evidence": "Adds an unsolicited writing audit (Insight block or an explanation of the rewrite).",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "4a5f5a376296f0fcd8497c4c64e7a8f09411b6117595ba863acbeb304eaff725",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "baseline",
+      "repeat": 1,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "1d67968b2ef471573213b71f8ddc73800da6c1086344fc8f58a29822cb52974a",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "baseline",
+      "repeat": 2,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "dcde9e8947c01d4c85bfe5d2230b0552d0a2b99922544b636cac2429ee73a9c1",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "baseline",
+      "repeat": 2,
+      "case": "meaning",
+      "status": "fail",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "fail",
+          "evidence": "Adds an unsolicited writing audit (Insight block or an explanation of the rewrite).",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "5310e91b957185773063a545536b0162415cd3ca49f889d88806d82ae083dbf2",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "baseline",
+      "repeat": 2,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "325e8d7eede4de303e4b0a13f890e073ee0a1e45c76e3565bfebc7ff9e96b50e",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "baseline",
+      "repeat": 2,
+      "case": "procedure",
+      "status": "fail",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "fail",
+          "evidence": "Adds an unsolicited writing audit (Insight block or an explanation of the rewrite).",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "83d85fbd8c9dd2df92a306046d8d05b3b3a8f2bc7d342628c49cf9fc0db4f03f",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "baseline",
+      "repeat": 2,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "85a765c47d0d47bb01e1d010fd779ec22c07677833ae0efb429e6f00f44ef298",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "baseline",
+      "repeat": 3,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "539a03b188de6c9d30b5ebfec18d2fb6b1015d00d656a0b263241b3bffe6cc50",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "baseline",
+      "repeat": 3,
+      "case": "meaning",
+      "status": "fail",
+      "review": {
+        "meaning": {
+          "status": "fail",
+          "evidence": "Changes scanner capability into asserted behavior (detects).",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "fail",
+          "evidence": "Adds an unsolicited writing audit (Insight block or an explanation of the rewrite).",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "196ecf96bd09d686124f638b4b0bda52fba5d5f1423ac60d2889cf7b4b615ec8",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "baseline",
+      "repeat": 3,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "afdc92fdc8e8ec2cab68ed1b663395dd1d8b833b2283267ceb1fb4664e8d2f75",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "baseline",
+      "repeat": 3,
+      "case": "procedure",
+      "status": "fail",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "fail",
+          "evidence": "Numbers the warning as a separate procedure step without an imperative action.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "fail",
+          "evidence": "Adds an unsolicited writing audit (Insight block or an explanation of the rewrite).",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "4ae61ed22c7608ce8707755a21c51a3ad14d8a327831369b757a4a0bc1a2a48c",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "baseline",
+      "repeat": 3,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "7f2539e7e76b2a93ebfc2f8b35ef75d2b268c8909aa0bc080b9c5a8b71a0070c",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "candidate",
+      "repeat": 1,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "1b2004d01e900581e5024a87b3141fe123a7bf1bbf148753b959f6827b05ac93",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "candidate",
+      "repeat": 1,
+      "case": "meaning",
+      "status": "fail",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "fail",
+          "evidence": "Adds an unsolicited explanation of why the rewrite does not include scanBatch.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "5fb93f13c7d570475eed9bfa11440438f4ea7a459d67a244f34fc0bdeb8556de",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "candidate",
+      "repeat": 1,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "2b76081f52fa08212a0f2764f2850f8fb7bb20794af2c2eb1e0e525c04d95bd3",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "candidate",
+      "repeat": 1,
+      "case": "procedure",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "7f50f10373465fca0ffdeb4e3ed4c3ee1ed367ac53ce288dd95fca8d45a50956",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "candidate",
+      "repeat": 1,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "be0dfff25458167f955550dc10fcc3bdb9aec5a8a53121722511afb3245ad321",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "candidate",
+      "repeat": 2,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "af7f44555e059f4a7e3b23e64446292c1b1c6b1a3e957901452f3ec058669282",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "candidate",
+      "repeat": 2,
+      "case": "meaning",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "cb101f6d3145212967f56996780cf8ffeb8d2d4419d65d3ee054e6912cbcfce8",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "candidate",
+      "repeat": 2,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "06103f264c85024017d74ef98084d1b113c68bfebacb0fa85d385d7c0972b368",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "candidate",
+      "repeat": 2,
+      "case": "procedure",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "16f50ebdd35309e12b4cfc78611c962c9c43a8469a9e30f2c24def32094574c2",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "candidate",
+      "repeat": 2,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "f58548fda0ce4e02adca378bc0e877b17996ec9726876df6bfd187eb41071d63",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "candidate",
+      "repeat": 3,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "0372460b427b1c7df95503cf87f6a7c255edd04203bb12b2a07bca4273b3a777",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "candidate",
+      "repeat": 3,
+      "case": "meaning",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "6506c17cbc5c6809a47625f9a7494ac674ca84a93d21c9667e1b3776dbc89df5",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "candidate",
+      "repeat": 3,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "9e1022214fb2bf13b272d7451f4cbb1cb854102d042603270abc1f6b0a38a47f",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "candidate",
+      "repeat": 3,
+      "case": "procedure",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "9137a1a612733ff8922eded2309e1b6cf16e7d5d9bf379086665d7ccfa55e418",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "claude-code-pinned-cli",
+      "condition": "candidate",
+      "repeat": 3,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "a5dab3557c75f87f98b9cfe6f0d75f7f65a4634660b646362912aff3c7c4079e",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "baseline",
+      "repeat": 1,
+      "case": "local-evidence",
+      "status": "fail",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "fail",
+          "evidence": "The sentence beginning Note that README.md:3 has 26 words.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "04b1a4d531efd70a85e1fa32eb6cde1753f0f5d29ff2440aaca88ab618f1f1cf",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "baseline",
+      "repeat": 1,
+      "case": "meaning",
+      "status": "fail",
+      "review": {
+        "meaning": {
+          "status": "fail",
+          "evidence": "Changes capability (is able to detect) into asserted behavior (detects).",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "bcc5ee25313824531bf97bba7c86949eabc3366f3b58704db09602eb99806d65",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "baseline",
+      "repeat": 1,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "13103f36e6e3e86c41b69a212f6ec892c7a6ce89881e13d09a51e0386713b333",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "baseline",
+      "repeat": 1,
+      "case": "procedure",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "2f3e87dff623a02327dd2abde5a8b0b455c051ce0619c5fcbd526fee296b3e3c",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "baseline",
+      "repeat": 1,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "c914f620fe4d41914698ed9214d6c6a4bcdc1b5086d87619cc01a42722562534",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "baseline",
+      "repeat": 2,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "7b10432e0de64f73709a2d1c7681d8b854cd5b7873e1fb6c0131edf38f1b07e4",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "baseline",
+      "repeat": 2,
+      "case": "meaning",
+      "status": "fail",
+      "review": {
+        "meaning": {
+          "status": "fail",
+          "evidence": "Changes capability (is able to detect) into asserted behavior (detects).",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "cbb1e1a2f52a14e7c7b0343fac3a48e275f655914c2e4d85de038e2f468e92f7",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "baseline",
+      "repeat": 2,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "6bcaf5af4e925da627665429ca25a894b3b7601a7758c20a310bdf29f54566d4",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "baseline",
+      "repeat": 2,
+      "case": "procedure",
+      "status": "fail",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "fail",
+          "evidence": "Adds an unsolicited audit of the runbook format and facts.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "34e4bea3d637b1ce52acec8d456a48f81ef30f86a8806e8458ef4c8d0f5f1966",
+      "skill_load_observed": true
+    },
+    {
+      "harness": "opencode",
+      "condition": "baseline",
+      "repeat": 2,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "27af926bb344375076c1e49746ca2905d04e8f7f31656710a45ea03250b81d0a",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "baseline",
+      "repeat": 3,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "867d6534bb4e7b118eb6dfdb2d1970764503283d8514554670f9f13a7c321e80",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "baseline",
+      "repeat": 3,
+      "case": "meaning",
+      "status": "fail",
+      "review": {
+        "meaning": {
+          "status": "fail",
+          "evidence": "Changes capability (is able to detect) into asserted behavior (detects).",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "fail",
+          "evidence": "Adds an unsolicited writing audit after the rewrite.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "96cf2aae0de439b1478a6b3923a36edaeb7e35ddceb60f680b126d2a8dc5346e",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "baseline",
+      "repeat": 3,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "db43d3b26d15e866d573189533fbb6aed4d9a2c9e726538dbf83e92834054786",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "baseline",
+      "repeat": 3,
+      "case": "procedure",
+      "status": "fail",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "fail",
+          "evidence": "The numbered warning is a separate step with no imperative action.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "4ab0438b6ef9bcb43438bb049648d2000890fc750586e2a38306c049dbe85383",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "baseline",
+      "repeat": 3,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "f032ace1d45b39fb33b831923d40345a0e8b1846892231c26ee24523f9425b4e",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "candidate",
+      "repeat": 1,
+      "case": "local-evidence",
+      "status": "fail",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "fail",
+          "evidence": "The final sentence beginning Also note the behavior has 36 words.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "6bb5157f429233c94e0a8ced11282fdc8e65526650b36c930f9ce522fb671973",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "candidate",
+      "repeat": 1,
+      "case": "meaning",
+      "status": "fail",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "fail",
+          "evidence": "Adds an unsolicited explanation of omitting scanBatch and asks for another sentence.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "b165232249dea555551020972b19a77c4f5c945fab8fb6eee2ff741b85993132",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "candidate",
+      "repeat": 1,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "2146faf3fd698c4d5dd0520eebab6c7c1507cbd230cbf0293953f6ea9f7275f6",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "candidate",
+      "repeat": 1,
+      "case": "procedure",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "7e57baf9589aea799baa3bd029d439b0ad0a664d8e3b506ebfad928135c10143",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "candidate",
+      "repeat": 1,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "e25c1071f7674d5e181e895f93858e32edbd93f37d63eae3b7d2603a00ca4ecd",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "candidate",
+      "repeat": 2,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "429d7dfc4913b0e43e6d2a6e209227eb5ea0aba4fa3cb4deada682f0fb6fd14d",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "candidate",
+      "repeat": 2,
+      "case": "meaning",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "d98cf36737cf10f9ece6ae1c2574f663fa8e198b13642e6e112d5262e5836faa",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "candidate",
+      "repeat": 2,
+      "case": "official-docs",
+      "status": "fail",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "fail",
+          "evidence": "Adds the false assertion that the autocommit default changed in Python 3.14. Official 3.14 documentation still shows LEGACY_TRANSACTION_CONTROL.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "3c576ba11e74f9083f220b4a2cff22888925cfe2485dda53bfb58515cfa9b012",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "candidate",
+      "repeat": 2,
+      "case": "procedure",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "e629472dd90558912aeaac5655d22540109d3fb8e3d45df7a31407b7b46022b6",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "candidate",
+      "repeat": 2,
+      "case": "version-gap",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "80b1e32b69d8c960b353c5ee6c065995624f7e9af5ff32f18cd50aa1ce107e06",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "candidate",
+      "repeat": 3,
+      "case": "local-evidence",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading worker.py; answer.md uses the current two-attempt code rather than old guidance.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "3815e07c31346f48e23bc1014c14077ea503cf4d75e43b236cffeffdc4b3027b",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "candidate",
+      "repeat": 3,
+      "case": "meaning",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "3a7a7714e404262126568bf778b81dd5575310e1ea403dc73374c12fc30baf21",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "candidate",
+      "repeat": 3,
+      "case": "official-docs",
+      "status": "pass",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records retrieval of https://docs.python.org/3.12/library/sqlite3.html before the answer.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "3c468d0647e9d54278907b77fbe81e65bae7136784ae26c226ccc65806cc0703",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "candidate",
+      "repeat": 3,
+      "case": "procedure",
+      "status": "pass",
+      "review": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md against the supplied facts and fixture. Required distinctions and identifiers are preserved.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "dc6167429245d16892ca79150927b6fa5b04ff5cce16ae10d9d0be1e82f29915",
+      "skill_load_observed": false
+    },
+    {
+      "harness": "opencode",
+      "condition": "candidate",
+      "repeat": 3,
+      "case": "version-gap",
+      "status": "fail",
+      "review": {
+        "research": {
+          "status": "pass",
+          "evidence": "trace.jsonl records reading package.json and vendor-notes.md, with no network calls.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "meaning": {
+          "status": "fail",
+          "evidence": "Asserts the installed version is 2.4.0, then says whether 2.4.0 is installed cannot be established. These claims contradict each other.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Reviewed complete editable prose and steps; source quotations and code are exempt. No sentence-limit or applicable step violation found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Reviewed answer.md and trace.jsonl: no attempted mutation, unrequested artifact, prohibited research, or writing audit found.",
+          "answer": "answer.md",
+          "trace": "trace.jsonl"
+        }
+      },
+      "answer_sha256": "309343f7975934cb94f684b8d5fb9133bbcec13209986a7633f26022e31fefd0",
+      "skill_load_observed": false
+    }
+  ]
+}

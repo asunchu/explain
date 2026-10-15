@@ -84,3 +84,9 @@ Use identical prompts, model/settings, capabilities, and budgets for before/afte
 Run the core suite in each target harness before claiming behavioral portability. Artifact, media, and discovery results should be reported separately. A recommendation for release confidence is zero core failures across three repetitions per harness, followed by the relevant artifact/media cases; this is a practical regression gate, not a statistical guarantee. Use a second independent reviewer for subjective visual/audio judgments when practical.
 
 CI runs only deterministic definition/reporter checks. Real harness trials require installed harnesses, model access, artifact tools, and review. Keep transcripts local by default; redact credentials, personal paths, and private inputs before sharing sanitized results in a PR. Never relabel synthetic reporter-test fixtures as skill behavior evidence.
+
+## Paired writing and grounding experiment
+
+See [paired-defaults.md](paired-defaults.md) for the separate five-case, before/after experiment and real harness runner.
+It records instruction snapshots and checks research evidence separately from answer quality.
+The [October 15 paired report](reports/2026-10-15-grounded-defaults.md) records 90 completed trials, remaining failures, and loading limitations.
