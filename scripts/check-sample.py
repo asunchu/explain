@@ -14,6 +14,6 @@ assert a['codec_name']=='aac'
 assert abs(float(probe['format']['duration'])-scene['duration']/30)<.15
 result=subprocess.run(['ffmpeg','-v','error','-i',str(video),'-f','null','-'],capture_output=True,text=True)
 assert result.returncode==0 and not result.stderr.strip(), result.stderr
-report={'runner':'GitHub-hosted Ubuntu 24.04','sample':'cache example','durationSeconds':float(probe['format']['duration']),'resolution':'1920x1080','fps':30,'codecs':['h264','aac'],'fullDecode':'passed','scope':'Existing example rendering; not model behavior or fresh TTS synthesis'}
+report={'runner':'GitHub-hosted Ubuntu 24.04','sample':scene['title'],'durationSeconds':float(probe['format']['duration']),'resolution':'1920x1080','fps':30,'codecs':['h264','aac'],'fullDecode':'passed','scope':'Existing example rendering; not model behavior or fresh TTS synthesis'}
 (root/'cloud-render.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))

@@ -1,11 +1,13 @@
 # Explain — the film
 
-A complete narrated walkthrough of the Explain skill: learning goal, medium selection, a cache example, story structure, animation choices, local narration, synchronization, verification, and delivery.
+An updated 2:17 walkthrough of Explain: clear writing, preserved meaning, format selection, user preferences, video production, verification, and delivery.
+
+This edition keeps the original Remotion visual style and adds the updated script.
 
 ## Outputs
 
 - `output/explain.mp4`: 1920×1080, 30 fps, H.264/AAC, with visible captions.
-- `public/audio/*.wav`: the ten scene narration files. Regeneration also writes `output/narration.wav`.
+- `public/audio/*.wav`: the eight scene narration files. Regeneration also writes `output/narration.wav`.
 - `output/captions.srt`: passage captions timed from individually synthesized clips.
 - `output/transcript.md`: readable narration.
 - `output/validation.json`: technical checks and verification limitations.
@@ -41,7 +43,7 @@ The narration script copies the speech phonemizer's data into a temporary short 
 - [Kokoro ONNX runtime](https://github.com/thewh1teagle/kokoro-onnx), MIT wrapper.
 - [Model](https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.1/kokoro-v1.0.onnx) and [voices](https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.1/voices-v1.0.bin).
 
-The cache diagram is an illustrative cache-miss/cache-hit example, not a benchmark. It assumes the stored response is available for reuse; real systems also apply freshness and invalidation rules.
+The sample scene shows why changing “may” to “will” changes a claim. It illustrates fact preservation, not a measured software result.
 
 The moving waveform is decorative motion rather than a plot of measured amplitude. Captions use measured passage boundaries, not inferred word timestamps. No music, stock footage, remote font, or generated raster imagery is used.
 

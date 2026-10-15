@@ -1,12 +1,81 @@
 [
-  {"id":"clarity","chapter":"THE IDEA","title":"From complexity to clarity.","visual":"Scattered information tiles converge into one clean Explain mark.","lines":["An answer can be correct, and still be hard to understand.","Explain turns complex ideas into something you can see, follow, and remember."]},
-  {"id":"brief","chapter":"01 / UNDERSTAND","title":"Start with the learning goal.","visual":"A natural-language request resolves into topic, audience, and outcome.","lines":["Start with a topic, a document, or a piece of code.","The skill identifies your audience and what they should understand afterward.","You can specify the format, length, and budget."]},
-  {"id":"format","chapter":"02 / CHOOSE","title":"The idea chooses the medium.","visual":"Four animated format cards reveal prose, diagram, interactive page, and video.","lines":["A definition may need a sentence. A relationship may need a diagram.","Changing a variable calls for an interactive page.","A process unfolding over time may work best as a narrated video."]},
-  {"id":"example","chapter":"A CONCRETE EXAMPLE","title":"Show what a cache changes.","visual":"First request travels to the origin. A repeat request takes the shorter cache route.","lines":["Take a cache. The first request fetches data from its original source.","A later request can reuse the stored copy.","Animating those two paths makes the difference visible."]},
-  {"id":"story","chapter":"03 / BUILD THE STORY","title":"Every scene earns its place.","visual":"Evidence becomes a plain-language script, then an ordered storyboard.","lines":["Explain checks the source material, defines unfamiliar terms, and writes in plain language.","Then it maps each teaching point to a scene.","The visuals show the mechanism while narration connects the ideas."]},
-  {"id":"motion","chapter":"04 / MAKE IT MOVE","title":"Purposeful motion. Clear ideas.","visual":"Remotion video card, GSAP interaction card, and Motion Canvas vector card animate distinct examples.","lines":["Remotion is the default for polished video.","G sap supports interactive web animation. Motion Canvas suits narrated vector diagrams.","Typography, color, and motion stay consistent so your attention follows the idea."]},
-  {"id":"voice","chapter":"05 / GIVE IT A VOICE","title":"Narration sets the pace.","visual":"Local Kokoro voice waveform generates separate reusable audio clips.","lines":["For this film, Kokoro generates the narration locally, with no paid speech API.","Each passage becomes a reusable audio clip.","Changing the visuals does not require generating the voice again."]},
-  {"id":"sync","chapter":"06 / SYNCHRONIZE","title":"One timeline. Everything aligned.","visual":"Audio, animation, and caption tracks align to a shared moving playhead.","lines":["The skill measures the actual audio, then fits the animation to it.","Captions follow the spoken passages.","Frame based motion keeps previews and final renders consistent."]},
-  {"id":"verify","chapter":"07 / CHECK THE RESULT","title":"A render is only the beginning.","visual":"Rendered frame enlarges while checks inspect labels, timing, audio, and export.","lines":["Before delivery, it checks rendered frames, readable labels, timing, captions, and the exported file.","Audio should be checked for pronunciation and clipping.","Any checks it could not perform are reported clearly."]},
-  {"id":"deliver","chapter":"READY TO USE","title":"Make the next idea click.","visual":"Explain command appears above three harness chips and a finished-artifact stack.","lines":["Use Explain in Codex, OpenCode, or Claude Code.","Ask for the explanation you need, and receive the finished artifact plus editable source.","This video was created using that same workflow."]}
+  {
+    "id": "intro",
+    "chapter": "EXPLAIN / THE IDEA",
+    "title": "Make the idea clear.",
+    "lines": [
+      "Explain is a skill that helps an assistant make technical ideas easier to understand.",
+      "It starts with clear language, then chooses a useful way to show the idea."
+    ]
+  },
+  {
+    "id": "writing",
+    "chapter": "01 / CLEAR LANGUAGE",
+    "title": "Clear words come first.",
+    "lines": [
+      "Use one main idea per sentence. Keep descriptions within twenty five words.",
+      "Give each instruction one action, within twenty words.",
+      "Keep facts, technical names, and uncertainty intact. A shorter sentence must still be true."
+    ]
+  },
+  {
+    "id": "example",
+    "chapter": "02 / PRESERVE MEANING",
+    "title": "Simplify the words. Keep the facts.",
+    "lines": [
+      "Suppose the source says, the patch may reduce failures.",
+      "Keep the word may. Changing it to will turns a possible result into a promise.",
+      "This writing style is inspired by simplified technical English. It is not a claim of official compliance."
+    ]
+  },
+  {
+    "id": "formats",
+    "chapter": "03 / CHOOSE A FORMAT",
+    "title": "Use the simplest useful format.",
+    "lines": [
+      "A short definition often needs only text. A structure or relationship can benefit from a diagram.",
+      "Use interactive HTML when changing a value helps someone explore cause and effect.",
+      "Use narrated video when requested, or when a sequence benefits from motion and narration."
+    ]
+  },
+  {
+    "id": "request",
+    "chapter": "04 / YOUR CHOICE",
+    "title": "You set the direction.",
+    "lines": [
+      "You can specify the audience, format, length, and budget in your request.",
+      "For example, ask for a sixty second video that explains database indexes to a beginner.",
+      "The skill should follow your choice instead of making every explanation a video."
+    ]
+  },
+  {
+    "id": "production",
+    "chapter": "05 / BUILD THE VIDEO",
+    "title": "A script becomes a timeline.",
+    "lines": [
+      "For this video, Remotion turns React components and animation into a finished film.",
+      "Kokoro generates the voice locally. Each spoken passage sets the timing for its caption.",
+      "The animation follows a seekable timeline, so we can inspect specific moments before exporting."
+    ]
+  },
+  {
+    "id": "checks",
+    "chapter": "06 / CHECK THE RESULT",
+    "title": "Check the meaning and the output.",
+    "lines": [
+      "Check the facts first. Then inspect readable labels, scene timing, captions, and the exported file.",
+      "Listen for clear pronunciation and missing words. Report any checks that were not completed.",
+      "Successful rendering alone does not prove that an explanation is correct."
+    ]
+  },
+  {
+    "id": "finish",
+    "chapter": "EXPLAIN / READY TO USE",
+    "title": "Ask naturally. Stay in control.",
+    "lines": [
+      "Global writing instructions can apply the style without naming the skill. Setup and model behavior still need testing.",
+      "You can also ask to use Explain directly. Request the format that helps you understand.",
+      "For an artifact, keep the finished output, editable source, transcript, and reproduction steps together."
+    ]
+  }
 ]

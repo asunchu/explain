@@ -11,6 +11,7 @@ if(mode==='stills'){
  for(const scene of timeline.scenes){
   const frame=scene.start+Math.min(scene.duration-25, Math.max(100,scene.captions[1]?.start+25||100));
   await renderStill({composition,serveUrl,output:path.join(root,`output/${scene.id}.png`),frame,imageFormat:'png',scale:.75});
+  if(scene.id==='intro') fs.copyFileSync(path.join(root,'output/intro.png'),path.join(root,'output/clarity.png'));
   console.log('Still:',scene.id);
  }
 } else {

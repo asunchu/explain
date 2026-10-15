@@ -2,61 +2,49 @@
 
 Narration: local Kokoro, af_heart. AI-generated voice.
 
-## THE IDEA
+## EXPLAIN / THE IDEA
 
-An answer can be correct, and still be hard to understand.
-Explain turns complex ideas into something you can see, follow, and remember.
+Explain is a skill that helps an assistant make technical ideas easier to understand.
+It starts with clear language, then chooses a useful way to show the idea.
 
-## 01 / UNDERSTAND
+## 01 / CLEAR LANGUAGE
 
-Start with a topic, a document, or a piece of code.
-The skill identifies your audience and what they should understand afterward.
-You can specify the format, length, and budget.
+Use one main idea per sentence. Keep descriptions within twenty five words.
+Give each instruction one action, within twenty words.
+Keep facts, technical names, and uncertainty intact. A shorter sentence must still be true.
 
-## 02 / CHOOSE
+## 02 / PRESERVE MEANING
 
-A definition may need a sentence. A relationship may need a diagram.
-Changing a variable calls for an interactive page.
-A process unfolding over time may work best as a narrated video.
+Suppose the source says, the patch may reduce failures.
+Keep the word may. Changing it to will turns a possible result into a promise.
+This writing style is inspired by simplified technical English. It is not a claim of official compliance.
 
-## A CONCRETE EXAMPLE
+## 03 / CHOOSE A FORMAT
 
-Take a cache. The first request fetches data from its original source.
-A later request can reuse the stored copy.
-Animating those two paths makes the difference visible.
+A short definition often needs only text. A structure or relationship can benefit from a diagram.
+Use interactive HTML when changing a value helps someone explore cause and effect.
+Use narrated video when requested, or when a sequence benefits from motion and narration.
 
-## 03 / BUILD THE STORY
+## 04 / YOUR CHOICE
 
-Explain checks the source material, defines unfamiliar terms, and writes in plain language.
-Then it maps each teaching point to a scene.
-The visuals show the mechanism while narration connects the ideas.
+You can specify the audience, format, length, and budget in your request.
+For example, ask for a sixty second video that explains database indexes to a beginner.
+The skill should follow your choice instead of making every explanation a video.
 
-## 04 / MAKE IT MOVE
+## 05 / BUILD THE VIDEO
 
-Remotion is the default for polished video.
-GSAP supports interactive web animation. Motion Canvas suits narrated vector diagrams.
-Typography, color, and motion stay consistent so your attention follows the idea.
+For this video, Remotion turns React components and animation into a finished film.
+Kokoro generates the voice locally. Each spoken passage sets the timing for its caption.
+The animation follows a seekable timeline, so we can inspect specific moments before exporting.
 
-## 05 / GIVE IT A VOICE
+## 06 / CHECK THE RESULT
 
-For this film, Kokoro generates the narration locally, with no paid speech API.
-Each passage becomes a reusable audio clip.
-Changing the visuals does not require generating the voice again.
+Check the facts first. Then inspect readable labels, scene timing, captions, and the exported file.
+Listen for clear pronunciation and missing words. Report any checks that were not completed.
+Successful rendering alone does not prove that an explanation is correct.
 
-## 06 / SYNCHRONIZE
+## EXPLAIN / READY TO USE
 
-The skill measures the actual audio, then fits the animation to it.
-Captions follow the spoken passages.
-Frame-based motion keeps previews and final renders consistent.
-
-## 07 / CHECK THE RESULT
-
-Before delivery, it checks rendered frames, readable labels, timing, captions, and the exported file.
-Audio should be checked for pronunciation and clipping.
-Any checks it could not perform are reported clearly.
-
-## READY TO USE
-
-Use Explain in Codex, OpenCode, or Claude Code.
-Ask for the explanation you need, and receive the finished artifact plus editable source.
-This video was created using that same workflow.
+Global writing instructions can apply the style without naming the skill. Setup and model behavior still need testing.
+You can also ask to use Explain directly. Request the format that helps you understand.
+For an artifact, keep the finished output, editable source, transcript, and reproduction steps together.

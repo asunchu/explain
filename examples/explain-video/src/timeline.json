@@ -1,300 +1,232 @@
 {
   "fps": 30,
-  "duration": 3944,
+  "duration": 4118,
   "scenes": [
     {
-      "id": "clarity",
-      "chapter": "THE IDEA",
-      "title": "From complexity to clarity.",
-      "visual": "Scattered information tiles converge into one clean Explain mark.",
+      "id": "intro",
+      "chapter": "EXPLAIN / THE IDEA",
+      "title": "Make the idea clear.",
       "lines": [
-        "An answer can be correct, and still be hard to understand.",
-        "Explain turns complex ideas into something you can see, follow, and remember."
+        "Explain is a skill that helps an assistant make technical ideas easier to understand.",
+        "It starts with clear language, then chooses a useful way to show the idea."
       ],
       "start": 0,
       "captions": [
         {
-          "text": "An answer can be correct, and still be hard to understand.",
+          "text": "Explain is a skill that helps an assistant make technical ideas easier to understand.",
           "start": 18,
-          "end": 116
+          "end": 194
         },
         {
-          "text": "Explain turns complex ideas into something you can see, follow, and remember.",
-          "start": 122,
-          "end": 269
+          "text": "It starts with clear language, then chooses a useful way to show the idea.",
+          "start": 200,
+          "end": 336
         }
       ],
-      "duration": 293
+      "duration": 360
     },
     {
-      "id": "brief",
-      "chapter": "01 / UNDERSTAND",
-      "title": "Start with the learning goal.",
-      "visual": "A natural-language request resolves into topic, audience, and outcome.",
+      "id": "writing",
+      "chapter": "01 / CLEAR LANGUAGE",
+      "title": "Clear words come first.",
       "lines": [
-        "Start with a topic, a document, or a piece of code.",
-        "The skill identifies your audience and what they should understand afterward.",
-        "You can specify the format, length, and budget."
+        "Use one main idea per sentence. Keep descriptions within twenty five words.",
+        "Give each instruction one action, within twenty words.",
+        "Keep facts, technical names, and uncertainty intact. A shorter sentence must still be true."
       ],
-      "start": 293,
+      "start": 360,
       "captions": [
         {
-          "text": "Start with a topic, a document, or a piece of code.",
+          "text": "Use one main idea per sentence. Keep descriptions within twenty five words.",
           "start": 18,
-          "end": 112
+          "end": 167
         },
         {
-          "text": "The skill identifies your audience and what they should understand afterward.",
-          "start": 118,
-          "end": 244
+          "text": "Give each instruction one action, within twenty words.",
+          "start": 173,
+          "end": 274
         },
         {
-          "text": "You can specify the format, length, and budget.",
-          "start": 250,
-          "end": 342
+          "text": "Keep facts, technical names, and uncertainty intact. A shorter sentence must still be true.",
+          "start": 280,
+          "end": 447
         }
       ],
-      "duration": 366
-    },
-    {
-      "id": "format",
-      "chapter": "02 / CHOOSE",
-      "title": "The idea chooses the medium.",
-      "visual": "Four animated format cards reveal prose, diagram, interactive page, and video.",
-      "lines": [
-        "A definition may need a sentence. A relationship may need a diagram.",
-        "Changing a variable calls for an interactive page.",
-        "A process unfolding over time may work best as a narrated video."
-      ],
-      "start": 659,
-      "captions": [
-        {
-          "text": "A definition may need a sentence. A relationship may need a diagram.",
-          "start": 18,
-          "end": 146
-        },
-        {
-          "text": "Changing a variable calls for an interactive page.",
-          "start": 152,
-          "end": 249
-        },
-        {
-          "text": "A process unfolding over time may work best as a narrated video.",
-          "start": 255,
-          "end": 386
-        }
-      ],
-      "duration": 410
+      "duration": 471
     },
     {
       "id": "example",
-      "chapter": "A CONCRETE EXAMPLE",
-      "title": "Show what a cache changes.",
-      "visual": "First request travels to the origin. A repeat request takes the shorter cache route.",
+      "chapter": "02 / PRESERVE MEANING",
+      "title": "Simplify the words. Keep the facts.",
       "lines": [
-        "Take a cache. The first request fetches data from its original source.",
-        "A later request can reuse the stored copy.",
-        "Animating those two paths makes the difference visible."
+        "Suppose the source says, the patch may reduce failures.",
+        "Keep the word may. Changing it to will turns a possible result into a promise.",
+        "This writing style is inspired by simplified technical English. It is not a claim of official compliance."
       ],
-      "start": 1069,
+      "start": 831,
       "captions": [
         {
-          "text": "Take a cache. The first request fetches data from its original source.",
+          "text": "Suppose the source says, the patch may reduce failures.",
           "start": 18,
-          "end": 149
+          "end": 115
         },
         {
-          "text": "A later request can reuse the stored copy.",
-          "start": 155,
-          "end": 238
+          "text": "Keep the word may. Changing it to will turns a possible result into a promise.",
+          "start": 121,
+          "end": 258
         },
         {
-          "text": "Animating those two paths makes the difference visible.",
-          "start": 244,
-          "end": 341
+          "text": "This writing style is inspired by simplified technical English. It is not a claim of official compliance.",
+          "start": 264,
+          "end": 466
         }
       ],
-      "duration": 365
+      "duration": 490
     },
     {
-      "id": "story",
-      "chapter": "03 / BUILD THE STORY",
-      "title": "Every scene earns its place.",
-      "visual": "Evidence becomes a plain-language script, then an ordered storyboard.",
+      "id": "formats",
+      "chapter": "03 / CHOOSE A FORMAT",
+      "title": "Use the simplest useful format.",
       "lines": [
-        "Explain checks the source material, defines unfamiliar terms, and writes in plain language.",
-        "Then it maps each teaching point to a scene.",
-        "The visuals show the mechanism while narration connects the ideas."
+        "A short definition often needs only text. A structure or relationship can benefit from a diagram.",
+        "Use interactive HTML when changing a value helps someone explore cause and effect.",
+        "Use narrated video when requested, or when a sequence benefits from motion and narration."
       ],
-      "start": 1434,
+      "start": 1321,
       "captions": [
         {
-          "text": "Explain checks the source material, defines unfamiliar terms, and writes in plain language.",
+          "text": "A short definition often needs only text. A structure or relationship can benefit from a diagram.",
           "start": 18,
-          "end": 188
+          "end": 215
         },
         {
-          "text": "Then it maps each teaching point to a scene.",
-          "start": 194,
-          "end": 265
+          "text": "Use interactive HTML when changing a value helps someone explore cause and effect.",
+          "start": 221,
+          "end": 392
         },
         {
-          "text": "The visuals show the mechanism while narration connects the ideas.",
-          "start": 271,
-          "end": 388
+          "text": "Use narrated video when requested, or when a sequence benefits from motion and narration.",
+          "start": 398,
+          "end": 561
         }
       ],
-      "duration": 412
+      "duration": 585
     },
     {
-      "id": "motion",
-      "chapter": "04 / MAKE IT MOVE",
-      "title": "Purposeful motion. Clear ideas.",
-      "visual": "Remotion video card, GSAP interaction card, and Motion Canvas vector card animate distinct examples.",
+      "id": "request",
+      "chapter": "04 / YOUR CHOICE",
+      "title": "You set the direction.",
       "lines": [
-        "Remotion is the default for polished video.",
-        "G sap supports interactive web animation. Motion Canvas suits narrated vector diagrams.",
-        "Typography, color, and motion stay consistent so your attention follows the idea."
+        "You can specify the audience, format, length, and budget in your request.",
+        "For example, ask for a sixty second video that explains database indexes to a beginner.",
+        "The skill should follow your choice instead of making every explanation a video."
       ],
-      "start": 1846,
+      "start": 1906,
       "captions": [
         {
-          "text": "Remotion is the default for polished video.",
+          "text": "You can specify the audience, format, length, and budget in your request.",
           "start": 18,
-          "end": 104
+          "end": 152
         },
         {
-          "text": "GSAP supports interactive web animation. Motion Canvas suits narrated vector diagrams.",
-          "start": 110,
-          "end": 295
+          "text": "For example, ask for a sixty second video that explains database indexes to a beginner.",
+          "start": 158,
+          "end": 328
         },
         {
-          "text": "Typography, color, and motion stay consistent so your attention follows the idea.",
-          "start": 301,
-          "end": 465
+          "text": "The skill should follow your choice instead of making every explanation a video.",
+          "start": 334,
+          "end": 469
         }
       ],
-      "duration": 489
+      "duration": 493
     },
     {
-      "id": "voice",
-      "chapter": "05 / GIVE IT A VOICE",
-      "title": "Narration sets the pace.",
-      "visual": "Local Kokoro voice waveform generates separate reusable audio clips.",
+      "id": "production",
+      "chapter": "05 / BUILD THE VIDEO",
+      "title": "A script becomes a timeline.",
       "lines": [
-        "For this film, Kokoro generates the narration locally, with no paid speech API.",
-        "Each passage becomes a reusable audio clip.",
-        "Changing the visuals does not require generating the voice again."
+        "For this video, Remotion turns React components and animation into a finished film.",
+        "Kokoro generates the voice locally. Each spoken passage sets the timing for its caption.",
+        "The animation follows a seekable timeline, so we can inspect specific moments before exporting."
       ],
-      "start": 2335,
+      "start": 2399,
       "captions": [
         {
-          "text": "For this film, Kokoro generates the narration locally, with no paid speech API.",
+          "text": "For this video, Remotion turns React components and animation into a finished film.",
           "start": 18,
-          "end": 180
+          "end": 179
         },
         {
-          "text": "Each passage becomes a reusable audio clip.",
-          "start": 186,
-          "end": 273
+          "text": "Kokoro generates the voice locally. Each spoken passage sets the timing for its caption.",
+          "start": 185,
+          "end": 357
         },
         {
-          "text": "Changing the visuals does not require generating the voice again.",
-          "start": 279,
-          "end": 399
+          "text": "The animation follows a seekable timeline, so we can inspect specific moments before exporting.",
+          "start": 363,
+          "end": 540
         }
       ],
-      "duration": 423
+      "duration": 564
     },
     {
-      "id": "sync",
-      "chapter": "06 / SYNCHRONIZE",
-      "title": "One timeline. Everything aligned.",
-      "visual": "Audio, animation, and caption tracks align to a shared moving playhead.",
+      "id": "checks",
+      "chapter": "06 / CHECK THE RESULT",
+      "title": "Check the meaning and the output.",
       "lines": [
-        "The skill measures the actual audio, then fits the animation to it.",
-        "Captions follow the spoken passages.",
-        "Frame based motion keeps previews and final renders consistent."
+        "Check the facts first. Then inspect readable labels, scene timing, captions, and the exported file.",
+        "Listen for clear pronunciation and missing words. Report any checks that were not completed.",
+        "Successful rendering alone does not prove that an explanation is correct."
       ],
-      "start": 2758,
+      "start": 2963,
       "captions": [
         {
-          "text": "The skill measures the actual audio, then fits the animation to it.",
+          "text": "Check the facts first. Then inspect readable labels, scene timing, captions, and the exported file.",
           "start": 18,
-          "end": 139
+          "end": 208
         },
         {
-          "text": "Captions follow the spoken passages.",
-          "start": 145,
-          "end": 216
+          "text": "Listen for clear pronunciation and missing words. Report any checks that were not completed.",
+          "start": 214,
+          "end": 374
         },
         {
-          "text": "Frame-based motion keeps previews and final renders consistent.",
-          "start": 222,
-          "end": 343
+          "text": "Successful rendering alone does not prove that an explanation is correct.",
+          "start": 380,
+          "end": 516
         }
       ],
-      "duration": 367
+      "duration": 540
     },
     {
-      "id": "verify",
-      "chapter": "07 / CHECK THE RESULT",
-      "title": "A render is only the beginning.",
-      "visual": "Rendered frame enlarges while checks inspect labels, timing, audio, and export.",
+      "id": "finish",
+      "chapter": "EXPLAIN / READY TO USE",
+      "title": "Ask naturally. Stay in control.",
       "lines": [
-        "Before delivery, it checks rendered frames, readable labels, timing, captions, and the exported file.",
-        "Audio should be checked for pronunciation and clipping.",
-        "Any checks it could not perform are reported clearly."
+        "Global writing instructions can apply the style without naming the skill. Setup and model behavior still need testing.",
+        "You can also ask to use Explain directly. Request the format that helps you understand.",
+        "For an artifact, keep the finished output, editable source, transcript, and reproduction steps together."
       ],
-      "start": 3125,
+      "start": 3503,
       "captions": [
         {
-          "text": "Before delivery, it checks rendered frames, readable labels, timing, captions, and the exported file.",
+          "text": "Global writing instructions can apply the style without naming the skill. Setup and model behavior still need testing.",
           "start": 18,
-          "end": 204
+          "end": 234
         },
         {
-          "text": "Audio should be checked for pronunciation and clipping.",
-          "start": 210,
-          "end": 300
+          "text": "You can also ask to use Explain directly. Request the format that helps you understand.",
+          "start": 240,
+          "end": 403
         },
         {
-          "text": "Any checks it could not perform are reported clearly.",
-          "start": 306,
-          "end": 396
+          "text": "For an artifact, keep the finished output, editable source, transcript, and reproduction steps together.",
+          "start": 409,
+          "end": 591
         }
       ],
-      "duration": 420
-    },
-    {
-      "id": "deliver",
-      "chapter": "READY TO USE",
-      "title": "Make the next idea click.",
-      "visual": "Explain command appears above three harness chips and a finished-artifact stack.",
-      "lines": [
-        "Use Explain in Codex, OpenCode, or Claude Code.",
-        "Ask for the explanation you need, and receive the finished artifact plus editable source.",
-        "This video was created using that same workflow."
-      ],
-      "start": 3545,
-      "captions": [
-        {
-          "text": "Use Explain in Codex, OpenCode, or Claude Code.",
-          "start": 18,
-          "end": 121
-        },
-        {
-          "text": "Ask for the explanation you need, and receive the finished artifact plus editable source.",
-          "start": 127,
-          "end": 286
-        },
-        {
-          "text": "This video was created using that same workflow.",
-          "start": 292,
-          "end": 375
-        }
-      ],
-      "duration": 399
+      "duration": 615
     }
   ],
   "voice": "af_heart",

@@ -34,7 +34,7 @@ report={
  'chapters':len(probe['chapters']),'audioPeakDbFS':peak,
  'fullDecode':'passed without errors','sceneAudioTiming':'matched to frame timeline',
  'captions':'nonoverlapping measured passage boundaries; burned into video; SRT also supplied',
- 'visualInspection':'All 10 representative scene frames reviewed; cache sample rendered and inspected',
+ 'visualInspection':'Eight representative scene frames reviewed; meaning-preservation sample rendered and inspected',
  'limitations':['No independent listening audition of pronunciation or subjective voice quality was performed.'],
  'speechApiCostUsd':0,'narration':'AI-generated locally with Kokoro-82M / af_heart',
  'source':'storyboard.json; src/index.jsx; scripts/narrate.py; scripts/render.mjs; scripts/finalize.py'

@@ -92,7 +92,7 @@ function Sync({f}){
 function Verify({f}){
  return <>
   <Box style={{position:'absolute',left:120,top:405,width:850,height:370,padding:30}}><Label color={C.mint}>Inspect the rendered output</Label><div style={{marginTop:24,border:`1px solid ${C.edge}`,borderRadius:17,height:238,display:'flex',alignItems:'center',justifyContent:'center',gap:45}}><div style={{width:112,height:86,borderRadius:16,background:C.purple}}/><div style={{width:120,height:3,background:C.mint,position:'relative'}}><div style={{position:'absolute',left:(f%70)/70*120,top:-7,width:17,height:17,borderRadius:30,background:C.mint}}/></div><div style={{width:112,height:86,borderRadius:16,background:C.mint}}/></div></Box>
-  <div style={{position:'absolute',left:1070,top:415}}>{['Readable frames','Audio & pronunciation','Captions & timing','Playable export'].map((v,i)=><Enter f={f} delay={20+i*25} key={v}><div style={{display:'flex',alignItems:'center',gap:24,marginBottom:26,fontSize:34}}><span style={{display:'flex',alignItems:'center',justifyContent:'center',width:45,height:45,borderRadius:25,border:`1px solid ${C.mint}`,color:C.mint,fontSize:26}}>✓</span>{v}</div></Enter>)}</div>
+  <div style={{position:'absolute',left:1070,top:415}}>{['Facts & readable labels','Voice & pronunciation','Captions & timing','Playable export'].map((v,i)=><Enter f={f} delay={20+i*25} key={v}><div style={{display:'flex',alignItems:'center',gap:24,marginBottom:26,fontSize:34}}><span style={{display:'flex',alignItems:'center',justifyContent:'center',width:45,height:45,borderRadius:25,border:`1px solid ${C.mint}`,color:C.mint,fontSize:26}}>{i+1}</span>{v}</div></Enter>)}</div>
  </>
 }
 
@@ -104,16 +104,50 @@ function Deliver({f}){
  </div>
 }
 
-const views={clarity:Intro,brief:Brief,format:Formats,example:Cache,story:Story,motion:Motion,voice:Voice,sync:Sync,verify:Verify,deliver:Deliver};
+function Writing({f,scene}){
+ const step=f<scene.captions[1].start?0:f<scene.captions[2].start?1:2;
+ return <>
+ <div style={{position:'absolute',left:120,top:405,width:520}}>
+  <Label color={step===2?C.gold:C.mint}>{['Descriptions','Instructions','Meaning'][step]}</Label>
+  <div style={{fontSize:164,lineHeight:1.2,fontWeight:600,letterSpacing:-7,color:step===2?C.gold:C.ink}}>{['25','20','1'][step]}<span style={{fontSize:38,letterSpacing:0,color:C.muted,marginLeft:18}}>{step===2?'truth':'words max'}</span></div>
+  <div style={{fontSize:32,color:C.muted,marginTop:16}}>{['One main idea per sentence.','One action per step.','Keep uncertainty intact.'][step]}</div>
+ </div>
+ <Box style={{position:'absolute',left:740,top:410,width:1060,height:340,padding:42}}>
+ <Label color={C.purple}>{['A clear sentence','Separate the actions','Keep the qualification'][step]}</Label>
+ {step===0?<><div style={{fontSize:46,marginTop:42}}>The cache stores a copy.</div><div style={{display:'flex',gap:10,marginTop:35}}>{['The','cache','stores','a','copy.'].map((w,i)=><div key={w} style={{fontSize:23,color:C.bg,background:i===2?C.mint:C.purple,padding:'12px 20px',borderRadius:10,opacity:ease(f,20+i*12,38+i*12)}}>{w}</div>)}</div></>:step===1?<div style={{fontSize:40,marginTop:35,lineHeight:1.8}}><div><span style={{color:C.mint}}>01</span> Stop the service.</div><div><span style={{color:C.mint}}>02</span> Restore the backup.</div></div>:<><div style={{fontSize:42,marginTop:42}}>The patch <span style={{color:C.gold,borderBottom:`3px solid ${C.gold}`}}>may</span> reduce failures.</div><div style={{fontSize:28,color:C.muted,marginTop:35}}>A possible result stays possible.</div></>}
+ </Box></>
+}
+function Meaning({f,scene}){
+ const change=f>=scene.captions[1].start;
+ return <><div style={{position:'absolute',left:120,top:420}}><Label color={C.gold}>The source says</Label><div style={{fontSize:67,marginTop:30}}>The patch <span style={{color:C.gold}}>may</span> reduce failures.</div></div>
+ <svg width="1920" height="1080" style={{position:'absolute',inset:0}}><path d="M840 560V620H470V650M840 620H1360V650" stroke={C.edge} strokeWidth="4" fill="none"/><circle cx="840" cy={560+ease(f,25,75)*60} r="8" fill={C.gold}/></svg>
+ <Box style={{position:'absolute',left:120,top:650,width:770,padding:'27px 35px',borderColor:C.mint,opacity:ease(f,25,55)}}><Label color={C.mint}>Preserve the meaning</Label><div style={{fontSize:38,marginTop:20}}>A possible improvement.</div></Box>
+ <Box style={{position:'absolute',left:960,top:650,width:840,padding:'27px 35px',borderColor:'#d78f95',opacity:change?1:.15}}><Label color="#efb2b7">Changing “may” to “will”</Label><div style={{fontSize:38,marginTop:20}}>Adds a promise the source never made.</div></Box>
+ </>
+}
+function Request({f}){
+ return <div style={{position:'absolute',left:120,right:120,top:405}}><Enter f={f}><Box style={{padding:'30px 40px',borderColor:C.mint}}><Label color={C.mint}>Your request</Label><div style={{fontSize:41,lineHeight:1.4,marginTop:20}}>“Explain database indexes to a beginner in a 60-second video.”</div></Box></Enter><div style={{display:'flex',gap:28,marginTop:34}}>{[['AUDIENCE','A beginner',C.purple],['FORMAT','A narrated video',C.mint],['LENGTH','60 seconds',C.gold]].map(([a,b,c],i)=><Enter key={a} f={f} delay={35+i*15} style={{flex:1}}><Box style={{padding:30,height:155,borderColor:c}}><Label color={c}>{a}</Label><div style={{fontSize:36,marginTop:20}}>{b}</div></Box></Enter>)}</div><Enter f={f} delay={100}><div style={{fontSize:28,color:C.muted,marginTop:30}}>You can also set the language, style, and budget.</div></Enter></div>
+}
+function Production({f,scene}){
+ const a=scene.captions[1].start,b=scene.captions[2].start;
+ if(f>=b)return <Sync f={f-b}/>;
+ if(f>=a)return <Voice f={f-a}/>;
+ return <><Box style={{position:'absolute',left:120,top:410,width:610,height:340,padding:36}}><Label color={C.purple}>Editable source</Label><div style={{fontFamily:'Menlo, monospace',fontSize:34,lineHeight:1.9,marginTop:25,color:C.muted}}><div style={{color:C.purple}}>&lt;Scene&gt;</div><div style={{paddingLeft:36}}>Words + visuals</div><div style={{color:C.purple}}>&lt;/Scene&gt;</div></div></Box><svg width="1920" height="1080" style={{position:'absolute',inset:0}}><path d="M770 580H1030" stroke={C.edge} strokeWidth="4"/><circle cx={770+ease(f,15,95)*260} cy="580" r="12" fill={C.mint}/></svg><Box style={{position:'absolute',left:1070,top:410,width:730,height:340,padding:30}}><Label color={C.mint}>The rendered scene</Label><div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:40,marginTop:25}}><Mini kind={3} f={f}/><div style={{fontSize:45}}>Remotion</div></div><div style={{fontSize:27,color:C.muted,marginTop:20}}>The same frame. The same visual state.</div></Box></>
+}
+function Finish({f}){
+ return <div style={{position:'absolute',left:120,right:120,top:405}}><Enter f={f}><Box style={{padding:38,background:'#19392f',borderColor:'#527963'}}><Label color={C.mint}>Ask naturally</Label><div style={{fontSize:46,marginTop:25}}>“Explain database indexes with an interactive example.”</div></Box></Enter><div style={{display:'flex',gap:20,marginTop:30}}>{['Codex','Claude Code','OpenCode'].map((x,i)=><Enter key={x} f={f} delay={20+i*15}><div style={{fontSize:29,border:`1px solid ${C.edge}`,borderRadius:40,padding:'16px 28px',color:C.muted}}>{x}</div></Enter>)}</div><Enter f={f} delay={75}><div style={{fontSize:29,color:C.muted,marginTop:28}}>Global defaults need setup and testing. Explicit skill requests also work.</div></Enter><Enter f={f} delay={120}><div style={{fontSize:31,marginTop:30}}>Finished artifact <span style={{color:C.mint}}> + </span> editable source <span style={{color:C.mint}}> + </span> transcript</div></Enter></div>
+}
+
+const views={intro:Intro,writing:Writing,example:Meaning,formats:Formats,request:Request,production:Production,checks:Verify,finish:Finish};
 function Scene({scene,index}){
  const f=useCurrentFrame();const View=views[scene.id];const cue=scene.captions.find(c=>f>=c.start&&f<c.end);
  const opacity=ease(f,0,12)*(1-ease(f,scene.duration-10,scene.duration));
  return <AbsoluteFill style={{opacity}}>
    <Audio src={staticFile(`audio/${scene.id}.wav`)}/>
-   {scene.id!=='clarity'&&<div style={{position:'absolute',left:120,top:194}}><Enter f={f}><Label color={C.mint}>{scene.chapter}</Label></Enter><Enter f={f} delay={5}><div style={{fontSize:76,fontWeight:500,letterSpacing:-2.5,marginTop:22}}>{scene.title}</div></Enter></div>}
+   {scene.id!=='intro'&&<div style={{position:'absolute',left:120,top:194}}><Enter f={f}><Label color={C.mint}>{scene.chapter}</Label></Enter><Enter f={f} delay={5}><div style={{fontSize:76,fontWeight:500,letterSpacing:-2.5,marginTop:22}}>{scene.title}</div></Enter></div>}
    <View f={f} scene={scene}/>
    {cue&&<div style={{position:'absolute',left:190,right:190,top:892,height:105,display:'flex',alignItems:'center',justifyContent:'center',textAlign:'center'}}><div style={{fontSize:34,lineHeight:1.4,color:C.ink,background:'#08161bea',padding:'14px 28px',borderRadius:14,maxWidth:1480}}>{cue.text}</div></div>}
-   <div style={{position:'absolute',bottom:35,left:120,fontSize:19,letterSpacing:2,color:C.muted}}>EXPLAIN / HOW IT WORKS</div><div style={{position:'absolute',bottom:35,right:120,fontSize:19,color:C.muted}}>{String(index+1).padStart(2,'0')} / 10</div>
+   <div style={{position:'absolute',bottom:35,left:120,fontSize:19,letterSpacing:2,color:C.muted}}>EXPLAIN / HOW IT WORKS</div><div style={{position:'absolute',bottom:35,right:120,fontSize:19,color:C.muted}}>{String(index+1).padStart(2,'0')} / {timeline.scenes.length}</div>
  </AbsoluteFill>
 }
 function Film(){
