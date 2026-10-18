@@ -1,0 +1,7 @@
+flowchart LR
+  accTitle: Home HQ data flow
+  accDescr: Apple Calendar and Reminders remain authoritative. The Mac bridge supplies the Household API and the frame dashboard.
+  A[Apple Calendar and Reminders] --> B[Mac EventKit bridge]
+  B --> C[Household API]
+  C --> D[Home HTTPS relay]
+  D --> E[Android dashboard]

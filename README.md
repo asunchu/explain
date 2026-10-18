@@ -18,7 +18,7 @@ npx skills add asunchu/explain --skill explain -g -a codex -a claude-code -a ope
 
 Choose only the agents you use. Omit `-g` for a project installation. The [open skills CLI](https://github.com/vercel-labs/skills) handles discovery and installation; it is a separate third-party tool. For manual installation, copy the complete `skills/explain/` directory into your harness's skill directory. Restart or reload the harness if necessary.
 
-The skill itself has no runtime dependency. Video tools and speech models are installed only when an artifact requires them.
+The writing skill has no runtime dependency. Diagram tools, video tools, and speech models are installed only when an artifact requires them.
 
 ## Try it
 
@@ -37,16 +37,24 @@ You can also ask naturally: “Why do database indexes speed up reads but slow d
 | What needs explaining | Typical format |
 | --- | --- |
 | A definition or small concept | Plain language + example |
-| Structure and relationships | SVG or Mermaid |
+| Structure and relationships | Mermaid source rendered with Pele, or custom SVG |
 | Cause and effect or alternative scenarios | Interactive HTML |
 | A process over time or narrated story | Animated video |
 
 An explicit format request takes precedence.
 
+Standard diagrams use [Pele](https://pele.run/) through a pinned local renderer.
+It keeps Mermaid source editable and exports SVG with links and images disabled.
+Rendering runs in a disposable worker with resource limits and a deadline.
+See the [diagram guide](skills/explain/references/diagrams.md) for commands and compatibility limits.
+The [dated security review](security/pele-2026-10-18.md) records the package verification and integration controls.
+Custom React/SVG remains available for illustrations and precise animation.
+
 ## Examples
 
 - **[Software factory](examples/software-factory/):** one CSV-export feature travels through specification, implementation, verification, repair, human decisions, and release. Download its HTML and open it offline.
 - **[Explain film](examples/explain-video/):** the skill explains its own workflow in a complete 2:17 video, with editable Remotion source, storyboard, transcript, captions, and local Kokoro narration. Speech API cost was $0; local compute is excluded.
+- **[Pele diagram](examples/pele-diagram/):** a simplified Home HQ architecture with desktop and mobile SVG layouts and editable Mermaid source.
 
 Default animation choices include Remotion, HTML/SVG with GSAP when useful, Motion Canvas, and Three.js for spatial concepts. The narration guide compares local Kokoro, low-cost hosted Kokoro, and premium voices. Prices are dated examples, not guarantees; check the provider before spending.
 

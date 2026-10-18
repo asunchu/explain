@@ -27,7 +27,7 @@ Honor the requested medium. Otherwise use the smallest format that resolves the 
 | Understanding problem | Output |
 | --- | --- |
 | Definition or short conceptual question | Concise prose, with a small example |
-| Structure, relationships, or a short sequence | SVG or Mermaid diagram |
+| Structure, relationships, or a short sequence | Mermaid source rendered locally with Pele, or custom SVG |
 | Cause and effect, adjustable parameters, comparing scenarios | Interactive HTML with meaningful controls |
 | A process over time or a story best taught through narration | Animated video with narration and captions |
 
@@ -35,6 +35,9 @@ A recommendation or script request does not authorize producing a video.
 For ambiguous artifact requests, infer sensible defaults and state them: technically curious adult, English, and local output.
 For requested video, start around 60–90 seconds at 1080p/30 fps unless the user provides other constraints.
 Ask only when missing facts, audience, format, or budget materially affect the result.
+
+Read [references/diagrams.md](references/diagrams.md) when producing diagrams.
+Use its pinned local renderer for standard diagrams. Keep custom React/SVG when illustration or precise motion needs it.
 
 ## Build and check
 

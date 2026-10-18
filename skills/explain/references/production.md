@@ -6,6 +6,7 @@ Read [VIDEO.md](../VIDEO.md) for video scripts and production checks.
 Read [references/animation.md](animation.md) when producing animated HTML or video. Defaults:
 
 - **Interactive HTML:** HTML/CSS/SVG plus GSAP when a timeline or morphing is useful.
+- **Standard diagrams:** Mermaid source with the local Pele wrapper in [diagrams.md](diagrams.md). Render assets before video composition.
 - **Polished video:** Remotion with React/SVG and frame-driven motion. Add Three.js through `@remotion/three` when depth or spatial relationships help.
 - **Vector teaching animations:** Motion Canvas when synchronized diagrams are the main content.
 - Do not default to Manim. Use it only when explicitly requested or accepted for a specific mathematical requirement.

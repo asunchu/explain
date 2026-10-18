@@ -13,3 +13,16 @@ jobs:
       - run: python scripts/validate.py
       - run: python scripts/evaluate.py validate
       - run: python -m unittest discover -s evals -p 'test_*.py' -v
+  diagrams:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: skills/explain/scripts/diagrams
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts --no-fund
+      - run: npm test
+      - run: npm audit --omit=dev

@@ -1,0 +1,15 @@
+{
+  "name": "explain-pele-diagrams",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test render.test.mjs"
+  },
+  "dependencies": {
+    "pele": "1.6.0"
+  }
+}
