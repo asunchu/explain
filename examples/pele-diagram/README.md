@@ -14,7 +14,7 @@ npm run render
 
 The default font paths target macOS. `DIAGRAM_FONT_FILES` can specify other Arial files using the platform's path separator.
 The export rejects missing or unusable fonts before replacing the assets.
-The renderer and font files are separate build tools. Neither appears inside the distributable Explain skill.
+The resvg PNG renderer and font files are separate build tools. Neither appears inside the distributable Explain skill.
 
 Edit `architecture.mmd` to change the diagram.
 The export updates the SVG and PNG assets, including the existing mobile filenames.

@@ -6,6 +6,8 @@ A portable agent skill for Codex, Claude Code, and OpenCode. Explain starts with
 
 [Explore an example: Software factories](https://asunchu.github.io/explain/examples/software-factory/) · [Watch the film](https://asunchu.github.io/explain/#film) · [Read the skill](skills/explain/SKILL.md)
 
+[Latest release: v0.2.0](https://github.com/asunchu/explain/releases/tag/v0.2.0) · [Release notes](CHANGELOG.md)
+
 [![Explain film preview](examples/explain-video/output/clarity.png)](https://asunchu.github.io/explain/#film)
 
 ## Install
@@ -19,6 +21,10 @@ npx skills add asunchu/explain --skill explain -g -a codex -a claude-code -a ope
 Choose only the agents you use. Omit `-g` for a project installation. The [open skills CLI](https://github.com/vercel-labs/skills) handles discovery and installation; it is a separate third-party tool. For manual installation, copy the complete `skills/explain/` directory into your harness's skill directory. Restart or reload the harness if necessary.
 
 The writing skill has no runtime dependency. Diagram tools, video tools, and speech models are installed only when an artifact requires them.
+
+Existing users can rerun the installation command to update the skill.
+The release also provides a complete [skill ZIP](https://github.com/asunchu/explain/releases/download/v0.2.0/explain-skill.zip) for manual installation.
+For always-on writing, update the copied shared core in your harness instructions; preserve unrelated instructions.
 
 ## Try it
 

@@ -37,6 +37,24 @@ The command reports the timestamp used. Reuse it for repeatable builds.
 Keep the source and SVG together. Embed exported SVG through an `img` element when interaction is unnecessary.
 An SVG image does not inherit page CSS variables. Put any required theme values in the exported asset.
 
+## Prepare the delivery
+
+Use a clear font, a restrained palette, and short connectors.
+Show separate routes as branches when they represent different paths.
+Reduce unnecessary gaps before shrinking the labels.
+
+For remote chat previews, provide a PNG alongside the editable source and SVG.
+Resolve theme variables before raster export.
+Load the intended font explicitly.
+Verify that it can draw the labels before replacing existing assets.
+Check the exported image for visible text, arrows, and clipping at the intended viewing size.
+For phone delivery, inspect a preview at 360–390 pixels wide.
+Check the output in the receiving client when available.
+A local browser check cannot verify every remote renderer.
+
+The repository's [Home HQ example](https://github.com/asunchu/explain/tree/main/examples/pele-diagram) includes a reproducible PNG exporter with font checks.
+Its optional resvg dependency stays in the example project, outside this skill.
+
 For video, render the asset before building the composition.
 Use Remotion for scene timing and frame-driven motion. Pele does not provide video production or narration.
 
