@@ -1,7 +1,25 @@
-flowchart LR
-  accTitle: Home HQ data flow
-  accDescr: Apple Calendar and Reminders remain authoritative. The Mac bridge supplies the Household API and the frame dashboard.
-  A[Apple Calendar and Reminders] --> B[Mac EventKit bridge]
-  B --> C[Household API]
-  C --> D[Home HTTPS relay]
-  D --> E[Android dashboard]
+---
+config:
+  flowchart:
+    nodeSpacing: 20
+    rankSpacing: 22
+---
+flowchart TD
+  accTitle: Apple stays the source of truth
+  accDescr: Apple Calendar and Reminders supply a Mac bridge and Household API. Browsers use Tailscale. The Android frame uses the restricted home relay.
+  A["Apple apps<br/>Calendar · Reminders"]
+  B["Mac bridge<br/>Swift · EventKit"]
+  C["Household API<br/>Private SQLite"]
+  D["Browser<br/>Tailscale"]
+  E["Android frame<br/>HTTPS relay · WebView"]
+  A --> B --> C
+  C --> D
+  C --> E
+  classDef source fill:#eaf5ed,stroke:#9bbfa5,color:#173b28,rx:12,font-size:17px
+  classDef core fill:#edf3fc,stroke:#b5c9e8,color:#172f55,rx:12,font-size:17px
+  classDef hub fill:#1a4273,stroke:#1a4273,color:#ffffff,rx:12,font-size:17px
+  classDef display fill:#f5f7fa,stroke:#cbd3df,color:#172436,rx:12,font-size:17px
+  class A source
+  class B core
+  class C hub
+  class D,E display

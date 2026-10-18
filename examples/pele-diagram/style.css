@@ -1,12 +1,7 @@
-:root { color-scheme: light; font: 18px/1.55 system-ui, sans-serif; color: #1f2937; background: #f6f8fc; }
+:root { color-scheme: light; font: 15px/1.5 system-ui, sans-serif; color: #172436; background: #fff; }
 body { margin: 0; }
-main { max-width: 1120px; margin: auto; padding: 64px 28px; }
-h1 { max-width: 840px; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.12; letter-spacing: -.04em; }
-p { max-width: 760px; }
-.eyebrow { color: #475569; font-weight: 650; letter-spacing: .05em; }
-picture { display: block; padding: 28px 12px; margin: 36px 0 20px; background: #fff; border: 1px solid #d9e1ef; border-radius: 18px; }
-img { display: block; width: 100%; height: auto; }
-.caption { font-size: .85rem; color: #475569; }
+main { max-width: 480px; margin: auto; padding: 20px 12px; }
+.diagram { display: block; width: 100%; height: auto; }
+nav { display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 8px 24px; }
 a { color: #1d4ed8; text-underline-offset: .2em; }
 a:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 5px; }
-@media (max-width: 640px) { main { padding: 30px 18px; } picture { padding: 18px 6px; } }

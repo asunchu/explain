@@ -54,7 +54,7 @@ Custom React/SVG remains available for illustrations and precise animation.
 
 - **[Software factory](examples/software-factory/):** one CSV-export feature travels through specification, implementation, verification, repair, human decisions, and release. Download its HTML and open it offline.
 - **[Explain film](examples/explain-video/):** the skill explains its own workflow in a complete 2:17 video, with editable Remotion source, storyboard, transcript, captions, and local Kokoro narration. Speech API cost was $0; local compute is excluded.
-- **[Pele diagram](examples/pele-diagram/):** a simplified Home HQ architecture with desktop and mobile SVG layouts and editable Mermaid source.
+- **[Pele diagram](examples/pele-diagram/):** a compact Home HQ architecture with themed SVG, a mobile-friendly PNG, and editable Mermaid source.
 
 Default animation choices include Remotion, HTML/SVG with GSAP when useful, Motion Canvas, and Three.js for spatial concepts. The narration guide compares local Kokoro, low-cost hosted Kokoro, and premium voices. Prices are dated examples, not guarantees; check the provider before spending.
 

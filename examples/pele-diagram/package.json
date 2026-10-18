@@ -1,0 +1,15 @@
+{
+  "name": "explain-pele-example",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "render": "node export.mjs",
+    "test": "node --test export.test.mjs"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "2.6.2"
+  }
+}

@@ -9,16 +9,12 @@
 </head>
 <body>
   <main>
-    <p class="eyebrow">Explain · Pele 1.6.0</p>
-    <h1>Apple stays the source of truth.</h1>
-    <p>The Mac bridge supplies the dashboard through the Household API and a restricted home relay.</p>
-    <picture>
-      <source media="(max-width: 640px)" srcset="architecture-mobile.svg">
-      <img src="architecture.svg" alt="Apple Calendar and Reminders flow through the Mac bridge, Household API, home HTTPS relay, and Android dashboard.">
-    </picture>
-    <p class="caption">Simplified architecture. This diagram does not verify deployment or device behavior.</p>
-    <p>The mobile asset uses a vertical layout. Both assets render locally with links and images disabled.</p>
-    <a href="architecture.mmd">Editable Mermaid source</a>
+    <img class="diagram" src="architecture.png" width="1182" height="1530" alt="Home HQ. Apple apps supply the Mac EventKit bridge and Household API. The API serves a browser through Tailscale and an Android frame through the home HTTPS relay and WebView. The bridge checks Apple before saving completions.">
+    <nav aria-label="Diagram files">
+      <a href="architecture.mmd">Editable source</a>
+      <a href="architecture.svg">SVG</a>
+      <a href="architecture.png">Full-size PNG</a>
+    </nav>
   </main>
 </body>
 </html>

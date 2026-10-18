@@ -9,5 +9,6 @@ The MIT license covers this repository's original material. It does not relicens
 - Other package licenses are recorded in package metadata and the pinned dependency files. Refer to each upstream distribution for its notices.
 - GSAP, Motion Canvas, Three.js, and hosted TTS providers are recommendations, not included runtime components. Their terms apply when used.
 - The optional diagram renderer pins [Pele](https://github.com/obsidianmd/pele) 1.6.0 under MIT. Its lockfile records the package integrity. The dependency installs separately.
+- The diagram example exports PNG through [resvg-js](https://github.com/thx/resvg-js) 2.6.2 under MPL-2.0. It loads a local Arial installation; no renderer binary or font file is bundled.
 
 The software-factory example is an original illustrative simulation informed by [Anthropic](https://www.anthropic.com/engineering/harness-design-long-running-apps) and [StrongDM](https://factory.strongdm.ai/). It is not either organization's implementation or an endorsement. The skill's inspiration is linked in the README; no tweet text is reproduced.
