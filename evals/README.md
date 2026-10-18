@@ -90,3 +90,10 @@ CI runs only deterministic definition/reporter checks. Real harness trials requi
 See [paired-defaults.md](paired-defaults.md) for the separate five-case, before/after experiment and real harness runner.
 It records instruction snapshots and checks research evidence separately from answer quality.
 The [October 15 paired report](reports/2026-10-15-grounded-defaults.md) records 90 completed trials, remaining failures, and loading limitations.
+
+## Latest local recheck
+
+The [October 18 report](reports/2026-10-18-loading-and-regressions.md) separates entrypoint selection, supporting-file reads, and output quality.
+Codex and Claude completed the final behavioral matrix. Ollama quota blocked ten Kimi trials.
+Kimi also skipped supporting files and exceeded a sentence limit in a video plan. The release gate remains closed.
+Use the report's frozen evidence and remaining-case list before continuing; do not substitute another model.

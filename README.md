@@ -84,8 +84,17 @@ The user's language and style take precedence.
 
 The skill description covers writing and explanations, including ordinary replies. Codex's `agents/openai.yaml` explicitly allows implicit invocation (also its default). These make Explain eligible for automatic selection; they do not force an invocation. The main skill instructions are read after selection, so putting “always use me” inside them cannot solve discovery.
 
-For always-on writing, append the [shared core](skills/explain/CORE.md) to your harness's global or project instructions.
-Preserve unrelated instructions and update the copied core when Explain changes.
+For always-on writing, put the [shared core](skills/explain/CORE.md) in your harness's global or project instructions.
+For automatic artifact loading, also include a router that names the exact installed skill directory.
+From a local checkout, run:
+
+```sh
+python3 scripts/sync-defaults.py /path/to/AGENTS.md --skill-path /path/to/skills/explain
+```
+
+Use `CLAUDE.md` for Claude Code. The script replaces its marked block and preserves other instructions.
+The router loads the local entrypoint for diagrams, interactive explanations, storyboards, and video plans.
+It avoids selecting a different global copy with the same name. Repeat synchronization after updating or moving the installation.
 The [harness adapter guide](adapters/README.md) lists the instruction locations and tool mapping.
 Installation does not modify those files or guarantee automatic selection.
 

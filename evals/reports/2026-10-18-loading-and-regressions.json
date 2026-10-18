@@ -1,0 +1,1699 @@
+{
+  "scope": "Frozen behavioral rubric. Supplemental concerns are separate release blockers; a rubric pass is not a full correctness guarantee.",
+  "reviewer": "Primary assistant; no independent judge",
+  "trials": [
+    {
+      "harness": "codex",
+      "repeat": 1,
+      "case": "meaning",
+      "status": "pass",
+      "answer_sha256": "1c2ef1d27fb6675eddd745b07ab01929d9c62f0fc8d1396b3486b723cd8ce036",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 1,
+      "case": "procedure",
+      "status": "pass",
+      "answer_sha256": "2db8616c3ba9e340a7880ed6a2f88b3f617a58b203adc5657ff4a618c8ba68c7",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 1,
+      "case": "local-evidence",
+      "status": "pass",
+      "answer_sha256": "9b50635d93c552f92993bedf95ba261105c1750f33a40e2aa96bdf490a431f44",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 1,
+      "case": "version-gap",
+      "status": "pass",
+      "answer_sha256": "fbae3eb8db6232edccf2672267481f8af460d04a95142398908445e4ab5b518e",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 1,
+      "case": "official-docs",
+      "status": "pass",
+      "answer_sha256": "0f2343a5995b5e54061c17ad30b2700c4b6450815b199baeb8f88472ad09e4d0",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 1,
+      "case": "heldout-rewrite",
+      "status": "pass",
+      "answer_sha256": "32b6cbbdcd378b583654aebccef9b8d03db82d941d87d70e2d8f72df919d9238",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 1,
+      "case": "heldout-installation",
+      "status": "pass",
+      "answer_sha256": "260268af706ce356807fda38cd696f5a1b7d618d490ad501f00e150e2734bbf5",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 1,
+      "case": "heldout-local",
+      "status": "pass",
+      "answer_sha256": "ee4e58888ab1b4740fc22e510caef0d937334e9b021aeff97885f100a4110813",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 2,
+      "case": "meaning",
+      "status": "pass",
+      "answer_sha256": "f86876d6b27add68ed305b6b3f71f731e7aebe85e80919afd23f93dbec5c2a08",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 2,
+      "case": "procedure",
+      "status": "pass",
+      "answer_sha256": "2db8616c3ba9e340a7880ed6a2f88b3f617a58b203adc5657ff4a618c8ba68c7",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 2,
+      "case": "local-evidence",
+      "status": "pass",
+      "answer_sha256": "75c997405cc03fd3ce7b69b63ecedd5a71fee8b6e80e232423a070aa639adb74",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 2,
+      "case": "version-gap",
+      "status": "pass",
+      "answer_sha256": "9d383da55cde531d41e3d61753cfd04d9563197c92f210b4bdcb6fc254df9f1a",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 2,
+      "case": "official-docs",
+      "status": "pass",
+      "answer_sha256": "c55d401553e9204fc0719ab0c806f1aa56ccc96efedd5199802d5f3a4bac0a59",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 2,
+      "case": "heldout-rewrite",
+      "status": "pass",
+      "answer_sha256": "688ecc32512123e29c02f5f4943afaad2a786d1cf0139c42cb2b2811fe0b7765",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 2,
+      "case": "heldout-installation",
+      "status": "pass",
+      "answer_sha256": "9d070cb6913bfc306a6ce6f42f71f5e7bbf57a4e8fa936ae912c2526ca4ff9a5",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 2,
+      "case": "heldout-local",
+      "status": "pass",
+      "answer_sha256": "9f29676dff7fb6352f0989b0a421c64916843e8df6f54c90afcfdf9d87a03c55",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 3,
+      "case": "meaning",
+      "status": "pass",
+      "answer_sha256": "1c2ef1d27fb6675eddd745b07ab01929d9c62f0fc8d1396b3486b723cd8ce036",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 3,
+      "case": "procedure",
+      "status": "pass",
+      "answer_sha256": "346f2a3c61efe6e6a0a01f38a4f45087c36f3533fa3e709bf00633df6ac8f68c",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 3,
+      "case": "local-evidence",
+      "status": "pass",
+      "answer_sha256": "dee982ef1a16a76516bae9b5b5643a2ee3746fac9179268cfc766e8882ca5560",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 3,
+      "case": "version-gap",
+      "status": "pass",
+      "answer_sha256": "4a50a8447345fdd11d063e860375be590d527bd1ac091f80d0fd7f3dfef1a508",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 3,
+      "case": "official-docs",
+      "status": "pass",
+      "answer_sha256": "f7e2962b9bd7b1d30d8423774bb18aecb2e64795284feab2113d4b78ff344590",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 3,
+      "case": "heldout-rewrite",
+      "status": "pass",
+      "answer_sha256": "688ecc32512123e29c02f5f4943afaad2a786d1cf0139c42cb2b2811fe0b7765",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 3,
+      "case": "heldout-installation",
+      "status": "pass",
+      "answer_sha256": "c1042043665d3c605ec2123ab01395b2f538b1624fb162435c8cbd269e2de9b6",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "codex",
+      "repeat": 3,
+      "case": "heldout-local",
+      "status": "pass",
+      "answer_sha256": "2c884757a42d880920b0413e2b23f06b8bd10a54bd47d064f435f5c0765e0f76",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 1,
+      "case": "meaning",
+      "status": "pass",
+      "answer_sha256": "311faee44c5124667b393a5c9b9007e807f4668f5cacb1d55fe726ebd339d416",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 1,
+      "case": "procedure",
+      "status": "pass",
+      "answer_sha256": "718d78dc8b7a8ca0b6493ece9ddbaccbd0af8bc2599e16e0a426bde58aeeafe0",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 1,
+      "case": "local-evidence",
+      "status": "pass",
+      "answer_sha256": "250243597559b1c0dce59bb90e3e53439d8d2dff5c1654a958a9e6d33e940f84",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 1,
+      "case": "version-gap",
+      "status": "pass",
+      "answer_sha256": "4831432584160254a6606e9c78cf31bff99df853754197c669f250b022d22d87",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 1,
+      "case": "official-docs",
+      "status": "pass",
+      "answer_sha256": "1ef37978d6acf4d2143b887a550e8e0f5e1e8f660b7fb1a301d2b74e87e66920",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 1,
+      "case": "heldout-rewrite",
+      "status": "pass",
+      "answer_sha256": "25aa5e3baed0ffcf75b28a3865ed90a685df21acf61225e7f7981913f476a52f",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 1,
+      "case": "heldout-installation",
+      "status": "pass",
+      "answer_sha256": "4b1a3884d342391c6aa0df6b9da9964f927e6ca366984eb8940e14b4a526528f",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 1,
+      "case": "heldout-local",
+      "status": "pass",
+      "answer_sha256": "1e8a17180b12a3c176d585f7eec8b6acca094774f90464144ebabd48e79922ac",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 2,
+      "case": "meaning",
+      "status": "pass",
+      "answer_sha256": "1c2ef1d27fb6675eddd745b07ab01929d9c62f0fc8d1396b3486b723cd8ce036",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 2,
+      "case": "procedure",
+      "status": "pass",
+      "answer_sha256": "42048069c8be235a8e8cab8c1ca87c107b24ba3d2cf80ac01b9f9d66bc0e9c75",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 2,
+      "case": "local-evidence",
+      "status": "pass",
+      "answer_sha256": "5f64a95a16d55789a99cd16eac4cda998addf109bb09992df63e640dc84d6ec2",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 2,
+      "case": "version-gap",
+      "status": "pass",
+      "answer_sha256": "014773fa4deced992b0957f0a3f35ac9045766f4f77c2d129cf13068bc95652f",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 2,
+      "case": "official-docs",
+      "status": "pass",
+      "answer_sha256": "61f658d57ef95c1a0a6e2759285de066d794ad115323b9735d304a1b3aa0c6cf",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 2,
+      "case": "heldout-rewrite",
+      "status": "pass",
+      "answer_sha256": "bfdcd12a33dc572fb3cc312648289ed5c0e4c064c8d3da86a0562b05ba137470",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 2,
+      "case": "heldout-installation",
+      "status": "pass",
+      "answer_sha256": "0e75c5721b43cc0380f46f434f345936fa09779c7ce12a5b7478262ac7c58f50",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 2,
+      "case": "heldout-local",
+      "status": "pass",
+      "answer_sha256": "e6ee4b66ce918f1db17353b50fadff30d35d266b2030a8994f783f76f9e064bc",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 3,
+      "case": "meaning",
+      "status": "pass",
+      "answer_sha256": "1c2ef1d27fb6675eddd745b07ab01929d9c62f0fc8d1396b3486b723cd8ce036",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 3,
+      "case": "procedure",
+      "status": "pass",
+      "answer_sha256": "8c45898b6ca0262ee74ba4db31d0d98b6a101d147b517d49a6419b419433d03f",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 3,
+      "case": "local-evidence",
+      "status": "pass",
+      "answer_sha256": "606ec8f0cf057ea03896edda51dd00146e411a0c7b51782dc56edcb007468b74",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 3,
+      "case": "version-gap",
+      "status": "pass",
+      "answer_sha256": "dc02072cc88bad89e4dfd365ce2f706c8492b2848594812eddff62eb4aa1f2b9",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 3,
+      "case": "official-docs",
+      "status": "pass",
+      "answer_sha256": "4d635ac59d744bf64fdd827a9596effec583548651719e91afccc5b03afc8a08",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 3,
+      "case": "heldout-rewrite",
+      "status": "pass",
+      "answer_sha256": "bda1bc7f00d5f71004d8cc32f4788a6940f2941d72d4c2cac05be934dce9b1ad",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 3,
+      "case": "heldout-installation",
+      "status": "pass",
+      "answer_sha256": "7de3b2f0e24bd66ceb0b33f2f1658d5babd1782a03b6980dbc7d3d114d49241e",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "claude-code",
+      "repeat": 3,
+      "case": "heldout-local",
+      "status": "pass",
+      "answer_sha256": "936b7801a3c0eaa6e5443a3a0e64985b03e278de24cabaa05d441f5d28877ff4",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "opencode",
+      "repeat": 1,
+      "case": "meaning",
+      "status": "pass",
+      "answer_sha256": "456c529728d250ea428daddd388d464ce21758336c84b20cf08d8cbe8c62fe84",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "opencode",
+      "repeat": 1,
+      "case": "procedure",
+      "status": "pass",
+      "answer_sha256": "b1b1c68d9b0e0a18a80cad372e2d35b1c5b6670229ef733f7de812bed8e0ea32",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "opencode",
+      "repeat": 1,
+      "case": "local-evidence",
+      "status": "pass",
+      "answer_sha256": "bfb2f92ce88ed0b4234bd5e09ca14b93e1e30d705549c69b1b749688e244815d",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "opencode",
+      "repeat": 1,
+      "case": "version-gap",
+      "status": "pass",
+      "answer_sha256": "1fbe0511d4a1f898f9672a600a791f632377de0001d02b234b9057c47ca8c715",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true,
+      "supplemental_concern": "Adds an unsupported claim that either upgrading the declaration or obtaining missing documentation requires network access."
+    },
+    {
+      "harness": "opencode",
+      "repeat": 1,
+      "case": "official-docs",
+      "status": "pass",
+      "answer_sha256": "4f3753c71b761474ef2bed2f26dcc30ef247a6a9f91d2efa0f6cf25532e0bf8f",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "opencode",
+      "repeat": 1,
+      "case": "heldout-rewrite",
+      "status": "pass",
+      "answer_sha256": "da5772f8fb5df843fb3aa506468c03aa258a14251a9fb11284f6b5674cc085b5",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "opencode",
+      "repeat": 1,
+      "case": "heldout-installation",
+      "status": "pass",
+      "answer_sha256": "a36abd8667dc2667db34127a055b77c4403610e99dd7a721d66443765c942481",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "opencode",
+      "repeat": 1,
+      "case": "heldout-local",
+      "status": "pass",
+      "answer_sha256": "b6130aedbdbd86c1a8d11e522eebc3299bc4d49e4b9679e0c6fcd49d6ecbcfc8",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "opencode",
+      "repeat": 2,
+      "case": "meaning",
+      "status": "pass",
+      "answer_sha256": "1c2ef1d27fb6675eddd745b07ab01929d9c62f0fc8d1396b3486b723cd8ce036",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "opencode",
+      "repeat": 2,
+      "case": "procedure",
+      "status": "pass",
+      "answer_sha256": "37355af382918ad7c1db6960f9ec458dbf90e14f4a971a8a7349c7b86e9ff267",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "opencode",
+      "repeat": 2,
+      "case": "local-evidence",
+      "status": "pass",
+      "answer_sha256": "dd1389bfb405491ffd3fdd0581dc1e093653f53f6b2b1308e3d8c46de87ef8b6",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "opencode",
+      "repeat": 2,
+      "case": "version-gap",
+      "status": "pass",
+      "answer_sha256": "993b22f3cef8dd47e374f96f433bccf36a85ec95abd1aeabf8c03cae13847db3",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "opencode",
+      "repeat": 2,
+      "case": "official-docs",
+      "status": "pass",
+      "answer_sha256": "9a2de971cea008096311e6be7e4d410a5a17b632da09a613b75c4788ec37524c",
+      "criteria": {
+        "research": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "opencode",
+      "repeat": 2,
+      "case": "heldout-rewrite",
+      "status": "pass",
+      "answer_sha256": "5ca80d78ce6cf950bbb9b3a0c13c39bf76b5cdfefde6fb0108bf07524d79dfe4",
+      "criteria": {
+        "meaning": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "writing": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        },
+        "scope": {
+          "status": "pass",
+          "evidence": "Manual review against the frozen criterion; tool reads and file inventory verified. Sentence flags reviewed with protected text excluded."
+        }
+      },
+      "unchanged_inventory": true
+    },
+    {
+      "harness": "opencode",
+      "repeat": 2,
+      "case": "heldout-installation",
+      "status": "blocked",
+      "reason": "Ollama session quota, HTTP 429"
+    },
+    {
+      "harness": "opencode",
+      "repeat": 2,
+      "case": "heldout-local",
+      "status": "unrun"
+    },
+    {
+      "harness": "opencode",
+      "repeat": 3,
+      "case": "meaning",
+      "status": "unrun"
+    },
+    {
+      "harness": "opencode",
+      "repeat": 3,
+      "case": "procedure",
+      "status": "unrun"
+    },
+    {
+      "harness": "opencode",
+      "repeat": 3,
+      "case": "local-evidence",
+      "status": "unrun"
+    },
+    {
+      "harness": "opencode",
+      "repeat": 3,
+      "case": "version-gap",
+      "status": "unrun"
+    },
+    {
+      "harness": "opencode",
+      "repeat": 3,
+      "case": "official-docs",
+      "status": "unrun"
+    },
+    {
+      "harness": "opencode",
+      "repeat": 3,
+      "case": "heldout-rewrite",
+      "status": "unrun"
+    },
+    {
+      "harness": "opencode",
+      "repeat": 3,
+      "case": "heldout-installation",
+      "status": "unrun"
+    },
+    {
+      "harness": "opencode",
+      "repeat": 3,
+      "case": "heldout-local",
+      "status": "unrun"
+    }
+  ],
+  "loading": {
+    "scope": "Local file loading and unchanged inventory only; partial reads are noted in report",
+    "trials": [
+      {
+        "harness": "codex",
+        "repeat": "repeat-1",
+        "local_reads": {
+          "SKILL.md": true,
+          "CORE.md": true,
+          "references/production.md": true,
+          "VIDEO.md": true
+        },
+        "unchanged_inventory": true,
+        "answer_sha256": "ec97f65b64cebf0ffccc6ff047addcf330e5d88a5f93ef09804a0e6add9c6c02"
+      },
+      {
+        "harness": "codex",
+        "repeat": "repeat-2",
+        "local_reads": {
+          "SKILL.md": true,
+          "CORE.md": true,
+          "references/production.md": true,
+          "VIDEO.md": true
+        },
+        "unchanged_inventory": true,
+        "answer_sha256": "1ec4258298b12d3bcfb4c3aadbaec38528fdb164c52f609cc030f7cf950e1820"
+      },
+      {
+        "harness": "codex",
+        "repeat": "repeat-3",
+        "local_reads": {
+          "SKILL.md": true,
+          "CORE.md": true,
+          "references/production.md": true,
+          "VIDEO.md": true
+        },
+        "unchanged_inventory": true,
+        "answer_sha256": "4d9d6f28c9ba5864b2e31b2d0e9b8097bea1acaaa6587d6e97b0d2cbf0dd2f6b"
+      },
+      {
+        "harness": "claude-code",
+        "repeat": "repeat-1",
+        "local_reads": {
+          "SKILL.md": true,
+          "CORE.md": true,
+          "references/production.md": true,
+          "VIDEO.md": true
+        },
+        "unchanged_inventory": true,
+        "answer_sha256": "e804ac32f38d7f849bb70d2f10acab9ea64022b1ca3f47e8ba05ea0c166cc6c2"
+      },
+      {
+        "harness": "claude-code",
+        "repeat": "repeat-2",
+        "local_reads": {
+          "SKILL.md": true,
+          "CORE.md": true,
+          "references/production.md": true,
+          "VIDEO.md": true
+        },
+        "unchanged_inventory": true,
+        "answer_sha256": "b6410e8452131dab389312ba866e634810535b9d57be1738968ee351a52ac082"
+      },
+      {
+        "harness": "claude-code",
+        "repeat": "repeat-3",
+        "local_reads": {
+          "SKILL.md": true,
+          "CORE.md": true,
+          "references/production.md": true,
+          "VIDEO.md": true
+        },
+        "unchanged_inventory": true,
+        "answer_sha256": "febe82216bbadcf66c2e12151d90d0e1b6e4a4044d6c0c1f26ca17ee1f2b9ee1"
+      },
+      {
+        "harness": "opencode",
+        "repeat": "repeat-1",
+        "local_reads": {
+          "SKILL.md": true,
+          "CORE.md": true,
+          "references/production.md": true,
+          "VIDEO.md": true
+        },
+        "unchanged_inventory": true,
+        "answer_sha256": "b4f12a207acd5f5a28556907f27db411d4e399988a5e45593a446041591bb567"
+      },
+      {
+        "harness": "opencode",
+        "repeat": "repeat-2",
+        "local_reads": {
+          "SKILL.md": true,
+          "CORE.md": true,
+          "references/production.md": false,
+          "VIDEO.md": true
+        },
+        "unchanged_inventory": true,
+        "answer_sha256": "7a2c173ef384bc3667a32ec92f835c67732f636b96de182eb96bde318f56781a"
+      },
+      {
+        "harness": "opencode",
+        "repeat": "repeat-3",
+        "local_reads": {
+          "SKILL.md": true,
+          "CORE.md": false,
+          "references/production.md": true,
+          "VIDEO.md": true
+        },
+        "unchanged_inventory": true,
+        "answer_sha256": "b03a6314c3bbee711779b3b32a68d6067b7063346b5a00f36f847c73c4ff1892"
+      }
+    ]
+  },
+  "core_sha256": "b6163e737c6f9d6b5cc15f8898f16bd4203aca66cad57130d7b01999ad279e39",
+  "release_status": "blocked: incomplete Kimi matrix and supplemental findings"
+}

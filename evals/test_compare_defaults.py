@@ -5,6 +5,9 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
+from loading import routing
 
 SPEC = importlib.util.spec_from_file_location('compare_defaults', Path(__file__).resolve().parents[1] / 'scripts/compare_defaults.py')
 runner = importlib.util.module_from_spec(SPEC)
@@ -48,6 +51,34 @@ print(json.dumps({'type': 'result', 'result': 'test answer'}))
             self.assertIn('unexpected.txt', result['output_sha256'])
             self.assertEqual(result['review']['scope']['status'], 'pending')
             self.assertEqual(json.loads((trial / 'command.json').read_text())[0], str(fake))
+
+    def test_local_skill_and_process_plugin_override(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp).resolve()
+            fake = root / 'fake-cli'
+            fake.write_text("#!/usr/bin/env python3\nimport json,sys\nfrom pathlib import Path\nassert Path('.claude/skills/explain/CORE.md').is_file()\nassert not Path('CLAUDE.md').exists()\nsettings=json.loads(sys.argv[sys.argv.index('--settings')+1])\nassert settings['enabledPlugins']['explanatory-output-style@claude-plugins-official'] is False\nprint(json.dumps({'type':'result','result':'ok'}))\n")
+            fake.chmod(0o755)
+            result = runner.run_trial('claude-code', 'test', {'prompt':'test','fixtures':{},'criteria':{}},
+                                      root / 'trial', '', 10, str(fake), True, True)
+            self.assertEqual(result['exit_code'], 0)
+            self.assertEqual(result['input_sha256'], result['output_sha256'])
+
+    def test_routed_trial_uses_local_path_and_excludes_runtime_dependencies(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp).resolve()
+            source = root / 'repo/skills/explain'
+            source.mkdir(parents=True)
+            (source / 'SKILL.md').write_text('local skill')
+            (source / 'node_modules').mkdir()
+            (source / 'node_modules/unrelated.txt').write_text('exclude')
+            fake = root / 'fake-cli'
+            fake.write_text("#!/usr/bin/env python3\nimport json\nfrom pathlib import Path\nskill=Path.cwd()/'.claude/skills/explain'\nassert str(skill/'SKILL.md') in Path('CLAUDE.md').read_text()\nassert (skill/'SKILL.md').read_text()=='local skill'\nassert not (skill/'node_modules').exists()\nprint(json.dumps({'type':'result','result':'ok'}))\n")
+            fake.chmod(0o755)
+            with patch.object(runner, 'ROOT', root / 'repo'):
+                result = runner.run_trial('claude-code', 'test', {'prompt':'test','fixtures':{},'criteria':{}},
+                                          root / 'trial', '', 10, str(fake), True, False, True)
+            self.assertEqual(result['exit_code'], 0)
+            self.assertEqual(result['input_sha256'], result['output_sha256'])
 
     def test_refuses_fixture_outside_workspace(self):
         with tempfile.TemporaryDirectory() as tmp:

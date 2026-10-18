@@ -63,3 +63,34 @@ The research case tests available documentation tools, not a mandatory Context7 
 Repeat failures on fresh held-out prompts before adding a model adapter.
 Run native discovery and fresh HTML/video cases separately before claiming end-to-end portability.
 Raw traces can include machine or account details; keep them local and publish only reviewed summaries.
+
+## Regression and discovery tracks
+
+Use `--candidate-only --install-skill` to run the current core with a local copy of the complete skill.
+Use `--suite evals/heldout-grounding.json` for unfamiliar rewrite and local-evidence prompts.
+Use `--discovery-only --suite evals/discovery-grounding.json` to omit project core injection and test natural skill selection.
+Existing global instructions still apply. Record which skill path the model reads; a global copy does not prove local discovery.
+The discovery case requests a video plan only. It does not validate rendering, audio, or interactive HTML.
+
+For Claude Code, compare runs with and without `--disable-style` using the same model and prompts.
+The flag disables only the explanatory-output-style plugin for that process. Check the startup trace before attributing a difference.
+Do not count unavailable models, timeouts, or missing tool results as writing failures.
+Keep interrupted runs, use a new directory for a retry, and report both outcomes.
+
+Keep Context7 optional. If no connector is available, evaluate official-source retrieval and mark Context7 untested.
+Full format validation needs a separate writable artifact workspace and render/browser tools.
+Do not treat the read-only planning suite as end-to-end media validation.
+
+Use `--route-skill` to append the production artifact router to the project instructions.
+Combine it with `--discovery-only` to test routed loading without injecting the shared core.
+The user prompt remains unchanged. The router explicitly identifies the local entrypoint.
+Do not report routed loading as unassisted native discovery.
+
+Run `python3 scripts/check_writing.py /path/to/answer.md` to flag long prose for review.
+The checker skips code, quotations, headings, and tables. Review those exclusions and all procedure rules manually.
+It does not grade factual accuracy, passive voice, scope, or meaning.
+
+The runner freezes the installed skill tree and records file hashes before starting model calls.
+Use `--candidate-default /path/to/core.md` for a shared candidate experiment without changing the checkout during a run.
+The frozen skill receives that same core, including in routed-loading tests.
+Record stopped exploratory runs separately. Do not merge their partial results into a completed final matrix.

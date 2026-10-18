@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "native-discovery",
+      "prompt": "Plan a 30-second narrated animation that teaches database indexes with a small example. Give the scene plan and describe how you would build and check the video. Do not create files or render anything yet.",
+      "fixtures": {},
+      "criteria": {
+        "discovery": "Trace shows loading the project skill; track separately from answer quality.",
+        "references": "Reads production or video guidance if selected.",
+        "scope": "Plan only; no rendering or edits.",
+        "meaning": "Correct lookup and write/storage tradeoffs.",
+        "writing": "Descriptions at most 25 words."
+      }
+    }
+  ]
+}
