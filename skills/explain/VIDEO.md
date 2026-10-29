@@ -13,6 +13,15 @@ Create a video when the requested format or teaching goal warrants it. A short p
 - Open with the video's subject. Close with what the viewer now understands or can do.
 - Keep captions faithful to the spoken script. Do not replace exact technical names with pronunciation spellings in captions.
 
+## Validate the teaching example
+
+Use the requested example size and audience level, including in a plan-only response.
+Separate a toy model from the real system. Label illustrative numbers as illustrative.
+Trace each displayed count through the example before writing its narration.
+Do not turn an asymptotic formula into a measured cost or an exact claim about another algorithm.
+Include the mechanism's important costs and limitations. Qualify words such as “every,” “always,” and “faster.”
+If a numerical claim lacks support, remove it or state what remains unknown.
+
 ## Build and check
 
 Keep the source, script, scene audio, captions, and export in one project folder.

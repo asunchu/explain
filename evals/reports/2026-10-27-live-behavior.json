@@ -1,0 +1,989 @@
+{
+  "date": "2026-10-27",
+  "release_ready": false,
+  "raw_evidence_root": "$LOCAL_EVIDENCE/explain-live-2026-10-27",
+  "scope": "Final candidate only: 72 behavioral responses and 9 routed loading responses. Completion is not a semantic pass.",
+  "environments": {
+    "final-claude-code": {
+      "harness": "claude-code",
+      "requested_model": "claude-opus-5-5",
+      "version": "2.1.310 (Claude Code)",
+      "skill_sha256": {
+        "WORDS.md": "877ddce54383ea4990febf5a60035e89207622c6c6b994199ec8fc0dc74abceb",
+        "VIDEO.md": "b3a0817e9005cc1bae4652747cb4702c18374b78066aacd3d624fe8cc6f2cfec",
+        "SKILL.md": "b54d04bfe565bec7455a8b68e38a2b08c29ad388b3cb7ad8065546ca632e95a3",
+        "CORE.md": "738e7dd86e5d05ecd75a367578af03fcdbb37b4ce613c361454c166d2a3add6e",
+        "RULES.md": "feffe30e8ac81430a75ccd764b158134bfdc3b54be873f18fc4f36f2f19c8d93",
+        "references/diagrams.md": "ba1a64a86928b107766f4231e00ab911a1cc03686bc78b1eff39cca161d51f09",
+        "references/animation.md": "f4ada350d6ac8ababf9933d961e33506182202edd98a1463bb96fe98e16e5c4f",
+        "references/production.md": "be9803eff3e3ca822636256c59d7cb3ca22197153d4480271d23ddcf0df42808",
+        "references/research.md": "5f58d847205644e45a96518b304aa4524d2cba7bbee38b0cd141115ec9973abd",
+        "references/tts.md": "293df6e6b088a1809eeffdd658d047b6aa53d162ce0a909a8c948c0e5e262adb",
+        "agents/openai.yaml": "fca8e975a42fa1269b3a3c4ca14dbbb5a2418392ae457032c952708f3a097d5c",
+        "scripts/diagrams/worker.mjs": "eff0713eda13ce253d6e6bb1b3c0272ceacadf61abf214243b129859565bc550",
+        "scripts/diagrams/render.mjs": "dee224c23eed8e69dc0f4e942c8b36e7e01aef419b09283d28480c118371ecc9",
+        "scripts/diagrams/package-lock.json": "b592061b3c38371df73348235bf6e7b296c191a5dc6a9a27a8d415196681aeba",
+        "scripts/diagrams/package.json": "64df9aaa748c9472bbd8982e20efa6e25c2938134f7fe622533063096a84ea0b",
+        "scripts/diagrams/render.test.mjs": "bf4e3e25b9e10bf28cfc6c6ba3b7d5d4e551541f8347aae847d92c55e8b2e655"
+      },
+      "suite_sha256": "6c0373afb45f4e9fcbdec6ad5e51e6fe23e4f7ba6f6906460633589308f09c5b",
+      "runner_sha256": "3996be1c4635e7135ab98926b0b15f5e17d5aefa968c78027b6abf2c6189b5b1",
+      "limits": "Project instruction comparison. Existing global instructions and installed skills remain. Not a clean-room skill-discovery test. Tool policies differ by harness."
+    },
+    "final-codex": {
+      "harness": "codex",
+      "requested_model": "gpt-6.1-sol",
+      "version": "codex-cli 0.164.0-alpha.11.1",
+      "skill_sha256": {
+        "WORDS.md": "877ddce54383ea4990febf5a60035e89207622c6c6b994199ec8fc0dc74abceb",
+        "VIDEO.md": "b3a0817e9005cc1bae4652747cb4702c18374b78066aacd3d624fe8cc6f2cfec",
+        "SKILL.md": "b54d04bfe565bec7455a8b68e38a2b08c29ad388b3cb7ad8065546ca632e95a3",
+        "CORE.md": "738e7dd86e5d05ecd75a367578af03fcdbb37b4ce613c361454c166d2a3add6e",
+        "RULES.md": "feffe30e8ac81430a75ccd764b158134bfdc3b54be873f18fc4f36f2f19c8d93",
+        "references/diagrams.md": "ba1a64a86928b107766f4231e00ab911a1cc03686bc78b1eff39cca161d51f09",
+        "references/animation.md": "f4ada350d6ac8ababf9933d961e33506182202edd98a1463bb96fe98e16e5c4f",
+        "references/production.md": "be9803eff3e3ca822636256c59d7cb3ca22197153d4480271d23ddcf0df42808",
+        "references/research.md": "5f58d847205644e45a96518b304aa4524d2cba7bbee38b0cd141115ec9973abd",
+        "references/tts.md": "293df6e6b088a1809eeffdd658d047b6aa53d162ce0a909a8c948c0e5e262adb",
+        "agents/openai.yaml": "fca8e975a42fa1269b3a3c4ca14dbbb5a2418392ae457032c952708f3a097d5c",
+        "scripts/diagrams/worker.mjs": "eff0713eda13ce253d6e6bb1b3c0272ceacadf61abf214243b129859565bc550",
+        "scripts/diagrams/render.mjs": "dee224c23eed8e69dc0f4e942c8b36e7e01aef419b09283d28480c118371ecc9",
+        "scripts/diagrams/package-lock.json": "b592061b3c38371df73348235bf6e7b296c191a5dc6a9a27a8d415196681aeba",
+        "scripts/diagrams/package.json": "64df9aaa748c9472bbd8982e20efa6e25c2938134f7fe622533063096a84ea0b",
+        "scripts/diagrams/render.test.mjs": "bf4e3e25b9e10bf28cfc6c6ba3b7d5d4e551541f8347aae847d92c55e8b2e655"
+      },
+      "suite_sha256": "6c0373afb45f4e9fcbdec6ad5e51e6fe23e4f7ba6f6906460633589308f09c5b",
+      "runner_sha256": "3996be1c4635e7135ab98926b0b15f5e17d5aefa968c78027b6abf2c6189b5b1",
+      "limits": "Project instruction comparison. Existing global instructions and installed skills remain. Not a clean-room skill-discovery test. Tool policies differ by harness."
+    },
+    "final-loading-claude-code": {
+      "harness": "claude-code",
+      "requested_model": "claude-opus-5-5",
+      "version": "2.1.310 (Claude Code)",
+      "skill_sha256": {
+        "WORDS.md": "877ddce54383ea4990febf5a60035e89207622c6c6b994199ec8fc0dc74abceb",
+        "VIDEO.md": "b3a0817e9005cc1bae4652747cb4702c18374b78066aacd3d624fe8cc6f2cfec",
+        "SKILL.md": "b54d04bfe565bec7455a8b68e38a2b08c29ad388b3cb7ad8065546ca632e95a3",
+        "CORE.md": "738e7dd86e5d05ecd75a367578af03fcdbb37b4ce613c361454c166d2a3add6e",
+        "RULES.md": "feffe30e8ac81430a75ccd764b158134bfdc3b54be873f18fc4f36f2f19c8d93",
+        "references/diagrams.md": "ba1a64a86928b107766f4231e00ab911a1cc03686bc78b1eff39cca161d51f09",
+        "references/animation.md": "f4ada350d6ac8ababf9933d961e33506182202edd98a1463bb96fe98e16e5c4f",
+        "references/production.md": "be9803eff3e3ca822636256c59d7cb3ca22197153d4480271d23ddcf0df42808",
+        "references/research.md": "5f58d847205644e45a96518b304aa4524d2cba7bbee38b0cd141115ec9973abd",
+        "references/tts.md": "293df6e6b088a1809eeffdd658d047b6aa53d162ce0a909a8c948c0e5e262adb",
+        "agents/openai.yaml": "fca8e975a42fa1269b3a3c4ca14dbbb5a2418392ae457032c952708f3a097d5c",
+        "scripts/diagrams/worker.mjs": "eff0713eda13ce253d6e6bb1b3c0272ceacadf61abf214243b129859565bc550",
+        "scripts/diagrams/render.mjs": "dee224c23eed8e69dc0f4e942c8b36e7e01aef419b09283d28480c118371ecc9",
+        "scripts/diagrams/package-lock.json": "b592061b3c38371df73348235bf6e7b296c191a5dc6a9a27a8d415196681aeba",
+        "scripts/diagrams/package.json": "64df9aaa748c9472bbd8982e20efa6e25c2938134f7fe622533063096a84ea0b",
+        "scripts/diagrams/render.test.mjs": "bf4e3e25b9e10bf28cfc6c6ba3b7d5d4e551541f8347aae847d92c55e8b2e655"
+      },
+      "suite_sha256": "da2101d2c9ccc48014778f136bec6aa951ccd8217e5e1794de20fb47b9c30ab2",
+      "runner_sha256": "3996be1c4635e7135ab98926b0b15f5e17d5aefa968c78027b6abf2c6189b5b1",
+      "limits": "Project instruction comparison. Existing global instructions and installed skills remain. Not a clean-room skill-discovery test. Tool policies differ by harness."
+    },
+    "final-loading-codex": {
+      "harness": "codex",
+      "requested_model": "gpt-6.1-sol",
+      "version": "codex-cli 0.164.0-alpha.11.1",
+      "skill_sha256": {
+        "WORDS.md": "877ddce54383ea4990febf5a60035e89207622c6c6b994199ec8fc0dc74abceb",
+        "VIDEO.md": "b3a0817e9005cc1bae4652747cb4702c18374b78066aacd3d624fe8cc6f2cfec",
+        "SKILL.md": "b54d04bfe565bec7455a8b68e38a2b08c29ad388b3cb7ad8065546ca632e95a3",
+        "CORE.md": "738e7dd86e5d05ecd75a367578af03fcdbb37b4ce613c361454c166d2a3add6e",
+        "RULES.md": "feffe30e8ac81430a75ccd764b158134bfdc3b54be873f18fc4f36f2f19c8d93",
+        "references/diagrams.md": "ba1a64a86928b107766f4231e00ab911a1cc03686bc78b1eff39cca161d51f09",
+        "references/animation.md": "f4ada350d6ac8ababf9933d961e33506182202edd98a1463bb96fe98e16e5c4f",
+        "references/production.md": "be9803eff3e3ca822636256c59d7cb3ca22197153d4480271d23ddcf0df42808",
+        "references/research.md": "5f58d847205644e45a96518b304aa4524d2cba7bbee38b0cd141115ec9973abd",
+        "references/tts.md": "293df6e6b088a1809eeffdd658d047b6aa53d162ce0a909a8c948c0e5e262adb",
+        "agents/openai.yaml": "fca8e975a42fa1269b3a3c4ca14dbbb5a2418392ae457032c952708f3a097d5c",
+        "scripts/diagrams/worker.mjs": "eff0713eda13ce253d6e6bb1b3c0272ceacadf61abf214243b129859565bc550",
+        "scripts/diagrams/render.mjs": "dee224c23eed8e69dc0f4e942c8b36e7e01aef419b09283d28480c118371ecc9",
+        "scripts/diagrams/package-lock.json": "b592061b3c38371df73348235bf6e7b296c191a5dc6a9a27a8d415196681aeba",
+        "scripts/diagrams/package.json": "64df9aaa748c9472bbd8982e20efa6e25c2938134f7fe622533063096a84ea0b",
+        "scripts/diagrams/render.test.mjs": "bf4e3e25b9e10bf28cfc6c6ba3b7d5d4e551541f8347aae847d92c55e8b2e655"
+      },
+      "suite_sha256": "da2101d2c9ccc48014778f136bec6aa951ccd8217e5e1794de20fb47b9c30ab2",
+      "runner_sha256": "3996be1c4635e7135ab98926b0b15f5e17d5aefa968c78027b6abf2c6189b5b1",
+      "limits": "Project instruction comparison. Existing global instructions and installed skills remain. Not a clean-room skill-discovery test. Tool policies differ by harness."
+    },
+    "final-loading-opencode": {
+      "harness": "opencode",
+      "requested_model": "ollama/kimi-k3:cloud",
+      "version": "opencode v2.1.4",
+      "skill_sha256": {
+        "WORDS.md": "877ddce54383ea4990febf5a60035e89207622c6c6b994199ec8fc0dc74abceb",
+        "VIDEO.md": "b3a0817e9005cc1bae4652747cb4702c18374b78066aacd3d624fe8cc6f2cfec",
+        "SKILL.md": "b54d04bfe565bec7455a8b68e38a2b08c29ad388b3cb7ad8065546ca632e95a3",
+        "CORE.md": "738e7dd86e5d05ecd75a367578af03fcdbb37b4ce613c361454c166d2a3add6e",
+        "RULES.md": "feffe30e8ac81430a75ccd764b158134bfdc3b54be873f18fc4f36f2f19c8d93",
+        "references/diagrams.md": "ba1a64a86928b107766f4231e00ab911a1cc03686bc78b1eff39cca161d51f09",
+        "references/animation.md": "f4ada350d6ac8ababf9933d961e33506182202edd98a1463bb96fe98e16e5c4f",
+        "references/production.md": "be9803eff3e3ca822636256c59d7cb3ca22197153d4480271d23ddcf0df42808",
+        "references/research.md": "5f58d847205644e45a96518b304aa4524d2cba7bbee38b0cd141115ec9973abd",
+        "references/tts.md": "293df6e6b088a1809eeffdd658d047b6aa53d162ce0a909a8c948c0e5e262adb",
+        "agents/openai.yaml": "fca8e975a42fa1269b3a3c4ca14dbbb5a2418392ae457032c952708f3a097d5c",
+        "scripts/diagrams/worker.mjs": "eff0713eda13ce253d6e6bb1b3c0272ceacadf61abf214243b129859565bc550",
+        "scripts/diagrams/render.mjs": "dee224c23eed8e69dc0f4e942c8b36e7e01aef419b09283d28480c118371ecc9",
+        "scripts/diagrams/package-lock.json": "b592061b3c38371df73348235bf6e7b296c191a5dc6a9a27a8d415196681aeba",
+        "scripts/diagrams/package.json": "64df9aaa748c9472bbd8982e20efa6e25c2938134f7fe622533063096a84ea0b",
+        "scripts/diagrams/render.test.mjs": "bf4e3e25b9e10bf28cfc6c6ba3b7d5d4e551541f8347aae847d92c55e8b2e655"
+      },
+      "suite_sha256": "da2101d2c9ccc48014778f136bec6aa951ccd8217e5e1794de20fb47b9c30ab2",
+      "runner_sha256": "3996be1c4635e7135ab98926b0b15f5e17d5aefa968c78027b6abf2c6189b5b1",
+      "limits": "Project instruction comparison. Existing global instructions and installed skills remain. Not a clean-room skill-discovery test. Tool policies differ by harness."
+    },
+    "final-opencode": {
+      "harness": "opencode",
+      "requested_model": "ollama/kimi-k3:cloud",
+      "version": "opencode v2.1.4",
+      "skill_sha256": {
+        "WORDS.md": "877ddce54383ea4990febf5a60035e89207622c6c6b994199ec8fc0dc74abceb",
+        "VIDEO.md": "b3a0817e9005cc1bae4652747cb4702c18374b78066aacd3d624fe8cc6f2cfec",
+        "SKILL.md": "b54d04bfe565bec7455a8b68e38a2b08c29ad388b3cb7ad8065546ca632e95a3",
+        "CORE.md": "738e7dd86e5d05ecd75a367578af03fcdbb37b4ce613c361454c166d2a3add6e",
+        "RULES.md": "feffe30e8ac81430a75ccd764b158134bfdc3b54be873f18fc4f36f2f19c8d93",
+        "references/diagrams.md": "ba1a64a86928b107766f4231e00ab911a1cc03686bc78b1eff39cca161d51f09",
+        "references/animation.md": "f4ada350d6ac8ababf9933d961e33506182202edd98a1463bb96fe98e16e5c4f",
+        "references/production.md": "be9803eff3e3ca822636256c59d7cb3ca22197153d4480271d23ddcf0df42808",
+        "references/research.md": "5f58d847205644e45a96518b304aa4524d2cba7bbee38b0cd141115ec9973abd",
+        "references/tts.md": "293df6e6b088a1809eeffdd658d047b6aa53d162ce0a909a8c948c0e5e262adb",
+        "agents/openai.yaml": "fca8e975a42fa1269b3a3c4ca14dbbb5a2418392ae457032c952708f3a097d5c",
+        "scripts/diagrams/worker.mjs": "eff0713eda13ce253d6e6bb1b3c0272ceacadf61abf214243b129859565bc550",
+        "scripts/diagrams/render.mjs": "dee224c23eed8e69dc0f4e942c8b36e7e01aef419b09283d28480c118371ecc9",
+        "scripts/diagrams/package-lock.json": "b592061b3c38371df73348235bf6e7b296c191a5dc6a9a27a8d415196681aeba",
+        "scripts/diagrams/package.json": "64df9aaa748c9472bbd8982e20efa6e25c2938134f7fe622533063096a84ea0b",
+        "scripts/diagrams/render.test.mjs": "bf4e3e25b9e10bf28cfc6c6ba3b7d5d4e551541f8347aae847d92c55e8b2e655"
+      },
+      "suite_sha256": "6c0373afb45f4e9fcbdec6ad5e51e6fe23e4f7ba6f6906460633589308f09c5b",
+      "runner_sha256": "3996be1c4635e7135ab98926b0b15f5e17d5aefa968c78027b6abf2c6189b5b1",
+      "limits": "Project instruction comparison. Existing global instructions and installed skills remain. Not a clean-room skill-discovery test. Tool policies differ by harness."
+    }
+  },
+  "records": [
+    {
+      "run": "final-claude-code",
+      "case": "heldout-installation",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "4262982a282ded06be2ce7b795610407bf4a05d0bc354ae7e9625ea498285969",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-1/heldout-installation"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "heldout-local",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "51758b99a3af892c3f1ca5cd4e833d814873e79e09ef440cf225cdd6f58d8a62",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-1/heldout-local"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "heldout-rewrite",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "eb865383839a2722e717109f48ac01005c57212420038924a1309f7ab9eeae72",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-1/heldout-rewrite"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "local-evidence",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "93eb32a3667a8b1f57152431fce4fd95cd6b7262ea2c4ddb306be34c47128b86",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-1/local-evidence"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "meaning",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "26d1375873c10ad1141ab1ec9443ab925b9617c04d80dba74727664666e2dc80",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-1/meaning"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "official-docs",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "3a00398d130ee99d86379aa958707337d9a0e08431818a9c10664bc53f85a96f",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-1/official-docs"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "procedure",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "28f261d225d57b0b1ea7599ce5a01119f7e1a912eb4b51b157516b34235faebd",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-1/procedure"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "version-gap",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "fcc107bfff045663ad67efa2fdb46858adc984d33e1359ffffc87a36518fd9ee",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-1/version-gap"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "heldout-installation",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "01a4bdb5dd73422bad325c5588238ab5c25cdabb61a5d7841ccb27015f27170a",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-2/heldout-installation"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "heldout-local",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "36b71ef2386b76444e47240eea4eb55e31ad549d8038624e1c8af6ecaca22af4",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-2/heldout-local"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "heldout-rewrite",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "688ecc32512123e29c02f5f4943afaad2a786d1cf0139c42cb2b2811fe0b7765",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-2/heldout-rewrite"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "local-evidence",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "27776408420921e55fc41ab60c5dbe855e84284ac4147ab8a672127576c6892c",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-2/local-evidence"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "meaning",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "e7e7eab7b11df4d2b87e18ee0a1c509fa607e771304f5e91b444e7cbd296e376",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-2/meaning"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "official-docs",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "ab85b095976b5952f2495ff67db8bfee4631d0094c15c97164a4c3321ab0383b",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-2/official-docs"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "procedure",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "aa9b7b8e84358eba82441704cf1e9c7284055e2f2a0d2f6f9c83ea6641313940",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-2/procedure"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "version-gap",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "d02af0a0d8ec81cc064484dd4b5bece037fdfe07ce20a11cd8a071f6af844d60",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-2/version-gap"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "heldout-installation",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "15af2b08588752729fdb09e58d45d2262423b2ea768dd0b2507792e974ac8c1a",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-3/heldout-installation"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "heldout-local",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "ca528451f2008ee12ee836b94352d7e03e3e5755e02bbcde04f012f8c96c217b",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-3/heldout-local"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "heldout-rewrite",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "32b6cbbdcd378b583654aebccef9b8d03db82d941d87d70e2d8f72df919d9238",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-3/heldout-rewrite"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "local-evidence",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "a6ad02acea997fa1e2c2f5562570ecccf90ea7586d9df414fa060fdd2a625a4a",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-3/local-evidence"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "meaning",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "26d1375873c10ad1141ab1ec9443ab925b9617c04d80dba74727664666e2dc80",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-3/meaning"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "official-docs",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "39affdf9ea5e343920c21dc29eabd79ef204e018a0a2183e2be8989b4a58305c",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-3/official-docs"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "procedure",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "bb96d2c2daaaf23f03a9ab11e1d8106009497efa09b9ff03953149bd835c72e6",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-3/procedure"
+    },
+    {
+      "run": "final-claude-code",
+      "case": "version-gap",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "f63e1cd1ae09ba5afd6e04affb8c2033a00aa6d465584080d0ab31523d30586b",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-claude-code/candidate/repeat-3/version-gap"
+    },
+    {
+      "run": "final-codex",
+      "case": "heldout-installation",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "b32656aff9f3a714f83058d33ea44bfa36633b417f98defef8b750337cfc5bea",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-1/heldout-installation"
+    },
+    {
+      "run": "final-codex",
+      "case": "heldout-local",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "f8eec12178d3c5ef55b2894a730ee8ddf5eec2cc9cfb6159a42318d2227cc5e1",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-1/heldout-local"
+    },
+    {
+      "run": "final-codex",
+      "case": "heldout-rewrite",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "32b6cbbdcd378b583654aebccef9b8d03db82d941d87d70e2d8f72df919d9238",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-1/heldout-rewrite"
+    },
+    {
+      "run": "final-codex",
+      "case": "local-evidence",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "9527f7aaad17ec4cc7365bf85e11903c506a3241f2087266973384043297e289",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-1/local-evidence"
+    },
+    {
+      "run": "final-codex",
+      "case": "meaning",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "456c529728d250ea428daddd388d464ce21758336c84b20cf08d8cbe8c62fe84",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-1/meaning"
+    },
+    {
+      "run": "final-codex",
+      "case": "official-docs",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "5cbc0ef37f1c1e2dca9379aaf99e260e89d3a91b925d601bc7e221971d9adb08",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-1/official-docs"
+    },
+    {
+      "run": "final-codex",
+      "case": "procedure",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "2db8616c3ba9e340a7880ed6a2f88b3f617a58b203adc5657ff4a618c8ba68c7",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-1/procedure"
+    },
+    {
+      "run": "final-codex",
+      "case": "version-gap",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "f3e9a23e94724185f1b37fe950526fd7d2f03687252048c006118eae9cea3665",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-1/version-gap"
+    },
+    {
+      "run": "final-codex",
+      "case": "heldout-installation",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "dd0d2d28a463c822a60c6cb2a197eb271bfdc2e772acd4356a93de39d219d242",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-2/heldout-installation"
+    },
+    {
+      "run": "final-codex",
+      "case": "heldout-local",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "82d41438d83ff104d12c722d693109fc793713070dac79756cdef1d36b19fe7b",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-2/heldout-local"
+    },
+    {
+      "run": "final-codex",
+      "case": "heldout-rewrite",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "32b6cbbdcd378b583654aebccef9b8d03db82d941d87d70e2d8f72df919d9238",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-2/heldout-rewrite"
+    },
+    {
+      "run": "final-codex",
+      "case": "local-evidence",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "a15f158e351345aa34cbcc497e98c7c6750e2c8ad13a9fa5b5f287ab41041325",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-2/local-evidence"
+    },
+    {
+      "run": "final-codex",
+      "case": "meaning",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "f86876d6b27add68ed305b6b3f71f731e7aebe85e80919afd23f93dbec5c2a08",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-2/meaning"
+    },
+    {
+      "run": "final-codex",
+      "case": "official-docs",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "7fb4ada4bf8ef5547fb78686b754babf613ce61dc7633d4e10f35995fd25e397",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-2/official-docs"
+    },
+    {
+      "run": "final-codex",
+      "case": "procedure",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "2db8616c3ba9e340a7880ed6a2f88b3f617a58b203adc5657ff4a618c8ba68c7",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-2/procedure"
+    },
+    {
+      "run": "final-codex",
+      "case": "version-gap",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "eb2e47d803eac9f5afca414e860073cd84eac666bd20ed198b8a686138c83994",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-2/version-gap"
+    },
+    {
+      "run": "final-codex",
+      "case": "heldout-installation",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "a36e07f852a57c2deaef551350d5db2b2fdcb6ff35d5d0ca1573f49d269757de",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-3/heldout-installation"
+    },
+    {
+      "run": "final-codex",
+      "case": "heldout-local",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "a231a37bec30d3ae26900dab0fdd18e7aad90a107e8cf1198f389e966388afd9",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-3/heldout-local"
+    },
+    {
+      "run": "final-codex",
+      "case": "heldout-rewrite",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "688ecc32512123e29c02f5f4943afaad2a786d1cf0139c42cb2b2811fe0b7765",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-3/heldout-rewrite"
+    },
+    {
+      "run": "final-codex",
+      "case": "local-evidence",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "7fee71426dcd0130f85205c28beae9449332520a0c7806530b8746e7bf1990e5",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-3/local-evidence"
+    },
+    {
+      "run": "final-codex",
+      "case": "meaning",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "f86876d6b27add68ed305b6b3f71f731e7aebe85e80919afd23f93dbec5c2a08",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-3/meaning"
+    },
+    {
+      "run": "final-codex",
+      "case": "official-docs",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "dfa9064f26a5533c7000ba6a2f5161c1aacef9a33c69b597dd30bd63fc01a132",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-3/official-docs"
+    },
+    {
+      "run": "final-codex",
+      "case": "procedure",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "2db8616c3ba9e340a7880ed6a2f88b3f617a58b203adc5657ff4a618c8ba68c7",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-3/procedure"
+    },
+    {
+      "run": "final-codex",
+      "case": "version-gap",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "56d3e636721b9ee4fd8c625bdf111bf07e83eded9ba465d24b66e11c4fcc59d4",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-codex/candidate/repeat-3/version-gap"
+    },
+    {
+      "run": "final-loading-claude-code",
+      "case": "native-discovery",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "87c5ad9de96e50e478b0dabf10a00f37697536a9e4e56a00df390204da4b1224",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-loading-claude-code/candidate/repeat-1/native-discovery"
+    },
+    {
+      "run": "final-loading-claude-code",
+      "case": "native-discovery",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "20cb95aaf0c0f61450f39c2810d735a4eec15916bfe9b8f498e0ae9a647d2244",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-loading-claude-code/candidate/repeat-2/native-discovery"
+    },
+    {
+      "run": "final-loading-claude-code",
+      "case": "native-discovery",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "20499565775c5f223b6a14c5f30118be0032599828c77048339caff4bf465bfd",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-loading-claude-code/candidate/repeat-3/native-discovery"
+    },
+    {
+      "run": "final-loading-codex",
+      "case": "native-discovery",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "68968379dc44128fdfa9fab606387dd06c400a90b8c8984b7f7ced0db75ac406",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-loading-codex/candidate/repeat-1/native-discovery"
+    },
+    {
+      "run": "final-loading-codex",
+      "case": "native-discovery",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "5220f785165a037078af582bab23aaf1553360718227ce1b311f41c9af8f1ad1",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-loading-codex/candidate/repeat-2/native-discovery"
+    },
+    {
+      "run": "final-loading-codex",
+      "case": "native-discovery",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "aaee4380cd15d09212b869ce5e35323d045bcb2ab2e4ab2eb5c1b0ff7f7cb59e",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-loading-codex/candidate/repeat-3/native-discovery"
+    },
+    {
+      "run": "final-loading-opencode",
+      "case": "native-discovery",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "f39bee557410ad1589210e8b40c6981d1c487ab6d300b21bfedb103a7efdacee",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-loading-opencode/candidate/repeat-1/native-discovery"
+    },
+    {
+      "run": "final-loading-opencode",
+      "case": "native-discovery",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "2e929292962c6cedc8bbbd526bbf8e9d7861d4607f3dbd62c41d2eac5857fffa",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-loading-opencode/candidate/repeat-2/native-discovery"
+    },
+    {
+      "run": "final-loading-opencode",
+      "case": "native-discovery",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "2291a2ea503910e4b46a8510c43a738092cf261c18c8bda3b03060a154c48117",
+      "long_sentence_flags": [
+        {
+          "words": 26,
+          "text": "An index on CODE holds sorted entries with row pointers: Amy\u21923, Ben\u21925, Dan\u21926, Eve\u21927, Mia\u21922, Sam\u21921, Tom\u21928, Zoe\u21924."
+        }
+      ],
+      "evidence_directory": "final-loading-opencode/candidate/repeat-3/native-discovery"
+    },
+    {
+      "run": "final-opencode",
+      "case": "heldout-installation",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "8bd6505d2f412cfe8bc229a61547c70325d533e2c6401d549212fd17372bff21",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-1/heldout-installation"
+    },
+    {
+      "run": "final-opencode",
+      "case": "heldout-local",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "6bac0f143e2d7f5879a178a0c551bac461bf7de4c05a9e8ef6fb384029a2ac21",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-1/heldout-local"
+    },
+    {
+      "run": "final-opencode",
+      "case": "heldout-rewrite",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "888ce17f93d69d56be9abe6ca73f93e893ae267970675c866a0f39ad5e3ff35c",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-1/heldout-rewrite"
+    },
+    {
+      "run": "final-opencode",
+      "case": "local-evidence",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "fabf8320c0e81998cc25f593ca26e3c1b89eb1e104b2a39b0c3a8323f3a291c4",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-1/local-evidence"
+    },
+    {
+      "run": "final-opencode",
+      "case": "meaning",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "1c2ef1d27fb6675eddd745b07ab01929d9c62f0fc8d1396b3486b723cd8ce036",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-1/meaning"
+    },
+    {
+      "run": "final-opencode",
+      "case": "official-docs",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "27df8c51fa9c9ad15a82311d1d66635945665feea8d6de1e7bff867ab428ad69",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-1/official-docs"
+    },
+    {
+      "run": "final-opencode",
+      "case": "procedure",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "37b07b388ec6399397bd391260a232020b3d313555da0741bd89e28ccb604f79",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-1/procedure"
+    },
+    {
+      "run": "final-opencode",
+      "case": "version-gap",
+      "repeat": "repeat-1",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "a5a2cbf475422f649a2e3d7cfc73ace689d64b0ee159d05ab481459ec547a166",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-1/version-gap"
+    },
+    {
+      "run": "final-opencode",
+      "case": "heldout-installation",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "0327e77aac05df60bd854f4f6624acb5c670c2df8d527d0811a92ef1f9dc64ad",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-2/heldout-installation"
+    },
+    {
+      "run": "final-opencode",
+      "case": "heldout-local",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "9ad3c48c92a80b9ef61cc8cc8dc4d78815b38a8db703a27001a20dbbde5fe3db",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-2/heldout-local"
+    },
+    {
+      "run": "final-opencode",
+      "case": "heldout-rewrite",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "888ce17f93d69d56be9abe6ca73f93e893ae267970675c866a0f39ad5e3ff35c",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-2/heldout-rewrite"
+    },
+    {
+      "run": "final-opencode",
+      "case": "local-evidence",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "59fdfd0a1dee9cb5917215dd05079aaf0f962a3ac683f44371e5c8ca593d565f",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-2/local-evidence"
+    },
+    {
+      "run": "final-opencode",
+      "case": "meaning",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "1c2ef1d27fb6675eddd745b07ab01929d9c62f0fc8d1396b3486b723cd8ce036",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-2/meaning"
+    },
+    {
+      "run": "final-opencode",
+      "case": "official-docs",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "b5e6414e98df476294230ba4621eb2b481c569a248cd5f5ef62a73cd99cb6af6",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-2/official-docs"
+    },
+    {
+      "run": "final-opencode",
+      "case": "procedure",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "9dd8c23da38f12a04efa004f5eb83b753fc197cc8821e6de0661dd26ad2e39cb",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-2/procedure"
+    },
+    {
+      "run": "final-opencode",
+      "case": "version-gap",
+      "repeat": "repeat-2",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "1990b7322a777187d75b078e6753c7cc078fe7502ec36186b883a62f3ca97541",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-2/version-gap"
+    },
+    {
+      "run": "final-opencode",
+      "case": "heldout-installation",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "d05fd5f7d01825c94d8f352a8741559c37c6bde29ffc125a3b89d6d2e6976a04",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-3/heldout-installation"
+    },
+    {
+      "run": "final-opencode",
+      "case": "heldout-local",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "6504d6e167ab38b50463038f5d18d169542d6317638f949f4b9aba0fb7ad26f6",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-3/heldout-local"
+    },
+    {
+      "run": "final-opencode",
+      "case": "heldout-rewrite",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "6b8ebd83bde051e5ab79532f94efedd27ad607a7b9f767bdbcb2e50fa83eb511",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-3/heldout-rewrite"
+    },
+    {
+      "run": "final-opencode",
+      "case": "local-evidence",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "b3534f2a622e875b8c8e98e2e94347c90fb8532c5ee4fd8398f5c01c729965f7",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-3/local-evidence"
+    },
+    {
+      "run": "final-opencode",
+      "case": "meaning",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "fb66f74055249337e699198dc6953bd7e38f0a03274c7146678a4498d1ee565f",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-3/meaning"
+    },
+    {
+      "run": "final-opencode",
+      "case": "official-docs",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "7123c788a435d3014bd0eed0ed5c4ad11bc19a5b6f1bb6c23d6f0bf30bd15512",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-3/official-docs"
+    },
+    {
+      "run": "final-opencode",
+      "case": "procedure",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "4115b6209c896eba67a9769d4fde22ffb0b509f16f92b5f9eccda230a7d2d627",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-3/procedure"
+    },
+    {
+      "run": "final-opencode",
+      "case": "version-gap",
+      "repeat": "repeat-3",
+      "status": "completed",
+      "files_unchanged": true,
+      "answer_sha256": "67098130d8c155601d23ddb45c42a96b43bcfc7dfb7cfe649e4f0afa291dc067",
+      "long_sentence_flags": [],
+      "evidence_directory": "final-opencode/candidate/repeat-3/version-gap"
+    }
+  ],
+  "reviewer": "Primary assistant; manual review, no independent judge",
+  "limitations": [
+    "Existing global defaults remain active.",
+    "Behavioral cases inject the shared core and router into project instructions.",
+    "Loading cases use the router without project core injection.",
+    "No native discovery claim, rendered artifact test, or full 23-case run.",
+    "Earlier exploratory runs are preserved separately and excluded from these counts."
+  ]
+}

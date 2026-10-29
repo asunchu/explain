@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "heldout-rewrite",
+      "prompt": "Return a clearer version of this update: The exporter can identify missing fields. Last Tuesday, the pilot finished. We plan to expand access next month if the audit passes. This may reduce support requests.",
+      "fixtures": {},
+      "criteria": {
+        "meaning": "Preserves capability, completed pilot, conditional plan, and possibility.",
+        "writing": "Descriptions at most 25 words.",
+        "scope": "Only the rewrite; no commentary or question."
+      }
+    },
+    {
+      "id": "heldout-installation",
+      "prompt": "Is automatic caching enabled in our installed LedgerLeaf package? Use only these local files.",
+      "fixtures": {
+        "package.json": "{\"dependencies\":{\"ledgerleaf\":\"1.8.0\"}}",
+        "notes.md": "Synthetic fixture. Documentation for LedgerLeaf 2.0 says automatic caching is enabled. No installed files or lockfile are available."
+      },
+      "criteria": {
+        "research": "Reads both local files; no network.",
+        "meaning": "Separates declared version from installed version; does not infer caching behavior in 1.8.0.",
+        "writing": "Descriptions at most 25 words.",
+        "scope": "No edits or invented evidence."
+      }
+    },
+    {
+      "id": "heldout-local",
+      "prompt": "Why does this sender make at most three attempts? Describe what happens on success and failure, using the local source.",
+      "fixtures": {
+        "sender.py": "def send(deliver):\n    for i in range(3):\n        if deliver():\n            return \"sent\"\n    return \"failed\"\n"
+      },
+      "criteria": {
+        "research": "Reads sender.py.",
+        "meaning": "Three total attempts; early sent return; failed after all fail; no invented delay.",
+        "writing": "Descriptions at most 25 words.",
+        "scope": "Cites local source; no edits or writing audit."
+      }
+    }
+  ]
+}

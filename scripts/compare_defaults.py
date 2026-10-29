@@ -6,8 +6,12 @@ import json
 import os
 from pathlib import Path
 import signal
+import shutil
 import subprocess
 import time
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from loading import routing, SKILL_DIRS
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -53,14 +57,26 @@ def opencode_config():
     return {'agents': {'build': {'permissions': rules}}}
 
 
-def run_trial(harness, model, case, directory, instructions, timeout, executable=None):
+def run_trial(harness, model, case, directory, instructions, timeout, executable=None, install_skill=False, disable_style=False, route_skill=False, skill_source=None):
     directory.mkdir(parents=True)
     work = directory / 'work'
     work.mkdir()
     # A separate root prevents unrelated repository instructions from entering a trial.
     subprocess.run(['git', 'init', '-q', str(work)], check=True)
     name = 'CLAUDE.md' if harness == 'claude-code' else 'AGENTS.md'
-    (work / name).write_text(instructions)
+    skill_dir = SKILL_DIRS[harness]
+    core_instructions = instructions
+    if route_skill:
+        if not install_skill:
+            raise ValueError('Routing requires a local skill installation')
+        instructions += '\n\n' + routing(work / skill_dir / 'explain')
+    if instructions:
+        (work / name).write_text(instructions)
+    if install_skill:
+        shutil.copytree(skill_source or ROOT / 'skills/explain', work / skill_dir / 'explain',
+                        ignore=shutil.ignore_patterns('node_modules', '__pycache__', '.venv', '.DS_Store'))
+        if core_instructions:
+            (work / skill_dir / 'explain/CORE.md').write_text(core_instructions)
     for filename, content in case['fixtures'].items():
         target = (work / filename).resolve()
         if not target.is_relative_to(work.resolve()):
@@ -74,6 +90,8 @@ def run_trial(harness, model, case, directory, instructions, timeout, executable
     cmd = command(harness, model, case['prompt'], directory / 'answer.md')
     if executable:
         cmd[0] = executable
+    if disable_style and harness == 'claude-code':
+        cmd[1:1] = ['--settings', json.dumps({'enabledPlugins': {'explanatory-output-style@claude-plugins-official': False}})]
     (directory / 'command.json').write_text(json.dumps(cmd, indent=2))
     (directory / 'prompt.txt').write_text(case['prompt'])
     env = {**os.environ, 'PWD': str(work)}
@@ -102,16 +120,20 @@ def run_trial(harness, model, case, directory, instructions, timeout, executable
         (directory / 'answer.md').write_text(answer)
         ids = [e['sessionID'] for e in events if 'sessionID' in e]
         if ids:
-            exported = subprocess.run(['opencode', 'session', 'export', '--standalone', ids[0]],
+            exported = subprocess.run([executable or 'opencode', 'session', 'export', '--standalone', ids[0]],
                                       capture_output=True, text=True, timeout=30, env=env, cwd=work)
             (directory / 'session-export.json').write_text(exported.stdout)
             (directory / 'export-stderr.log').write_text(exported.stderr)
     answer_path = directory / 'answer.md'
     after = {str(p.relative_to(work)): digest(p) for p in work.rglob('*')
              if p.is_file() and '.git' not in p.parts}
-    metadata = {'harness': harness, 'requested_model': model, 'exit_code': code,
+    has_answer = answer_path.exists() and bool(answer_path.read_text().strip())
+    reported_error = any(e.get('type') == 'error' or e.get('is_error') is True for e in events)
+    status = ('infrastructure_error' if code or timed_out or reported_error else
+              'completed' if has_answer else 'response_missing')
+    metadata = {'status': status, 'harness': harness, 'requested_model': model, 'exit_code': code,
                 'timeout': timed_out, 'seconds': round(time.monotonic() - start, 2),
-                'has_answer': answer_path.exists() and bool(answer_path.read_text().strip()),
+                'has_answer': has_answer,
                 'input_sha256': before, 'output_sha256': after,
                 'review': {key: {'status': 'pending', 'evidence': ''} for key in case['criteria']}}
     (directory / 'execution.json').write_text(json.dumps(metadata, indent=2))
@@ -125,23 +147,42 @@ def main():
     parser.add_argument('--model', required=True)
     parser.add_argument('--executable', help='Explicit CLI path when PATH resolves another installed version')
     parser.add_argument('--baseline-default', type=Path, required=True)
+    parser.add_argument('--candidate-default', type=Path, help='Optional shared core candidate for a frozen experiment')
+    parser.add_argument('--suite', type=Path, default=ROOT / 'evals/grounding.json')
+    parser.add_argument('--candidate-only', action='store_true')
+    parser.add_argument('--discovery-only', action='store_true', help='Install local skill without core injection; global instructions remain')
+    parser.add_argument('--install-skill', action='store_true')
+    parser.add_argument('--route-skill', action='store_true', help='Install path-specific artifact routing in project instructions')
+    parser.add_argument('--disable-style', action='store_true')
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--repeats', type=int, default=3)
     parser.add_argument('--timeout', type=int, default=180)
     args = parser.parse_args()
+    if args.route_skill:
+        args.install_skill = True
     if args.repeats < 1 or args.timeout < 1:
         parser.error('repeats and timeout must be positive')
     out = args.out.resolve()
     if out.exists() or out.is_relative_to(ROOT):
         parser.error('Use a new output folder outside the repository')
     baseline = args.baseline_default.read_text()
-    candidate = (ROOT / 'skills/explain/CORE.md').read_text()
-    suite = json.loads((ROOT / 'evals/grounding.json').read_text())
+    candidate = '' if args.discovery_only else (args.candidate_default or ROOT / 'skills/explain/CORE.md').read_text()
+    if args.discovery_only:
+        args.install_skill = True
+        args.candidate_only = True
+    suite = json.loads(args.suite.read_text())
     out.mkdir(parents=True)
     (out / 'baseline.md').write_text(baseline)
     (out / 'candidate.md').write_text(candidate)
     (out / 'suite.json').write_text(json.dumps(suite, indent=2))
     (out / 'runner.py').write_bytes(Path(__file__).read_bytes())
+    (out / 'loading.py').write_bytes((ROOT / 'scripts/loading.py').read_bytes())
+    skill_snapshot = out / 'skill-snapshot'
+    if args.install_skill:
+        shutil.copytree(ROOT / 'skills/explain', skill_snapshot,
+                        ignore=shutil.ignore_patterns('node_modules', '__pycache__', '.venv', '.DS_Store'))
+        if args.candidate_default:
+            (skill_snapshot / 'CORE.md').write_text(args.candidate_default.read_text())
     global_file = Path.home() / {'codex': '.codex/AGENTS.md', 'claude-code': '.claude/CLAUDE.md',
                                 'opencode': '.config/opencode/AGENTS.md'}[args.harness]
     global_hash = None
@@ -151,24 +192,32 @@ def main():
     executable = args.executable or {'claude-code': 'claude'}.get(args.harness, args.harness)
     version = subprocess.run([executable, '--version'], capture_output=True, text=True)
     (out / 'environment.json').write_text(json.dumps({
+        'skill_sha256': {str(p.relative_to(skill_snapshot)): digest(p) for p in skill_snapshot.rglob('*') if p.is_file()} if args.install_skill else {},
+        'route_skill': args.route_skill, 'discovery_only': args.discovery_only, 'install_skill': args.install_skill, 'disable_style': args.disable_style, 'candidate_only': args.candidate_only,
         'harness': args.harness, 'requested_model': args.model, 'version': version.stdout.strip(), 'executable': executable,
         'baseline_sha256': digest(out / 'baseline.md'), 'candidate_sha256': digest(out / 'candidate.md'),
         'suite_sha256': digest(out / 'suite.json'), 'repeats': args.repeats,
         'global_instructions_sha256': global_hash, 'runner_sha256': digest(out / 'runner.py'),
         'limits': 'Project instruction comparison. Existing global instructions and installed skills remain. Not a clean-room skill-discovery test. Tool policies differ by harness.'}, indent=2))
+    missing_response = False
     for rep in range(1, args.repeats + 1):
         conditions = [('baseline', baseline), ('candidate', candidate)]
+        if args.candidate_only:
+            conditions = [('candidate', candidate)]
         if rep % 2 == 0:
             conditions.reverse()
         for case in suite['cases']:
             for condition, instructions in conditions:
                 metadata = run_trial(args.harness, args.model, case,
-                                     out / condition / f'repeat-{rep}' / case['id'], instructions, args.timeout, args.executable)
+                                     out / condition / f'repeat-{rep}' / case['id'], instructions, args.timeout, args.executable, args.install_skill, args.disable_style, args.route_skill, skill_snapshot if args.install_skill else None)
                 # Preserve first attempts and stop on infrastructure failure; never silently retry.
-                if metadata['exit_code'] or metadata['timeout'] or not metadata['has_answer']:
+                if metadata['status'] == 'infrastructure_error':
                     print('Stopped on infrastructure failure. Remaining trials are unrun.', flush=True)
                     return 2
-    return 0
+                if metadata['status'] == 'response_missing':
+                    missing_response = True
+                    print('Recorded an empty response. Continuing independent cases without retrying.', flush=True)
+    return 2 if missing_response else 0
 
 
 if __name__ == '__main__':

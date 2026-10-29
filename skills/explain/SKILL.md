@@ -1,6 +1,6 @@
 ---
 name: explain
-description: Write clear technical English for replies, documentation, procedures, and explanations. Use 80% STE by default and strict writing rules for instructions. Choose text, diagrams, interactive HTML, or narrated video when they help. Preserve code, exact quotations, and the user's requested style.
+description: Explain technical ideas with clear prose, diagrams, interactive HTML, or narrated animation. Use for video plans, storyboards, scripts, visual walkthroughs, and explanations, even when the user does not name a skill. Preserve the requested scope and format.
 ---
 
 # Explain
@@ -9,7 +9,8 @@ Make the idea easy to understand. Start with clear words and use a richer format
 
 ## Shared contract
 
-Read [CORE.md](CORE.md) before composing the explanation unless its contents are already present in the active instructions.
+Read this installed copy of [CORE.md](CORE.md) before composing the explanation.
+Global writing defaults can differ from this copy; do not substitute them for this read.
 This is the same contract for every harness and model. Do not infer a different contract from the harness name.
 Read [RULES.md](RULES.md) and [WORDS.md](WORDS.md) for detailed writing checks.
 Our word guide is not the official ASD-STE100 dictionary; do not claim formal compliance without checking the official sources.
@@ -48,7 +49,7 @@ Use its pinned local renderer for standard diagrams. Keep custom React/SVG when 
 
 For substantial artifacts, draft a compact storyboard with teaching points, visible objects, actions, narration, and sources.
 Proceed within existing authorization; add no approval gate unless the user requests one or the action requires it.
-For animation, HTML, or video production, read [references/production.md](references/production.md).
+For animation, HTML, or video planning and production, read [references/production.md](references/production.md).
 For video scripts and export checks, also read [VIDEO.md](VIDEO.md).
 A working source project does not prove that the output plays or its controls work.
 

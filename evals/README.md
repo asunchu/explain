@@ -90,3 +90,10 @@ CI runs only deterministic definition/reporter checks. Real harness trials requi
 See [paired-defaults.md](paired-defaults.md) for the separate five-case, before/after experiment and real harness runner.
 It records instruction snapshots and checks research evidence separately from answer quality.
 The [October 15 paired report](reports/2026-10-15-grounded-defaults.md) records 90 completed trials, remaining failures, and loading limitations.
+
+## Latest local recheck
+
+The [October 29 report](reports/2026-10-29-pele-112-evaluations.md) records the Pele 1.12.0 checks and live cross-harness results.
+All three harnesses completed 24 behavioral responses and three routed loading trials. Codex required a separate retry after infrastructure failures.
+Factual errors and combined actions remain in video plans. Kimi also exceeded a sentence limit.
+Completion and loading are not an overall behavioral pass. The release check remains open.

@@ -12,3 +12,9 @@ examples/explain-video/output/*
 !examples/explain-video/output/captions.srt
 !examples/explain-video/output/transcript.md
 !examples/explain-video/output/validation.json
+
+# Local generated output
+/output/
+
+# Local Remotion browser cache
+/.remotion/
