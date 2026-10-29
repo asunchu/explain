@@ -35,6 +35,20 @@ test('keeps labels as text and blocks navigation', async () => {
   assert.deepEqual(result.links, []);
 });
 
+test('chooses contrasting labels for light and dark custom fills', async () => {
+  const { svg } = await renderDiagram('flowchart LR\nA[Light] --> B[Dark]\nstyle A fill:#ffffff\nstyle B fill:#000000', clock);
+  assert.match(svg, /<text[^>]*fill="var\(--pele-fg-on-light,[^"]+\)"[^>]*>Light<\/text>/);
+  assert.match(svg, /<text[^>]*fill="var\(--pele-fg-on-dark,[^"]+\)"[^>]*>Dark<\/text>/);
+});
+
+test('keeps a custom group fill opaque', async () => {
+  const { svg } = await renderDiagram('flowchart LR\nsubgraph G[Group]\nA --> B\nend\nstyle G fill:#fde68a', clock);
+  const group = svg.match(/<g class="pele-cluster"[^>]*>([\s\S]*?)<\/g>/)?.[1];
+  assert.ok(group, 'The group must be present.');
+  assert.match(group, /fill:#fde68a/);
+  assert.doesNotMatch(group, /(?:fill-)?opacity(?:=|:)"?0\.5/);
+});
+
 test('blocks remote image output and ignores attempts to change host policy', async () => {
   const source = '%%{init: {"links":true,"images":true,"limit":999999,"maxEdges":999999}}%%\nflowchart LR\nA@{ img: "https://example.invalid/track", label: "Image", h: 60 }\nclick A "https://example.invalid/link"';
   const result = await renderDiagram(source, clock);

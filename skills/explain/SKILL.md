@@ -9,7 +9,8 @@ Make the idea easy to understand. Start with clear words and use a richer format
 
 ## Shared contract
 
-Read [CORE.md](CORE.md) before composing the explanation unless its contents are already present in the active instructions.
+Read this installed copy of [CORE.md](CORE.md) before composing the explanation.
+Global writing defaults can differ from this copy; do not substitute them for this read.
 This is the same contract for every harness and model. Do not infer a different contract from the harness name.
 Read [RULES.md](RULES.md) and [WORDS.md](WORDS.md) for detailed writing checks.
 Our word guide is not the official ASD-STE100 dictionary; do not claim formal compliance without checking the official sources.

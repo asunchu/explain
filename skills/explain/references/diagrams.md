@@ -5,7 +5,7 @@ Keep custom React/SVG for illustrations or precise animation.
 Honor a user who requests Mermaid's renderer or a different drawing tool.
 
 Pele replaces the rendering engine. It accepts Mermaid syntax and produces SVG.
-The reviewed integration pins Pele 1.6.0. It does not install a global package or load a CDN.
+The integration pins Pele 1.12.0. It does not install a global package or load a CDN.
 
 ## Render locally
 

@@ -68,7 +68,8 @@ def prepare(args):
     require(not out.is_relative_to(ROOT), 'Use a run directory outside the repository')
     out.mkdir(parents=True)
     (out / 'selection.json').write_text(json.dumps([c['id'] for c in cases]) + '\n')
-    shutil.copytree(ROOT / 'skills/explain', out / 'candidate-skill')
+    shutil.copytree(ROOT / 'skills/explain', out / 'candidate-skill',
+                    ignore=shutil.ignore_patterns('node_modules', '__pycache__', '.venv', '.DS_Store'))
     (out / 'suite.json').write_text(json.dumps(suite, indent=2) + '\n')
     results = {'schema_version': 1, 'harness': args.harness, 'model': args.model,
                'harness_version': args.harness_version, 'created_at': datetime.now(timezone.utc).isoformat(),

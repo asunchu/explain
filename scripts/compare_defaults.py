@@ -120,16 +120,20 @@ def run_trial(harness, model, case, directory, instructions, timeout, executable
         (directory / 'answer.md').write_text(answer)
         ids = [e['sessionID'] for e in events if 'sessionID' in e]
         if ids:
-            exported = subprocess.run(['opencode', 'session', 'export', '--standalone', ids[0]],
+            exported = subprocess.run([executable or 'opencode', 'session', 'export', '--standalone', ids[0]],
                                       capture_output=True, text=True, timeout=30, env=env, cwd=work)
             (directory / 'session-export.json').write_text(exported.stdout)
             (directory / 'export-stderr.log').write_text(exported.stderr)
     answer_path = directory / 'answer.md'
     after = {str(p.relative_to(work)): digest(p) for p in work.rglob('*')
              if p.is_file() and '.git' not in p.parts}
-    metadata = {'harness': harness, 'requested_model': model, 'exit_code': code,
+    has_answer = answer_path.exists() and bool(answer_path.read_text().strip())
+    reported_error = any(e.get('type') == 'error' or e.get('is_error') is True for e in events)
+    status = ('infrastructure_error' if code or timed_out or reported_error else
+              'completed' if has_answer else 'response_missing')
+    metadata = {'status': status, 'harness': harness, 'requested_model': model, 'exit_code': code,
                 'timeout': timed_out, 'seconds': round(time.monotonic() - start, 2),
-                'has_answer': answer_path.exists() and bool(answer_path.read_text().strip()),
+                'has_answer': has_answer,
                 'input_sha256': before, 'output_sha256': after,
                 'review': {key: {'status': 'pending', 'evidence': ''} for key in case['criteria']}}
     (directory / 'execution.json').write_text(json.dumps(metadata, indent=2))
@@ -195,6 +199,7 @@ def main():
         'suite_sha256': digest(out / 'suite.json'), 'repeats': args.repeats,
         'global_instructions_sha256': global_hash, 'runner_sha256': digest(out / 'runner.py'),
         'limits': 'Project instruction comparison. Existing global instructions and installed skills remain. Not a clean-room skill-discovery test. Tool policies differ by harness.'}, indent=2))
+    missing_response = False
     for rep in range(1, args.repeats + 1):
         conditions = [('baseline', baseline), ('candidate', candidate)]
         if args.candidate_only:
@@ -206,10 +211,13 @@ def main():
                 metadata = run_trial(args.harness, args.model, case,
                                      out / condition / f'repeat-{rep}' / case['id'], instructions, args.timeout, args.executable, args.install_skill, args.disable_style, args.route_skill, skill_snapshot if args.install_skill else None)
                 # Preserve first attempts and stop on infrastructure failure; never silently retry.
-                if metadata['exit_code'] or metadata['timeout'] or not metadata['has_answer']:
+                if metadata['status'] == 'infrastructure_error':
                     print('Stopped on infrastructure failure. Remaining trials are unrun.', flush=True)
                     return 2
-    return 0
+                if metadata['status'] == 'response_missing':
+                    missing_response = True
+                    print('Recorded an empty response. Continuing independent cases without retrying.', flush=True)
+    return 2 if missing_response else 0
 
 
 if __name__ == '__main__':

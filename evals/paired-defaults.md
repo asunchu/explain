@@ -94,3 +94,12 @@ The runner freezes the installed skill tree and records file hashes before start
 Use `--candidate-default /path/to/core.md` for a shared candidate experiment without changing the checkout during a run.
 The frozen skill receives that same core, including in routed-loading tests.
 Record stopped exploratory runs separately. Do not merge their partial results into a completed final matrix.
+
+## Empty responses and infrastructure errors
+
+The runner records `response_missing` when a command exits successfully without an answer.
+It preserves that first attempt and continues independent cases without retrying.
+The overall command still exits with status 2. A missing response is never a pass.
+An explicit provider error, nonzero exit, or timeout stops the run; remaining cases stay unrun.
+OpenCode session export uses the same executable as the trial.
+Keep model changes and retries in separate, clearly identified experiments.

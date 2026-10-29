@@ -80,6 +80,55 @@ print(json.dumps({'type': 'result', 'result': 'test answer'}))
             self.assertEqual(result['exit_code'], 0)
             self.assertEqual(result['input_sha256'], result['output_sha256'])
 
+    def test_empty_success_is_not_a_completed_response(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp).resolve()
+            fake = root / 'fake-cli'
+            fake.write_text("#!/usr/bin/env python3\nprint('{}')\n")
+            fake.chmod(0o755)
+            result = runner.run_trial('opencode', 'test',
+                {'prompt': 'test', 'fixtures': {}, 'criteria': {}},
+                root / 'trial', '', 10, str(fake))
+            self.assertEqual(result['status'], 'response_missing')
+            self.assertFalse(result['has_answer'])
+            self.assertEqual(result['exit_code'], 0)
+
+    def test_empty_response_continues_without_retry_and_returns_failure(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp).resolve()
+            fake = root / 'fake-cli'
+            fake.write_text("#!/usr/bin/env python3\nimport json,sys\nif '--version' in sys.argv: print('test version')\nelif sys.argv[-1]=='second': print(json.dumps({'type':'text','part':{'text':'answer'}}))\n")
+            fake.chmod(0o755)
+            core = root / 'core.md'
+            core.write_text('test instructions')
+            suite = root / 'suite.json'
+            suite.write_text(json.dumps({'cases': [
+                {'id': name, 'prompt': name, 'fixtures': {}, 'criteria': {}}
+                for name in ['first', 'second']]}))
+            out = root / 'results'
+            argv = ['compare_defaults.py', '--harness', 'opencode', '--model', 'test',
+                    '--executable', str(fake), '--baseline-default', str(core),
+                    '--candidate-default', str(core), '--candidate-only',
+                    '--suite', str(suite), '--repeats', '1', '--out', str(out)]
+            with patch.object(sys, 'argv', argv):
+                code = runner.main()
+            self.assertEqual(code, 2)
+            executions = sorted(out.glob('candidate/repeat-1/*/execution.json'))
+            self.assertEqual(len(executions), 2)
+            statuses = [json.loads(f.read_text())['status'] for f in executions]
+            self.assertEqual(statuses, ['response_missing', 'completed'])
+
+    def test_reported_error_is_not_an_answer(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp).resolve()
+            fake = root / 'fake-cli'
+            fake.write_text("#!/usr/bin/env python3\nimport json\nprint(json.dumps({'type':'result','is_error':True,'result':'quota error'}))\n")
+            fake.chmod(0o755)
+            result = runner.run_trial('claude-code', 'test',
+                {'prompt': 'test', 'fixtures': {}, 'criteria': {}},
+                root / 'trial', '', 10, str(fake))
+            self.assertEqual(result['status'], 'infrastructure_error')
+
     def test_refuses_fixture_outside_workspace(self):
         with tempfile.TemporaryDirectory() as tmp:
             case = {'prompt': 'test', 'fixtures': {'../escape.txt': 'bad'}, 'criteria': {}}

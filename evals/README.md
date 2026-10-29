@@ -93,7 +93,7 @@ The [October 15 paired report](reports/2026-10-15-grounded-defaults.md) records 
 
 ## Latest local recheck
 
-The [October 18 report](reports/2026-10-18-loading-and-regressions.md) separates entrypoint selection, supporting-file reads, and output quality.
-Codex and Claude completed the final behavioral matrix. Ollama quota blocked ten Kimi trials.
-Kimi also skipped supporting files and exceeded a sentence limit in a video plan. The release gate remains closed.
-Use the report's frozen evidence and remaining-case list before continuing; do not substitute another model.
+The [October 29 report](reports/2026-10-29-pele-112-evaluations.md) records the Pele 1.12.0 checks and live cross-harness results.
+All three harnesses completed 24 behavioral responses and three routed loading trials. Codex required a separate retry after infrastructure failures.
+Factual errors and combined actions remain in video plans. Kimi also exceeded a sentence limit.
+Completion and loading are not an overall behavioral pass. The release check remains open.
