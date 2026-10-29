@@ -82,7 +82,7 @@ The user's language and style take precedence.
 
 ## Automatic use
 
-The skill description covers writing and explanations, including ordinary replies. Codex's `agents/openai.yaml` explicitly allows implicit invocation (also its default). These make Explain eligible for automatic selection; they do not force an invocation. The main skill instructions are read after selection, so putting “always use me” inside them cannot solve discovery.
+The skill description covers technical explanations and visual artifacts. Global writing defaults cover ordinary replies. Codex's `agents/openai.yaml` explicitly allows implicit invocation (also its default). These make Explain eligible for automatic selection; they do not force an invocation. The main skill instructions are read after selection, so putting “always use me” inside them cannot solve discovery.
 
 For always-on writing, put the [shared core](skills/explain/CORE.md) in your harness's global or project instructions.
 For automatic artifact loading, also include a router that names the exact installed skill directory.

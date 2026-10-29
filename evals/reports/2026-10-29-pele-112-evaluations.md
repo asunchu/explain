@@ -83,4 +83,7 @@ The report gives concrete residual failures rather than an unsupported overall p
 - [Dependency verification](../../security/pele-2026-10-29.md)
 - Local artifacts: `output/pele-112/README.md`
 
-No commit, push, or publication was performed for this update.
+At evaluation time, no commit, push, or publication had occurred.
+
+PR review later restored explicit imperative and active-voice requirements for procedure steps in `CORE.md`.
+The live results above predate that wording correction; they do not validate the revised text.

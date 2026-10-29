@@ -24,7 +24,7 @@ class Links(HTMLParser):
             assert path.exists(), f'{self.path}: {value}'
 
 for path in root.rglob('*.html'):
-    if not any(part in ('node_modules', 'output', '.remotion') for part in path.relative_to(root).parts):
+    if path.relative_to(root).parts[0] not in ('output', '.remotion') and 'node_modules' not in path.parts:
         Links(path).feed(path.read_text())
 
 film=root/'examples/explain-video'
@@ -41,7 +41,8 @@ for scene in timeline['scenes']:
     cursor+=scene['duration']
 assert cursor == timeline['duration']
 for path in root.rglob('*'):
-    if any(part in ('.git','node_modules','.venv','models','__pycache__','output','.remotion') for part in path.parts): continue
+    if path.relative_to(root).parts[0] in ('output', '.remotion'): continue
+    if any(part in ('.git','node_modules','.venv','models','__pycache__') for part in path.parts): continue
     if path.is_file() and path.suffix in ('.md','.py','.mjs','.jsx','.json','.html','.yml'):
         source=path.read_text()
         # Build strings separately so the validator does not match itself.

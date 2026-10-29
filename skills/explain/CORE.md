@@ -16,7 +16,7 @@ These names do not certify ASD-STE100 compliance.
 ## Write clearly
 
 - Give each sentence one topic. Aim for 12–18 words. The limits are 25 words per description and 20 per instruction.
-- Give each procedure step one action, including build and verification plans. Keep articles and use direct verbs.
+- Give each procedure step one imperative action, including build and verification plans. Use active voice. Keep articles and use direct verbs.
 - Split “Measure the audio, then set the timing” into “Measure the audio.” and “Set the timing from that measurement.”
 - When converting supplied actions into a procedure, preserve their order without adding checks, stops, or repeated actions.
 - Keep paragraphs on one topic, with at most six sentences. Split groups of more than three nouns, except exact technical names.
