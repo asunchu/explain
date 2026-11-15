@@ -12,19 +12,133 @@ A portable agent skill for Codex, Claude Code, and OpenCode. Explain starts with
 
 ## Install
 
-Requires Node.js/npm for the installer:
+Run one command on macOS:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/asunchu/explain/main/install.sh | bash
+```
+
+From a local checkout, use:
+
+```sh
+bash install.sh
+```
+
+The installer configures Explain for Codex, Claude Code, and OpenCode. It sets up:
+
+- One shared skill with compatible paths for all three harnesses.
+- The `explain doctor` and `explain tools` terminal commands.
+- Shared writing defaults and artifact routing in each harness's global instructions.
+- A managed PATH block for Bash or Zsh.
+- Locked Pele, Remotion, React, and local Kokoro dependencies.
+- Verified speech models, a Python environment, and Chrome Headless Shell.
+- FFmpeg and other missing system prerequisites through an existing supported package manager.
+
+Automatic macOS prerequisite setup requires Homebrew. Bash and Zsh are supported.
+Linux bootstrap support is experimental and has not passed a live Linux installation test.
+Ubuntu and Debian hosts need Chrome Headless Shell libraries and working Python `venv` support.
+See [Remotion's Linux dependencies](https://www.remotion.dev/docs/miscellaneous/linux-dependencies) before using the Linux bootstrap.
+Linux setup uses configured Ubuntu or Debian apt repositories.
+Those repositories must supply supported Node.js and Python versions. Privileged apt setup requires an existing non-interactive sudo session.
+The installer does not install a package manager. Existing Codex, Claude Code, and OpenCode clients use the resulting shared setup.
+
+Preview the installation without downloads or configuration changes:
+
+```sh
+bash install.sh --dry-run
+```
+
+Use `--core-only` to skip media preparation. It retains an existing runtime selection.
+Use `--no-system-deps` when system prerequisites are managed separately.
+Use `--model-cache /path/to/models` to reuse verified Kokoro model files.
+
+Media tools pass an actual diagram, local speech synthesis, and a short video export before configuration changes begin.
+Private backups protect existing instructions and aliases. Unrelated instruction text stays intact.
+Rollback preserves detected concurrent edits and reports recovery conflicts. Uncatchable termination can still interrupt recovery.
+Conflicting installations, extra package files, and invalid managed blocks stop installation before large downloads.
+System package installations and downloaded caches remain outside configuration rollback.
+Open a new terminal and start fresh harness sessions after installation.
+
+For a lightweight skill-only installation with the [skills CLI](https://github.com/vercel-labs/skills), use:
 
 ```sh
 npx skills add asunchu/explain --skill explain -g -a codex -a claude-code -a opencode
 ```
 
-Choose only the agents you use. Omit `-g` for a project installation. The [open skills CLI](https://github.com/vercel-labs/skills) handles discovery and installation; it is a separate third-party tool. For manual installation, copy the complete `skills/explain/` directory into your harness's skill directory. Restart or reload the harness if necessary.
+That command copies the skill. It does not perform the full toolchain setup above.
+The existing [v0.2.0 ZIP](https://github.com/asunchu/explain/releases/download/v0.2.0/explain-skill.zip) predates the bundled doctor and installer.
+Use an updated checkout for these tools until a new release archive is published.
 
-The writing skill has no runtime dependency. Diagram tools, video tools, and speech models are installed only when an artifact requires them.
+## Check the installation
 
-Existing users can rerun the installation command to update the skill.
-The release also provides a complete [skill ZIP](https://github.com/asunchu/explain/releases/download/v0.2.0/explain-skill.zip) for manual installation.
-For always-on writing, update the copied shared core in your harness instructions; preserve unrelated instructions.
+The complete skill includes the terminal launcher and setup tool. No repository checkout is required after installation.
+Set `EXPLAIN_SKILL` to your installed skill directory, then run:
+
+```sh
+python3 "$EXPLAIN_SKILL/scripts/install-shortcuts.py" --dry-run
+python3 "$EXPLAIN_SKILL/scripts/install-shortcuts.py"
+```
+
+Setup creates `~/.local/bin/explain`. Keep `~/.local/bin` on your `PATH`.
+Skill installers copy the tools but do not run this setup automatically.
+Use `--replace` to update a different existing symlink. Setup never replaces a regular file or directory.
+See the bundled [installation guide](skills/explain/references/installation.md) for custom locations and moved installations.
+
+```sh
+explain doctor
+explain doctor --fix --dry-run
+explain doctor --fix
+```
+
+You can also run the check directly from a repository checkout:
+
+```sh
+python3 scripts/doctor.py --project /path/to/project
+```
+
+The report shows candidate skill paths, resolved symlinks, separate copies, and differences from its reference copy.
+The default reference is the copy that owns the command. It checks consistency, not the latest published version.
+It also compares marked writing defaults and checks their artifact routers.
+Shared symlinks count as one installation. Separate copies remain separate, even when their files match.
+
+Use `--harness codex`, `--harness claude-code`, or `--harness opencode` to narrow the check.
+Use `--json` for a complete machine-readable report.
+Use `--reference /path/to/skills/explain` to compare against another source copy.
+Use `--skill-path /path/to/installed/explain` to include a custom installation.
+
+The default check is read-only. It uses Python's standard library and makes no network or model calls.
+
+To repair existing installations, preview the changes first:
+
+```sh
+python3 scripts/doctor.py --fix --dry-run
+```
+
+Apply the repair with private backups:
+
+```sh
+python3 scripts/doctor.py --fix
+```
+
+Repair uses the selected reference copy. It updates each shared installation once and preserves its symlink aliases.
+It replaces only existing marked defaults blocks, including their artifact routers. Text outside those blocks stays unchanged.
+Extra package files, dependency folders, and unmarked instructions stay unchanged.
+Ambiguous copies, broken installations, and invalid markers block automatic repair.
+
+Dry runs create no backups or target files. Applied repairs verify every backup before changing a destination.
+Backups default to `$XDG_STATE_HOME/explain/backups`, or `~/.local/state/explain/backups` when unset.
+Use `--backup-dir /path/to/backups` to select another parent directory.
+Each run creates a private directory with original file contents and a `manifest.json` that records paths and hashes.
+The command rejects stale plans and attempts rollback if a write fails. It then checks the repaired installation again.
+It does not fetch releases or install runtime dependencies.
+
+Exit codes: **0** means a clean check, a completed clean repair, or an unblocked dry run.
+**1** means findings remain. **2** means invalid input, a blocked repair, or a repair failure.
+Content fingerprints identify copies; the report does not infer an installed release version.
+The Pele value comes from the package manifest and does not verify its installed runtime.
+
+Candidate paths do not prove active loading. Plugin stores, enterprise policies, cloud skills, and session-added directories require separate inspection.
+Unmarked instructions remain outside the comparison. The [adapter guide](adapters/README.md#installation-diagnostics) describes the checked locations.
 
 ## Try it
 
@@ -96,7 +210,8 @@ Use `CLAUDE.md` for Claude Code. The script replaces its marked block and preser
 The router loads the local entrypoint for diagrams, interactive explanations, storyboards, and video plans.
 It avoids selecting a different global copy with the same name. Repeat synchronization after updating or moving the installation.
 The [harness adapter guide](adapters/README.md) lists the instruction locations and tool mapping.
-Installation does not modify those files or guarantee automatic selection.
+The full installer updates the global instruction files with managed Explain blocks.
+The skills CLI and manual file copies do not update those instructions. Automatic model selection still varies.
 
 The shared core preserves meaning before shortening text. It also chooses evidence sources:
 

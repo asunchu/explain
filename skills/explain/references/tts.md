@@ -24,6 +24,18 @@ The example uses 5,000 characters, roughly five minutes only if narration averag
 
 ElevenLabs also sells subscription credit plans with different model multipliers. The checked general pricing page lists Starter at $6/month with 30,000 credits and commercial licensing; promotions and API offers can differ. Use the actual account's current billing model instead of mixing credit-plan and pay-as-you-go prices. Free-tier output is not automatically licensed for commercial publication. Do not infer pricing for newer models from this table.
 
+## Use the prepared local runtime
+
+The full installer provides `kokoro-onnx`, whose Python API is `kokoro_onnx.Kokoro`.
+It does not provide the separate `kokoro.KPipeline` API.
+Run `explain tools --json` and use `runtime.python` to run narration scripts.
+Reuse `runtime.models/kokoro-v1.0.onnx` and `runtime.models/voices-v1.0.bin`.
+Keep generated audio in the artifact project rather than the shared runtime.
+
+The [editable example narrator](https://github.com/asunchu/explain/blob/main/examples/explain-video/scripts/narrate.py) uses this installed ONNX API.
+It includes voice settings, audio caching, measured captions, and the short phonemizer data path needed on macOS.
+Copy and adapt that source in the artifact project. Link its `.venv` and `models` to the prepared runtime as described in [toolchain.md](toolchain.md).
+
 ## Production workflow
 
 1. Choose the language and voice explicitly. Make a pronunciation list for product names, acronyms, mathematical notation, and numbers. Keep the written transcript human-readable.
@@ -32,7 +44,7 @@ ElevenLabs also sells subscription credit plans with different model multipliers
 4. Measure the generated audio and fit animation to it. Prefer WAV for editing; encode for distribution at export. Use actual timestamps or forced alignment for captions requiring word precision.
 5. Inspect the final mix. Avoid clipping, abrupt cuts, and background music competing with the voice. Regenerate only scenes with demonstrated problems.
 
-For local Kokoro, follow the [author's repository](https://github.com/hexgrad/kokoro) and [model card](https://huggingface.co/hexgrad/Kokoro-82M). Its documented Python pipeline uses `KPipeline`, `soundfile`, and language-specific phonemization dependencies such as `espeak-ng`. Use a project virtual environment and verify platform-specific installation instructions. Initial model/package downloads require connectivity; offline inference requires those assets already cached.
+For a separate upstream Python setup, follow the [author's repository](https://github.com/hexgrad/kokoro) and [model card](https://huggingface.co/hexgrad/Kokoro-82M). That alternative setup uses `KPipeline`, `soundfile`, and language-specific phonemization dependencies such as `espeak-ng`. Use a project virtual environment and verify platform-specific installation instructions. Initial model/package downloads require connectivity; offline inference requires those assets already cached.
 
 Do not use an unofficial consumer speech endpoint as a production “free TTS” guarantee. Prefer a supported local model or a documented provider API. Keep cloud requests limited to the intended narration text and keep credentials server-side.
 

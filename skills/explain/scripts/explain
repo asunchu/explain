@@ -1,0 +1,40 @@
+#!/bin/sh
+""":"
+_explain_python_file="${XDG_STATE_HOME:-$HOME/.local/state}/explain/launcher-python"
+if [ -r "$_explain_python_file" ]; then
+  IFS= read -r _explain_python < "$_explain_python_file"
+  if [ -x "$_explain_python" ]; then
+    exec "$_explain_python" "$0" "$@"
+  fi
+fi
+for _explain_python in python3.11 python3.12 python3.13 python3.10 python3; do
+  if command -v "$_explain_python" >/dev/null 2>&1; then
+    exec "$_explain_python" "$0" "$@"
+  fi
+done
+printf '%s\n' 'Explain needs Python 3.10 or newer. Run the installer again.' >&2
+exit 2
+":"""
+from pathlib import Path
+import sys
+sys.dont_write_bytecode = True
+
+
+def main():
+    if len(sys.argv) == 1 or sys.argv[1] in ('-h', '--help'):
+        print('Usage: explain doctor [options] | explain tools [--json]\n\nCheck local installations. Use --fix --dry-run to preview repairs.')
+        return 0
+    if sys.argv[1] not in ('doctor', 'tools'):
+        print('Unknown command. Use: explain doctor --help', file=sys.stderr)
+        return 2
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    if sys.argv[1] == 'tools':
+        from explain_tools import main as command
+    else:
+        from explain_doctor import main as command
+    sys.argv[0] = 'explain ' + sys.argv[1]
+    return command(sys.argv[2:])
+
+
+if __name__ == '__main__':
+    sys.exit(main())

@@ -15,6 +15,9 @@ report = {'scope': 'Installation and file integrity only; no model invocation', 
 for harness, directory in paths.items():
     checked = []
     for source in sorted(expected.rglob('*')):
+        if any(part in ('.git', 'node_modules', '.venv', 'models', '__pycache__', '.DS_Store')
+               for part in source.relative_to(expected).parts) or source.suffix == '.pyc':
+            continue
         if not source.is_file():
             continue
         relative = source.relative_to(expected)

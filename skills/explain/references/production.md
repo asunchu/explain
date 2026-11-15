@@ -1,5 +1,7 @@
 # Produce and verify an explanation
 
+If the full installer has run, read [toolchain.md](toolchain.md) and reuse its prepared local runtime.
+
 ## Select animation and narration
 
 Read [VIDEO.md](../VIDEO.md) for video scripts and production checks.

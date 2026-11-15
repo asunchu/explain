@@ -1,6 +1,6 @@
 ---
 name: explain
-description: Explain technical ideas with clear prose, diagrams, interactive HTML, or narrated animation. Use for video plans, storyboards, scripts, visual walkthroughs, and explanations, even when the user does not name a skill. Preserve the requested scope and format.
+description: Explain technical ideas with clear prose, diagrams, interactive HTML, or narrated animation. Use for video plans, storyboards, scripts, visual walkthroughs, and explanations, even when the user does not name a skill. Preserve the requested scope and format. Also use for Explain installation checks, repairs, and terminal shortcut setup.
 ---
 
 # Explain
@@ -58,3 +58,8 @@ A working source project does not prove that the output plays or its controls wo
 Ordinary requests can select this skill when the harness makes it available.
 Codex supports `$explain`; Claude Code supports `/explain`; OpenCode can use a natural-language request to load Explain.
 Global writing defaults and explicit skill loading are separate mechanisms. Neither guarantees a correct answer.
+
+## Installation and terminal shortcuts
+
+For `explain doctor`, installation differences, repairs, or terminal shortcut setup, read [references/installation.md](references/installation.md).
+Use the bundled tools. A plain doctor request authorizes a check; repair requires a repair request.

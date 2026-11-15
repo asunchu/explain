@@ -1,15 +1,10 @@
-"""Shared path-specific routing for installation and evaluation."""
+"""Compatibility entrypoint for the tools bundled in the Explain skill."""
 from pathlib import Path
+import sys
+sys.dont_write_bytecode = True
 
-SKILL_DIRS = {'codex': '.agents/skills', 'claude-code': '.claude/skills', 'opencode': '.opencode/skills'}
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'skills/explain/scripts'))
+import explain_loading as _implementation
+from explain_loading import *
 
-def routing(skill_path):
-    entry = Path(skill_path) / 'SKILL.md'
-    return f"""## Explanation artifacts
-
-For a diagram, interactive explanation, narrated animation, storyboard, or video plan, read `{entry}` before answering.
-Use that exact file and its relative references, even if a global skill has the same name.
-For video planning or production, also read `references/production.md` and `VIDEO.md` beside that entrypoint.
-A plan request does not authorize creating or rendering an artifact. Follow the user's requested scope.
-Do not announce instruction loading or writing checks.
-"""
+sys.modules[__name__] = _implementation

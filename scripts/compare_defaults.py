@@ -11,7 +11,7 @@ import subprocess
 import time
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from loading import routing, SKILL_DIRS
+from loading import routing, SKILL_DIRS, __file__ as LOADING_SOURCE
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -176,7 +176,7 @@ def main():
     (out / 'candidate.md').write_text(candidate)
     (out / 'suite.json').write_text(json.dumps(suite, indent=2))
     (out / 'runner.py').write_bytes(Path(__file__).read_bytes())
-    (out / 'loading.py').write_bytes((ROOT / 'scripts/loading.py').read_bytes())
+    (out / 'loading.py').write_bytes(Path(LOADING_SOURCE).read_bytes())
     skill_snapshot = out / 'skill-snapshot'
     if args.install_skill:
         shutil.copytree(ROOT / 'skills/explain', skill_snapshot,

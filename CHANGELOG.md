@@ -1,5 +1,25 @@
 # Changelog
 
+## Unreleased
+
+- Address Astra review findings in rollback, cancellation, cache isolation, and profile selection.
+- Keep the private media environment off global PATH and honor effective Codex overrides.
+- Include distribution notices and preserve existing media configuration during core-only updates.
+- Distinguish verified macOS setup from experimental Linux bootstrap support.
+
+- Add one-command setup for all three harnesses, shortcuts, defaults, and local media tools.
+- Stage and test pinned media dependencies before activating configuration changes.
+- Preserve prior configurations with backups and rollback, including shortcut aliases.
+- Add `explain tools` to locate the prepared shared runtime.
+
+- Add a read-only installation doctor for Codex, Claude Code, and OpenCode.
+- Bundle `explain doctor`, repair tools, and shortcut setup in the distributable skill.
+- Support terminal setup from an installed copy without a repository checkout.
+- Report shared symlinks, separate copies, package differences, and marked writing defaults.
+- Check router content and targets without changing installations or settings by default.
+- Add opt-in repairs with dry runs, private backups, stale-file checks, and rollback after write failures.
+- Preserve shared symlinks and instruction text outside existing marked defaults blocks.
+
 ## v0.2.0 — 2026-10-18
 
 - Make clear technical English the default, with a shared writing contract for Codex, Claude Code, and OpenCode.

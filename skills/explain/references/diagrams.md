@@ -11,20 +11,31 @@ The integration pins Pele 1.12.0. It does not install a global package or load a
 
 Use Node.js 20 or newer. Resolve these paths from the installed Explain directory.
 
-1. Install the locked renderer dependency.
+If the full installer has run, use `explain tools --json` to locate its prepared runtime.
+Set `EXPLAIN_NODE` to `runtime.executables.node` from that report.
+The installed diagram directory already links to the shared Pele dependency. Skip dependency installation in this case.
+
+1. Save the editable Mermaid source in the artifact project.
+2. Render the diagram to a new SVG file.
 
    ```sh
-   npm ci --ignore-scripts --prefix "$EXPLAIN_SKILL/scripts/diagrams"
+   "${EXPLAIN_NODE:-node}" "$EXPLAIN_SKILL/scripts/diagrams/render.mjs" diagram.mmd diagram.svg --width 960
    ```
 
-2. Save the editable Mermaid source in the artifact project.
-3. Render the diagram to a new SVG file.
+3. Inspect the SVG at its intended viewing size.
 
-   ```sh
-   node "$EXPLAIN_SKILL/scripts/diagrams/render.mjs" diagram.mmd diagram.svg --width 960
-   ```
+For a manual installation without the shared runtime, install the locked renderer dependency separately.
+Caution: `npm ci` can remove shared runtime files through a dependency symlink.
+Use this guarded command only for a standalone dependency directory:
 
-4. Inspect the SVG at its intended viewing size.
+```sh
+if [ -L "$EXPLAIN_SKILL/scripts/diagrams/node_modules" ]; then
+  printf '%s\n' 'Use the full installer to repair the shared runtime.' >&2
+else
+  npm ci --ignore-scripts --prefix "$EXPLAIN_SKILL/scripts/diagrams"
+fi
+```
+
 
 `EXPLAIN_SKILL` denotes the actual skill directory. Set it before using the commands.
 The command refuses to replace an existing file. Choose a new output name for another render.
